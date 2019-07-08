@@ -21,7 +21,7 @@ class MainViewModel {
         network = NetworkAPI()
     }
     
-    func loadData() {
-        network?.requestEnterprise(urlParam: "111")
+    func loadData(cnpj: String) {
+        network?.requestEnterprise(urlParam: cnpj)
     }
 }

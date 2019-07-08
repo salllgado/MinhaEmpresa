@@ -31,7 +31,7 @@ struct Enterprise {
     
     enum CodingKeys: String, CodingKey {
         case status
-        case message
+        case message = "message"
         case cnpj
         case type = "tipo"
         case fondationDate = "abertura"
@@ -54,8 +54,8 @@ struct Enterprise {
 extension Enterprise: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        status = try values.decode(String.self, forKey: .status)
-        message = try values.decode(String.self, forKey: .message)
+        status = try values.decodeIfPresent(String.self, forKey: .status)
+        message = try values.decodeIfPresent(String.self, forKey: .message)
         cnpj = try values.decode(String.self, forKey: .cnpj)
         type = try values.decode(String.self, forKey: .type)
         fondationDate = try values.decode(String.self, forKey: .fondationDate)

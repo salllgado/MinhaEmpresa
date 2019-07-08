@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController, MainViewModelDelegate {
     
     @IBOutlet weak var lblCNPJNumber: UILabel!
+    @IBOutlet weak var cnpjTf: CustomFormatter!
     
     private var viewModel: MainViewModel!
     
@@ -20,6 +21,10 @@ class MainViewController: UIViewController, MainViewModelDelegate {
         viewModel = MainViewModel()
         viewModel.delegate = self
         
-        viewModel.loadData()
+        cnpjTf.formatting = .CNPJ
+    }
+    
+    @IBAction func sendData(_ sender: Any) {
+        viewModel.loadData(cnpj: cnpjTf.text ?? "")
     }
 }

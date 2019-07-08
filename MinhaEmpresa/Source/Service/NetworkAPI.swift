@@ -21,7 +21,7 @@ class NetworkAPI: NetworkAPIProtocol {
     
     func requestEnterprise(urlParam: String) {
         Manager().request(send: EmptyRequest(), on: SendRequest.none, in: Endpoint.enterpriseData(param: urlParam).path, httpMethod: HTTPMethod.get, response: Enterprise()) { (res, error) in
-            Logger().log(res)
+            Logger().log(res?.enterpriseName)
         }
     }
 }
