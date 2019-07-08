@@ -7,14 +7,21 @@
 //
 
 import Foundation
+import Alamofire
+
+struct EmptyRequest: Encodable {
+    // ...
+}
 
 protocol NetworkAPIProtocol {
-    func requestEnterprise()
+    func requestEnterprise(urlParam: String)
 }
 
 class NetworkAPI: NetworkAPIProtocol {
     
-    func requestEnterprise() {
-//        Manager().request(send: <#T##Encodable#>, on: <#T##SendRequest#>, in: <#T##Endpoint#>)
+    func requestEnterprise(urlParam: String) {
+        Manager().request(send: EmptyRequest(), on: SendRequest.none, in: Endpoint.enterpriseData(param: urlParam).path, httpMethod: HTTPMethod.get, response: Enterprise()) { (res, error) in
+            Logger().log(res)
+        }
     }
 }

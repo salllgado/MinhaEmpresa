@@ -22,6 +22,6 @@ class MainViewModel {
     }
     
     func loadData() {
-        network?.requestEnterprise()
+        network?.requestEnterprise(urlParam: "111")
     }
 }
