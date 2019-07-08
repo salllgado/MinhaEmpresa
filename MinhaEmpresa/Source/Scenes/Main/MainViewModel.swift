@@ -9,7 +9,9 @@
 import Foundation
 
 protocol MainViewModelDelegate: class {
-    // ...
+    func serverResponds(send: Enterprise)
+    func loadingStart()
+    func loadingEnd()
 }
 
 class MainViewModel {
@@ -22,6 +24,14 @@ class MainViewModel {
     }
     
     func loadData(cnpj: String) {
-        network?.requestEnterprise(urlParam: cnpj)
+        delegate?.loadingStart()
+        network?.requestEnterprise(urlParam: cnpj, completionHanlder: { (response, error) in
+            self.delegate?.loadingEnd()
+            if let err = error {
+                Logger.log(err)
+            } else if let enterprise = response {
+                self.delegate?.serverResponds(send: enterprise)
+            }
+        })
     }
 }

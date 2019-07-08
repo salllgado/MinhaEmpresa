@@ -14,14 +14,14 @@ struct EmptyRequest: Encodable {
 }
 
 protocol NetworkAPIProtocol {
-    func requestEnterprise(urlParam: String)
+    func requestEnterprise(urlParam: String, completionHanlder: @escaping (_ response: Enterprise?, _ err: Error?)->Void)
 }
 
 class NetworkAPI: NetworkAPIProtocol {
     
-    func requestEnterprise(urlParam: String) {
+    func requestEnterprise(urlParam: String, completionHanlder: @escaping (_ response: Enterprise?, _ err: Error?)->Void) {
         Manager().request(send: EmptyRequest(), on: SendRequest.none, in: Endpoint.enterpriseData(param: urlParam).path, httpMethod: HTTPMethod.get, response: Enterprise()) { (res, error) in
-            Logger().log(res?.enterpriseName)
+            completionHanlder(res, error)
         }
     }
 }

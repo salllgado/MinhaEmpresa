@@ -11,7 +11,7 @@ import Foundation
 class Logger {
     
     /// Print some string just in DEBUG mode.
-    func log(_ printable: Any?) {
+    class func log(_ printable: Any?) {
         #if DEBUG
         print(printable)
         #endif

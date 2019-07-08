@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, MainViewModelDelegate {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var lblCNPJNumber: UILabel!
     @IBOutlet weak var cnpjTf: CustomFormatter!
@@ -26,5 +26,20 @@ class MainViewController: UIViewController, MainViewModelDelegate {
     
     @IBAction func sendData(_ sender: Any) {
         viewModel.loadData(cnpj: cnpjTf.text ?? "")
+    }
+}
+
+extension MainViewController: MainViewModelDelegate {
+    
+    func serverResponds(send: Enterprise) {
+        // navigate
+    }
+    
+    func loadingStart() {
+        // ...
+    }
+    
+    func loadingEnd() {
+        // ...
     }
 }
