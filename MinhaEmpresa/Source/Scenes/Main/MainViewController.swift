@@ -10,7 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var lblCNPJNumber: UILabel!
     @IBOutlet weak var cnpjTf: CustomFormatter!
     
     private var viewModel: MainViewModel!
