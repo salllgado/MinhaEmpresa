@@ -8,27 +8,23 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var lblRazao: UILabel!
+    @IBOutlet weak var lblCNPJ: UILabel!
+    @IBOutlet weak var lblTipo: UILabel!
     
     var viewModel: HomeViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // ...
-    }
-}
-
-extension HomeViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        setupUI()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    func setupUI() {
+        self.title = viewModel.enterprise?.nickname
+        lblRazao.text = viewModel.enterprise?.enterpriseName
+        lblCNPJ.text = viewModel.enterprise?.cnpj
+        lblTipo.text = viewModel.enterprise?.type
     }
 }

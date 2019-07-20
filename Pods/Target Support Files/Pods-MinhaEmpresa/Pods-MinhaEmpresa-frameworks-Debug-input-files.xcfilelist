@@ -1,2 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-MinhaEmpresa/Pods-MinhaEmpresa-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CSUtils/CSUtils.framework
+${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework
+${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework

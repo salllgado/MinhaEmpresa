@@ -7,6 +7,7 @@ target 'MinhaEmpresa' do
 
   # Pods for MinhaEmpresa
     pod 'Alamofire'
+    pod 'CSUtils', :git => 'https://github.com/salllgado/CSUtils.git', :branch => 'develop'
 
   target 'MinhaEmpresaTests' do
     inherit! :search_paths
