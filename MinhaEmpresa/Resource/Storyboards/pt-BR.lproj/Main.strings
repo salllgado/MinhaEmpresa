@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "00.000.000/000-00"; ObjectID = "DKh-9p-X8x"; */
+"DKh-9p-X8x.placeholder" = "00.000.000/000-00";
+
+/* Class = "UILabel"; text = "Bem Vindo"; ObjectID = "OSB-ZU-JRn"; */
+"OSB-ZU-JRn.text" = "Bem Vindo";
+
+/* Class = "UIButton"; normalTitle = "Enviar"; ObjectID = "ThU-Km-7ql"; */
+"ThU-Km-7ql.normalTitle" = "Enviar";
+
+/* Class = "UILabel"; text = "Para ter acesso aos dados da sua empresa digite seu número de CNPJ"; ObjectID = "eNI-Ez-RLE"; */
+"eNI-Ez-RLE.text" = "Para ter acesso aos dados da sua empresa digite seu número de CNPJ";

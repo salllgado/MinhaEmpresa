@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MinhaEmpresa
+
+  Created by Chrystian Salgado on 20/07/19.
+  Copyright © 2019 Salgado's Production. All rights reserved.
+*/
+
+"CNPJ_TITLE" = "CNPJ";
+"RAZAO_TITLE" = "RAZÃO SOCIAL";

@@ -52,17 +52,17 @@
                                                         <rect key="frame" x="16" y="16" width="327" height="143"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-yL-kAe" userLabel="Sk Razao">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48" height="44.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="44.333333333333336"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="razao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyI-LI-390">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="20.333333333333332"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="20.333333333333332"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Txu-Ch-Ff9">
-                                                                        <rect key="frame" x="0.0" y="20.333333333333343" width="48" height="24"/>
-                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                                        <rect key="frame" x="0.0" y="20.333333333333343" width="51.666666666666664" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -147,6 +147,9 @@
                                                 <include reference="6df-kB-Lfl"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="actionMoreDetails:" destination="A0B-QE-8uC" eventType="touchUpInside" id="nVm-mA-Y5F"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -185,14 +188,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="e1F-55-y5b"/>
                     <connections>
+                        <outlet property="lblActivityTitle" destination="PR4-OV-DIR" id="Add-ne-AhE"/>
                         <outlet property="lblCNPJ" destination="uX2-rc-QeL" id="pXU-3t-Ymc"/>
+                        <outlet property="lblCNPJTitle" destination="51G-PH-1XG" id="ey3-er-lzS"/>
                         <outlet property="lblRazao" destination="Txu-Ch-Ff9" id="SM6-dQ-kYu"/>
+                        <outlet property="lblRazaoTitle" destination="oyI-LI-390" id="BnQ-hK-cdR"/>
                         <outlet property="lblTipo" destination="ldq-u3-cls" id="rGY-6q-Aqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtC-QZ-bli" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="177"/>
+            <point key="canvasLocation" x="927" y="177"/>
         </scene>
     </scenes>
 </document>

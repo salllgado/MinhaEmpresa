@@ -14,6 +14,11 @@ protocol HomeViewControllerDelegate: class {
 
 class HomeViewController: UIViewController {
     
+    //static labels
+    @IBOutlet weak var lblRazaoTitle: UILabel!
+    @IBOutlet weak var lblCNPJTitle: UILabel!
+    @IBOutlet weak var lblActivityTitle: UILabel!
+    
     @IBOutlet weak var lblRazao: UILabel!
     @IBOutlet weak var lblCNPJ: UILabel!
     @IBOutlet weak var lblTipo: UILabel!
@@ -25,6 +30,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.saveEnterpriseIdentification()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     func setupUI() {
@@ -32,6 +38,11 @@ class HomeViewController: UIViewController {
         lblRazao.text = viewModel.enterprise?.enterpriseName
         lblCNPJ.text = viewModel.enterprise?.cnpj
         lblTipo.text = viewModel.enterprise?.firstActivity.first?.text
+        
+        // setup static labels
+        lblRazaoTitle.text = NSLocalizedString("RAZAO_TITLE", comment: "")
+        lblCNPJTitle.text = NSLocalizedString("CNPJ_TITLE", comment: "")
+        lblActivityTitle.text = NSLocalizedString("ENTERPRISE_TIPE_TITLE", comment: "")
     }
     
     @IBAction func actionMoreDetails(_ sender: Any) {

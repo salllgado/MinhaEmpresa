@@ -35,6 +35,7 @@
 		B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */; };
 		B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */; };
 		B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */; };
+		B5EA89F722E3DD16002B46C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5EA89F922E3DD16002B46C1 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,10 @@
 		B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexColor+String.swift"; sourceTree = "<group>"; };
 		B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
+		B5EA89F522E3DD0C002B46C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B5EA89F622E3DD0C002B46C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		B5EA89F822E3DD16002B46C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5EA89FA22E3DD1A002B46C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C4AB0F3388E7A2B3C615905E /* Pods-MinhaEmpresaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaUITests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaUITests/Pods-MinhaEmpresaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D72D974665747E3D2E2FB542 /* Pods-MinhaEmpresa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresa.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresa/Pods-MinhaEmpresa.debug.xcconfig"; sourceTree = "<group>"; };
 		F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +260,7 @@
 				B526B9EB22E395C20018D9DE /* Storyboards */,
 				B5B2E95B22D1303F00C5039A /* Assets.xcassets */,
 				B5B2E95822D1303D00C5039A /* MinhaEmpresa.xcdatamodeld */,
+				B5EA89F922E3DD16002B46C1 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = B5B2E94322D1303D00C5039A;
 			productRefGroup = B5B2E94D22D1303D00C5039A /* Products */;
@@ -406,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B2E99E22D3AF3F00C5039A /* Info.plist in Resources */,
+				B5EA89F722E3DD16002B46C1 /* Localizable.strings in Resources */,
 				B526B9F922E39CD20018D9DE /* Home.storyboard in Resources */,
 				B5B2E95F22D1303F00C5039A /* LaunchScreen.storyboard in Resources */,
 				B5B2E95C22D1303F00C5039A /* Assets.xcassets in Resources */,
@@ -577,6 +585,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B5B2E95622D1303D00C5039A /* Base */,
+				B5EA89F622E3DD0C002B46C1 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -585,8 +594,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				B5B2E95E22D1303F00C5039A /* Base */,
+				B5EA89F522E3DD0C002B46C1 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B5EA89F922E3DD16002B46C1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5EA89F822E3DD16002B46C1 /* en */,
+				B5EA89FA22E3DD1A002B46C1 /* pt-BR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -598,6 +617,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_SUFIX = .dev;
 				BASE_URL = www.receitaws.com.br;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -663,6 +683,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_SUFIX = "";
 				BASE_URL = www.receitaws.com.br;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
