@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.saveEnterpriseIdentification()
-        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     func setupUI() {
