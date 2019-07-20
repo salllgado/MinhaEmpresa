@@ -10,5 +10,16 @@ import Foundation
 
 class HomeViewModel {
     
-    var enterprise: Enterprise?
+    private var keychain: KeychainWorkable?
+    var enterprise: Enterprise? {
+        didSet {
+            keychain = KeychainWorker()
+        }
+    }
+    
+    // Save cnpj in keychain
+    func saveEnterpriseIdentification() {
+        guard let _enterprise = enterprise else { return }
+        keychain?.saveEnterpriseId(enterprise: _enterprise)
+    }
 }

@@ -33,6 +33,8 @@
 		B5B2E99D22D3AF3F00C5039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */; };
 		B5B2E99E22D3AF3F00C5039A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E99B22D3AF3F00C5039A /* Info.plist */; };
 		B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */; };
+		B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */; };
+		B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B2E99B22D3AF3F00C5039A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexColor+String.swift"; sourceTree = "<group>"; };
+		B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
 		C4AB0F3388E7A2B3C615905E /* Pods-MinhaEmpresaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaUITests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaUITests/Pods-MinhaEmpresaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D72D974665747E3D2E2FB542 /* Pods-MinhaEmpresa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresa.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresa/Pods-MinhaEmpresa.debug.xcconfig"; sourceTree = "<group>"; };
 		F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +182,7 @@
 				B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */,
 				B564BE6E22D3BCC30008D874 /* String+Logger.swift */,
 				B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */,
+				B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */,
 			);
 			path = "Extensions ";
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				B5B2E98822D1338C00C5039A /* Manager.swift */,
 				B5B2E99022D1382800C5039A /* NetworkAPI.swift */,
 				B5B2E99222D1387F00C5039A /* Endpoint.swift */,
+				B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 				B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */,
 				B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */,
 				B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */,
+				B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */,
+				B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */,
 				B526B9F322E399E80018D9DE /* HomeViewController.swift in Sources */,
 				B5B2E99122D1382800C5039A /* NetworkAPI.swift in Sources */,
 				B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */,

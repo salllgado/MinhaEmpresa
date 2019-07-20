@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CSUtils
 
 class HomeCoordinator: Coordinator {
     
@@ -29,6 +30,7 @@ class HomeCoordinator: Coordinator {
         )
         
         if let viewController = navigationController.viewControllers.first as? HomeViewController {
+            viewController.delegate = self
             viewController.viewModel = viewModel
             self.homeViewController = viewController
         }
@@ -45,8 +47,14 @@ extension HomeCoordinator {
         nav.navigationBar.prefersLargeTitles = true
         nav.navigationBar.titleTextAttributes = attr
         nav.navigationBar.largeTitleTextAttributes = attr
-        nav.navigationBar.backgroundColor = .blue
-        
+        nav.navigationBar.barTintColor = "#040E1D".hexColor()
         return nav
+    }
+}
+
+extension HomeCoordinator: HomeViewControllerDelegate {
+    
+    func navigate(param: Enterprise) {
+        // ...
     }
 }

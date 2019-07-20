@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: class {
+    func navigate(param: Enterprise)
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var lblRazao: UILabel!
@@ -15,16 +19,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lblTipo: UILabel!
     
     var viewModel: HomeViewModel!
+    var delegate: HomeViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.saveEnterpriseIdentification()
     }
     
     func setupUI() {
         self.title = viewModel.enterprise?.nickname
         lblRazao.text = viewModel.enterprise?.enterpriseName
         lblCNPJ.text = viewModel.enterprise?.cnpj
-        lblTipo.text = viewModel.enterprise?.type
+        lblTipo.text = viewModel.enterprise?.firstActivity.first?.text
+    }
+    
+    @IBAction func actionMoreDetails(_ sender: Any) {
+        guard let _enterprise = viewModel.enterprise else { return }
+        delegate?.navigate(param: _enterprise)
     }
 }

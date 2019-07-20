@@ -18,12 +18,23 @@ class MainViewController: UIViewController {
     
     var delegate: MainViewControllerDelegate?
     var viewModel: MainViewModel!
+    let loadingView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        
         cnpjTf.formatting = .CNPJ
+        
+        setupLoadingView()
+        viewModel.getEnterpriseId()
+    }
+    
+    private func setupLoadingView() {
+        loadingView.color = .black
+        loadingView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        loadingView.center = self.view.center
+        self.view.addSubview(loadingView)
+        self.view.bringSubviewToFront(loadingView)
     }
     
     @IBAction func sendData(_ sender: Any) {
@@ -37,11 +48,16 @@ extension MainViewController: MainViewModelDelegate {
         delegate?.navigate(with: send)
     }
     
+    func setEnterpriseId(cnpj: String) {
+        cnpjTf.text = cnpj
+        sendData(UIButton())
+    }
+    
     func loadingStart() {
-        // ...
+        loadingView.startAnimating()
     }
     
     func loadingEnd() {
-        // ...
+        loadingView.stopAnimating()
     }
 }

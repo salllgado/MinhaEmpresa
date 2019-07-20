@@ -17,10 +17,8 @@ struct Enterprise {
     var fondationDate: String = ""
     var enterpriseName: String = ""
     var nickname: String = ""
-    //    let fistActivity: [String] = []
-    //    let cnaeCode:
-//    var cnaeDescription: String = ""
-//    var secondaryActivity: String = ""
+    var firstActivity: [Detail] = []
+    var secondaryActivity: [Detail] = []
     var enterprisePlace: String = ""
     var number: String = ""
     var complement: String = ""
@@ -28,6 +26,7 @@ struct Enterprise {
     var neighborhood: String = ""
     var city: String = ""
     var uf: String = ""
+    var socios: [Socios] = []
     
     enum CodingKeys: String, CodingKey {
         case status
@@ -38,9 +37,8 @@ struct Enterprise {
         case enterpriseName = "nome"
         case nickname = "fantasia"
         case fistActivity = "atividade_principal"
-//        case cnaeCode = "atividade_principal.code"
-//        case caneDescription = "atividade_principal.text"
-//        case secondaryActivity = "atividades_secundarias"
+        case socios = "qsa"
+        case secondaryActivity = "atividades_secundarias"
         case enterprisePlace = "logradouro"
         case number = "numero"
         case complement = "complemento"
@@ -61,10 +59,9 @@ extension Enterprise: Decodable {
         fondationDate = try values.decode(String.self, forKey: .fondationDate)
         enterpriseName = try values.decode(String.self, forKey: .enterpriseName)
         nickname = try values.decode(String.self, forKey: .nickname)
-//        fistActivity = try values.decode(String.self, forKey: .fistActivity)
-//        cnaeCode = try values.decode(String.self, forKey: .cnaeCode)
-//        cnaeDescription = try values.decode(String.self, forKey: .cnaeDescription)
-//        secondaryActivity = try values.decode(String.self, forKey: .secondaryActivity)
+        firstActivity = try values.decode([Detail].self, forKey: .fistActivity)
+        socios = try values.decode([Socios].self, forKey: .socios)
+        secondaryActivity = try values.decode([Detail].self, forKey: .secondaryActivity)
         enterprisePlace = try values.decode(String.self, forKey: .enterprisePlace)
         number = try values.decode(String.self, forKey: .number)
         complement = try values.decode(String.self, forKey: .complement)
@@ -72,5 +69,20 @@ extension Enterprise: Decodable {
         neighborhood = try values.decode(String.self, forKey: .neighborhood)
         city = try values.decode(String.self, forKey: .city)
         uf = try values.decode(String.self, forKey: .uf)
+    }
+}
+
+struct Detail: Decodable {
+    var text: String = ""
+    var code: String = ""
+}
+
+struct Socios: Decodable {
+    var tipo: String
+    var nome: String
+    
+    enum CodingKeys: String, CodingKey {
+        case tipo = "qual"
+        case nome
     }
 }

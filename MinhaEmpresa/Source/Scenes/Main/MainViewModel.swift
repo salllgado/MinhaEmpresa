@@ -10,6 +10,7 @@ import Foundation
 
 protocol MainViewModelDelegate: class {
     func serverResponds(send: Enterprise)
+    func setEnterpriseId(cnpj: String)
     func loadingStart()
     func loadingEnd()
 }
@@ -18,9 +19,11 @@ class MainViewModel {
     
     weak var delegate: MainViewModelDelegate?
     private var network: NetworkAPIProtocol?
+    private var keychain: KeychainWorkable?
     
     init() {
         network = NetworkAPI()
+        keychain = KeychainWorker()
     }
     
     func loadData(cnpj: String) {
@@ -33,5 +36,9 @@ class MainViewModel {
                 self.delegate?.serverResponds(send: enterprise)
             }
         })
+    }
+    
+    func getEnterpriseId() {
+        delegate?.setEnterpriseId(cnpj: keychain?.getEnterpriseId() ?? "")
     }
 }
