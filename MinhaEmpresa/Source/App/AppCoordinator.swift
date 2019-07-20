@@ -25,8 +25,6 @@ class AppCoordinator {
     init(window: UIWindow) {
         self.window = window
         rootViewController = UINavigationController()
-        rootViewController.navigationBar.prefersLargeTitles = true
-        
         mainCoordinator = MainCoordinator(presenter: rootViewController)
     }
     

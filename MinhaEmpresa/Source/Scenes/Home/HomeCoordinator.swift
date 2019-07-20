@@ -24,13 +24,30 @@ class HomeCoordinator: Coordinator {
     
     func start() {
         let storyboard = UIStoryboard(name: "Home", bundle: .main)
-        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let navigationController = setupNavigationBar(
+            nav: storyboard.instantiateInitialViewController() as! UINavigationController
+        )
         
         if let viewController = navigationController.viewControllers.first as? HomeViewController {
             viewController.viewModel = viewModel
+            viewController.title = "SomeTitle"
             self.homeViewController = viewController
         }
         
         presenter.present(navigationController, animated: true, completion: nil)
+    }
+}
+
+extension HomeCoordinator {
+    
+    private func setupNavigationBar(nav: UINavigationController) -> UINavigationController {
+        let attr: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.white]
+        
+        nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.titleTextAttributes = attr
+        nav.navigationBar.largeTitleTextAttributes = attr
+        nav.navigationBar.backgroundColor = .blue
+        
+        return nav
     }
 }
