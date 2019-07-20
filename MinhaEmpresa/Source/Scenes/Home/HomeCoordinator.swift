@@ -30,7 +30,6 @@ class HomeCoordinator: Coordinator {
         
         if let viewController = navigationController.viewControllers.first as? HomeViewController {
             viewController.viewModel = viewModel
-            viewController.title = "SomeTitle"
             self.homeViewController = viewController
         }
         
