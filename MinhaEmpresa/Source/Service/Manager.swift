@@ -40,7 +40,7 @@ class Manager {
 
             Alamofire.request(urlComponents, method: httpMethod, parameters: bodyParams, encoding: JSONEncoding.default, headers: headerParams).responseData { (responseData) in
                 if let data = responseData.data {
-                    Logger().log(data.prettyPrintedJSONString)
+                    Logger.log(data.prettyPrintedJSONString)
                     self.parseObj(responseObj: response, data: data, completionHandler: completionHandler)
                 }
                 else {

@@ -42,7 +42,7 @@ extension Encodable {
                 return dictionary
             }
         } catch {
-            Logger().log(error.localizedDescription)
+            Logger.log(error.localizedDescription)
         }
         return nil
     }

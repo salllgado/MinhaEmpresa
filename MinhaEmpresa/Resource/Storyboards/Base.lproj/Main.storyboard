@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.000.000/000-00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-9p-X8x" customClass="CustomFormatter" customModule="MinhaEmpresa" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="582" width="311" height="44"/>
+                                        <rect key="frame" x="32" y="598" width="311" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Khr-wB-YO1"/>
                                         </constraints>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eNI-Ez-RLE" secondAttribute="trailing" constant="32" id="Xof-KF-yj8"/>
                                     <constraint firstItem="ThU-Km-7ql" firstAttribute="width" secondItem="DKh-9p-X8x" secondAttribute="width" id="adC-0M-FUX"/>
                                     <constraint firstItem="DKh-9p-X8x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eNI-Ez-RLE" secondAttribute="bottom" constant="16" id="bAh-7l-hRz"/>
-                                    <constraint firstItem="ThU-Km-7ql" firstAttribute="top" secondItem="DKh-9p-X8x" secondAttribute="bottom" constant="32" id="ehO-cZ-CZh"/>
+                                    <constraint firstItem="ThU-Km-7ql" firstAttribute="top" secondItem="DKh-9p-X8x" secondAttribute="bottom" constant="16" id="ehO-cZ-CZh"/>
                                     <constraint firstItem="ThU-Km-7ql" firstAttribute="centerX" secondItem="V3Q-fQ-kde" secondAttribute="centerX" id="g88-oa-QgY"/>
                                     <constraint firstItem="DKh-9p-X8x" firstAttribute="leading" secondItem="V3Q-fQ-kde" secondAttribute="leading" constant="32" id="l5o-cq-Bim"/>
                                     <constraint firstItem="eNI-Ez-RLE" firstAttribute="top" secondItem="OSB-ZU-JRn" secondAttribute="bottom" constant="32" id="wYq-bN-pFI"/>

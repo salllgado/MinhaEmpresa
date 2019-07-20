@@ -8,16 +8,19 @@
 
 import UIKit
 
+protocol MainViewControllerDelegate: class {
+    func navigate(with param: Enterprise)
+}
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var cnpjTf: CustomFormatter!
     
-    private var viewModel: MainViewModel!
+    var delegate: MainViewControllerDelegate?
+    var viewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel = MainViewModel()
         viewModel.delegate = self
         
         cnpjTf.formatting = .CNPJ
@@ -31,7 +34,7 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewModelDelegate {
     
     func serverResponds(send: Enterprise) {
-        // navigate
+        delegate?.navigate(with: send)
     }
     
     func loadingStart() {
