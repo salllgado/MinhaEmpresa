@@ -33,6 +33,8 @@
 		B5B2E99D22D3AF3F00C5039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */; };
 		B5B2E99E22D3AF3F00C5039A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E99B22D3AF3F00C5039A /* Info.plist */; };
 		B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */; };
+		B5B2F22322E8739000C48305 /* Feature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B2F22222E8739000C48305 /* Feature.framework */; };
+		B5B2F22422E8739000C48305 /* Feature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5B2F22222E8739000C48305 /* Feature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */; };
 		B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */; };
 		B5EA89F722E3DD16002B46C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5EA89F922E3DD16002B46C1 /* Localizable.strings */; };
@@ -54,6 +56,20 @@
 			remoteInfo = MinhaEmpresa;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5B2F22522E8739100C48305 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5B2F22422E8739000C48305 /* Feature.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		056941DD9922C806CC89BD9E /* Pods-MinhaEmpresaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +105,8 @@
 		B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B2E99B22D3AF3F00C5039A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B5B2F22222E8739000C48305 /* Feature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E03A3822E86D1100EC85A7 /* Feature.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Feature.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MinhaEmpresa-geehqurbifjlwrhhlowsdggtiuey/Build/Products/Debug-iphoneos/Feature.framework"; sourceTree = "<group>"; };
 		B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexColor+String.swift"; sourceTree = "<group>"; };
 		B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
 		B5EA89F522E3DD0C002B46C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -107,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */,
+				B5B2F22322E8739000C48305 /* Feature.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,9 +214,11 @@
 		B5B2E94322D1303D00C5039A = {
 			isa = PBXGroup;
 			children = (
+				B5B2F22222E8739000C48305 /* Feature.framework */,
 				B5B2E94E22D1303D00C5039A /* MinhaEmpresa */,
 				B5B2E96822D1303F00C5039A /* MinhaEmpresaTests */,
 				B5B2E97322D1303F00C5039A /* MinhaEmpresaUITests */,
+				B5E03A3722E86D0600EC85A7 /* Frameworks */,
 				B5B2E94D22D1303D00C5039A /* Products */,
 				122B6E5DB810F7153460D804 /* Pods */,
 				970B3FF7D8D510306FEF7F24 /* Frameworks */,
@@ -303,6 +324,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		B5E03A3722E86D0600EC85A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5E03A3822E86D1100EC85A7 /* Feature.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +344,7 @@
 				B5B2E94922D1303D00C5039A /* Frameworks */,
 				B5B2E94A22D1303D00C5039A /* Resources */,
 				1D336E2BE945BA38835E9B97 /* [CP] Embed Pods Frameworks */,
+				B5B2F22522E8739100C48305 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
