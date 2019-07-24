@@ -14,9 +14,8 @@ public class Feature {
         // ...
     }
     
-    public class func registerNote(presenter: UINavigationController) -> CoordinatorProtocol {
-        let registerNoteCoordinator = ResgisterNoteCoordinator()
-        registerNoteCoordinator.presenter = presenter
+    public class func registerNote(_ param: ResgistratioNoteParams) -> CoordinatorProtocol {
+        let registerNoteCoordinator = ResgisterNoteCoordinator(presenter: param.presenter)
         return registerNoteCoordinator
     }
 }

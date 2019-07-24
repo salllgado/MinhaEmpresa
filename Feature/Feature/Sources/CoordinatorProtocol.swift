@@ -11,3 +11,8 @@ import Foundation
 public protocol CoordinatorProtocol {
     func start()
 }
+
+public protocol ResgistratioNoteParams {
+    
+    var presenter: UINavigationController { get set } 
+}

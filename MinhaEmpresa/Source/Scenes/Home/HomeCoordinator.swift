@@ -8,10 +8,11 @@
 
 import UIKit
 import CSUtils
+import Feature
 
 class HomeCoordinator: Coordinator {
     
-    private let presenter: UINavigationController
+    private var presenter: UINavigationController
     private var homeViewController: HomeViewController?
     private var viewModel: HomeViewModel!
     
@@ -35,7 +36,10 @@ class HomeCoordinator: Coordinator {
             self.homeViewController = viewController
         }
         
-        presenter.present(navigationController, animated: true, completion: nil)
+        presenter.present(navigationController, animated: true, completion: {
+            guard let navigationController = self.homeViewController?.navigationController else { return }
+            self.presenter = navigationController
+        })
     }
 }
 
@@ -55,6 +59,20 @@ extension HomeCoordinator {
 extension HomeCoordinator: HomeViewControllerDelegate {
     
     func navigate(param: Enterprise) {
-        // ...
+        navigateToFeature()
+    }
+    
+    func navigateToFeature() {
+        let param = RegistrationNoteParam(presenter: self.presenter)
+        let registerNoteCoordinator = Feature.registerNote(param)
+        registerNoteCoordinator.start()
+    }
+}
+
+struct RegistrationNoteParam: ResgistratioNoteParams {
+    var presenter: UINavigationController
+    
+    init(presenter: UINavigationController) {
+        self.presenter = presenter
     }
 }

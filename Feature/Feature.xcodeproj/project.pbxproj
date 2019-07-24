@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */; };
+		B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */; };
+		B5B2F22C22E8766E00C48305 /* RegisterNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */; };
 		B5E03A2322E86CAB00EC85A7 /* Feature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E03A1922E86CAB00EC85A7 /* Feature.framework */; };
 		B5E03A2822E86CAB00EC85A7 /* FeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E03A2722E86CAB00EC85A7 /* FeatureTests.swift */; };
 		B5E03A2A22E86CAB00EC85A7 /* Feature.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E03A1C22E86CAB00EC85A7 /* Feature.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewController.swift; sourceTree = "<group>"; };
+		B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewModel.swift; sourceTree = "<group>"; };
+		B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterNote.storyboard; sourceTree = "<group>"; };
 		B5E03A1922E86CAB00EC85A7 /* Feature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E03A1C22E86CAB00EC85A7 /* Feature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feature.h; sourceTree = "<group>"; };
 		B5E03A1D22E86CAB00EC85A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 		B5E03A3B22E86D4300EC85A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				B5E03A4622E870EF00EC85A7 /* ResgisterNoteCoordinator.swift */,
+				B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */,
+				B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */,
 			);
 			path = RegisterNote;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B2F22C22E8766E00C48305 /* RegisterNote.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +258,8 @@
 				B5E03A4222E86E3200EC85A7 /* CoordinatorProtocol.swift in Sources */,
 				B5E03A3E22E86D6000EC85A7 /* Feature.swift in Sources */,
 				B5E03A4722E870EF00EC85A7 /* ResgisterNoteCoordinator.swift in Sources */,
+				B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */,
+				B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Feature
 
 class MainCoordinator: Coordinator {
     
@@ -41,10 +40,5 @@ extension MainCoordinator: MainViewControllerDelegate {
     func navigate(with param: Enterprise) {
         homeCoordinator = HomeCoordinator(presenter: presenter, param: param)
         homeCoordinator?.start()
-    }
-    
-    func navigateToFeature() {
-        let registerNoteCoordinator = Feature.registerNote(presenter: self.presenter)
-        registerNoteCoordinator.start()
     }
 }
