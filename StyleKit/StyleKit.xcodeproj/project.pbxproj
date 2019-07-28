@@ -48,11 +48,35 @@
 		B565388022ED41F200E5F65B /* StyleKit */ = {
 			isa = PBXGroup;
 			children = (
+				B565388F22ED43BA00E5F65B /* Resources */,
+				B565388E22ED43B300E5F65B /* Sources */,
 				B565388122ED41F200E5F65B /* StyleKit.h */,
 				B565388222ED41F200E5F65B /* Info.plist */,
-				B565388922ED41FE00E5F65B /* RoundedView.swift */,
 			);
 			path = StyleKit;
+			sourceTree = "<group>";
+		};
+		B565388E22ED43B300E5F65B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B565389022ED43E500E5F65B /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B565388F22ED43BA00E5F65B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B565389022ED43E500E5F65B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B565388922ED41FE00E5F65B /* RoundedView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
