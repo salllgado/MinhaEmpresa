@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:StyleKit/StyleKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MinhaEmpresa.xcodeproj">
    </FileRef>
    <FileRef
