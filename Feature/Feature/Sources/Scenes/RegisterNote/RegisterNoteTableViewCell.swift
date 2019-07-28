@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationNoteTableViewCell: UITableViewCell {
+class RegisterNoteTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

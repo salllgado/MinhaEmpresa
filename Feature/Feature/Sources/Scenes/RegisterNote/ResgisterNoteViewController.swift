@@ -23,10 +23,17 @@ class ResgisterNoteViewController: UIViewController {
     private func setupUI() {
         title = "Notas"
         
-        registrationNoteView.delegate = self
+        let nib = UINib(nibName: "RegisterNoteTableViewCell", bundle: Bundle(for: RegisterNoteTableViewCell.self))
+        registrationNoteView.tableView.register(nib, forCellReuseIdentifier: "TableViewCellIdentifier")
+        
+        let headerView = RegisterNoteHeaderView()
+        headerView.delegate = self
+        headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 76)
+        registrationNoteView.tableView.tableHeaderView = headerView
+        
         registrationNoteView.tableView.delegate = self
         registrationNoteView.tableView.dataSource = self
-        registrationNoteView.tableView.rowHeight = 80.0
+        registrationNoteView.tableView.rowHeight = 98.0
     }
 }
 
@@ -41,11 +48,12 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! RegisterNoteTableViewCell
+        return cell
     }
 }
 
-extension ResgisterNoteViewController: ResgisterNoteViewDelegate {
+extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
     
     func actionNewNote() {
         print("Button tapped")

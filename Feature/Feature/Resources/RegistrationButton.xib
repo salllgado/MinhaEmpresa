@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNoteHeaderView" customModule="Feature" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="YfX-Mh-vhW" id="ABz-3q-SyH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YfX-Mh-vhW" userLabel="Header View">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLM-nR-tKi" customClass="AppButton" customModule="StyleKit">
+                    <rect key="frame" x="55" y="16" width="288" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="YpG-m2-BOn"/>
+                        <constraint firstAttribute="width" constant="288" id="ljy-21-sW2"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="actionButton:" destination="-1" eventType="touchUpInside" id="KtA-zV-lka"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TLM-nR-tKi" secondAttribute="bottom" constant="16" id="XAG-3Z-Us2"/>
+                <constraint firstItem="TLM-nR-tKi" firstAttribute="centerX" secondItem="YfX-Mh-vhW" secondAttribute="centerX" id="fHF-8J-aFO"/>
+                <constraint firstItem="TLM-nR-tKi" firstAttribute="top" secondItem="YfX-Mh-vhW" secondAttribute="top" constant="16" id="guU-J8-z2P"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="U8c-AK-lZe"/>
+            <point key="canvasLocation" x="61.875" y="174.29577464788733"/>
+        </view>
+    </objects>
+</document>
