@@ -9,6 +9,8 @@ target 'MinhaEmpresa' do
     pod 'Alamofire'
     pod 'CSUtils', :git => 'https://github.com/salllgado/CSUtils.git', :branch => 'develop'
     pod 'KeychainSwift', '~> 13.0'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 
   target 'MinhaEmpresaTests' do
     inherit! :search_paths

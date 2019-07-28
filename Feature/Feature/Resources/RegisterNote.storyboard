@@ -15,12 +15,47 @@
             <objects>
                 <viewController storyboardIdentifier="ResgisterNoteViewController" id="WjP-Fs-NLh" customClass="ResgisterNoteViewController" customModule="Feature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYg-fw-uoh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqu-BL-hkm" customClass="RegistrationNoteView" customModule="Feature" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-Ir-S2m">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="WjP-Fs-NLh" id="HcW-9k-kAy"/>
+                                            <outlet property="delegate" destination="WjP-Fs-NLh" id="Ahh-mt-s6u"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3gm-Ir-S2m" secondAttribute="trailing" id="71Y-8k-rku"/>
+                                    <constraint firstItem="3gm-Ir-S2m" firstAttribute="leading" secondItem="Wqu-BL-hkm" secondAttribute="leading" id="X6Q-1J-TsF"/>
+                                    <constraint firstAttribute="bottom" secondItem="3gm-Ir-S2m" secondAttribute="bottom" id="fYY-MU-Ue8"/>
+                                    <constraint firstItem="3gm-Ir-S2m" firstAttribute="top" secondItem="Wqu-BL-hkm" secondAttribute="top" id="zon-mh-cPB"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="6M0-h4-8Qa"/>
+                                <connections>
+                                    <outlet property="tableView" destination="3gm-Ir-S2m" id="dum-N0-wg6"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.29449397329999999" green="0.65726363659999998" blue="0.76080340150000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="kT5-3k-3Tq"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wqu-BL-hkm" secondAttribute="trailing" id="LVg-wc-srz"/>
+                            <constraint firstItem="Wqu-BL-hkm" firstAttribute="leading" secondItem="eYg-fw-uoh" secondAttribute="leading" id="QLG-YY-XKS"/>
+                            <constraint firstItem="Wqu-BL-hkm" firstAttribute="top" secondItem="eYg-fw-uoh" secondAttribute="top" id="g2K-qL-xXD"/>
+                            <constraint firstAttribute="bottom" secondItem="Wqu-BL-hkm" secondAttribute="bottom" id="oOB-ML-fj2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0HW-SE-LPN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="registrationNoteView" destination="Wqu-BL-hkm" id="Tf2-2v-gMR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daf-pY-kJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +69,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XCa-rg-lJR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29449397329999999" green="0.65726363659999998" blue="0.76080340150000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
