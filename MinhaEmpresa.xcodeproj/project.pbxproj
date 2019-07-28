@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CDA00D71A2151C424C4D5CE /* Pods_MinhaEmpresaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B889B739F104E7AF734092E /* Pods_MinhaEmpresaTests.framework */; };
 		8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD23392E967620DBC116232C /* Pods_MinhaEmpresa.framework */; };
+		9DE5091A8978082B36D39EB6 /* Pods_MinhaEmpresaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995F825767D2189E5BA1395C /* Pods_MinhaEmpresaUITests.framework */; };
 		B3125529D05CBAA701155F74 /* Pods_MinhaEmpresaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */; };
 		B526B9EE22E395E30018D9DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B9ED22E395E30018D9DE /* AppCoordinator.swift */; };
 		B526B9F022E396B10018D9DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B9EF22E396B10018D9DE /* MainCoordinator.swift */; };
@@ -36,6 +37,8 @@
 		B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */; };
 		B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */; };
 		B5EA89F722E3DD16002B46C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5EA89F922E3DD16002B46C1 /* Localizable.strings */; };
+		BAB9CE3547FDB8A92CDB7D8C /* Pods_MinhaEmpresaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CAE9F812F9084EBE481838 /* Pods_MinhaEmpresaTests.framework */; };
+		BBCEFED7D5B9FFB54AF5DDE7 /* Pods_MinhaEmpresa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7106C86EC5584B4C96EC41 /* Pods_MinhaEmpresa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +73,12 @@
 
 /* Begin PBXFileReference section */
 		056941DD9922C806CC89BD9E /* Pods-MinhaEmpresaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E7106C86EC5584B4C96EC41 /* Pods_MinhaEmpresa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CAE9F812F9084EBE481838 /* Pods_MinhaEmpresaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332910A56171E62A100A2662 /* Pods-MinhaEmpresa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresa.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresa/Pods-MinhaEmpresa.release.xcconfig"; sourceTree = "<group>"; };
 		6B889B739F104E7AF734092E /* Pods_MinhaEmpresaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780443F57A0ADA07C4F56F03 /* Pods-MinhaEmpresaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaUITests/Pods-MinhaEmpresaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		995F825767D2189E5BA1395C /* Pods_MinhaEmpresaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C8B33D4F88408D9C787725 /* Pods-MinhaEmpresaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.release.xcconfig"; sourceTree = "<group>"; };
 		B526B9ED22E395E30018D9DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B526B9EF22E396B10018D9DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */,
+				BBCEFED7D5B9FFB54AF5DDE7 /* Pods_MinhaEmpresa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CDA00D71A2151C424C4D5CE /* Pods_MinhaEmpresaTests.framework in Frameworks */,
+				BAB9CE3547FDB8A92CDB7D8C /* Pods_MinhaEmpresaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3125529D05CBAA701155F74 /* Pods_MinhaEmpresaUITests.framework in Frameworks */,
+				9DE5091A8978082B36D39EB6 /* Pods_MinhaEmpresaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,9 @@
 			isa = PBXGroup;
 			children = (
 				B5E03A3822E86D1100EC85A7 /* Feature.framework */,
+				1E7106C86EC5584B4C96EC41 /* Pods_MinhaEmpresa.framework */,
+				31CAE9F812F9084EBE481838 /* Pods_MinhaEmpresaTests.framework */,
+				995F825767D2189E5BA1395C /* Pods_MinhaEmpresaUITests.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";

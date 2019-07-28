@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B565386F22ED418B00E5F65B /* RegistrationNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B565386E22ED418B00E5F65B /* RegistrationNoteTableViewCell.xib */; };
+		B565387222ED419600E5F65B /* RegistrationNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565387022ED419600E5F65B /* RegistrationNoteView.swift */; };
+		B565387322ED419600E5F65B /* RegistrationNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565387122ED419600E5F65B /* RegistrationNoteTableViewCell.swift */; };
 		B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */; };
 		B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */; };
 		B5B2F22C22E8766E00C48305 /* RegisterNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B565386E22ED418B00E5F65B /* RegistrationNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationNoteTableViewCell.xib; sourceTree = "<group>"; };
+		B565387022ED419600E5F65B /* RegistrationNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNoteView.swift; sourceTree = "<group>"; };
+		B565387122ED419600E5F65B /* RegistrationNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNoteTableViewCell.swift; sourceTree = "<group>"; };
 		B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewController.swift; sourceTree = "<group>"; };
 		B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewModel.swift; sourceTree = "<group>"; };
 		B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterNote.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		B5E03A3B22E86D4300EC85A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B565386E22ED418B00E5F65B /* RegistrationNoteTableViewCell.xib */,
 				B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */,
 			);
 			path = Resources;
@@ -137,6 +144,8 @@
 		B5E03A4522E870E000EC85A7 /* RegisterNote */ = {
 			isa = PBXGroup;
 			children = (
+				B565387122ED419600E5F65B /* RegistrationNoteTableViewCell.swift */,
+				B565387022ED419600E5F65B /* RegistrationNoteView.swift */,
 				B5E03A4622E870EF00EC85A7 /* ResgisterNoteCoordinator.swift */,
 				B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */,
 				B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */,
@@ -237,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B565386F22ED418B00E5F65B /* RegistrationNoteTableViewCell.xib in Resources */,
 				B5B2F22C22E8766E00C48305 /* RegisterNote.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +268,10 @@
 				B5E03A4222E86E3200EC85A7 /* CoordinatorProtocol.swift in Sources */,
 				B5E03A3E22E86D6000EC85A7 /* Feature.swift in Sources */,
 				B5E03A4722E870EF00EC85A7 /* ResgisterNoteCoordinator.swift in Sources */,
+				B565387222ED419600E5F65B /* RegistrationNoteView.swift in Sources */,
 				B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */,
 				B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */,
+				B565387322ED419600E5F65B /* RegistrationNoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
