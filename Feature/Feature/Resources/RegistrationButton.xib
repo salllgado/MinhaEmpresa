@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNoteHeaderView" customModule="Feature" customModuleProvider="target">
             <connections>
+                <outlet property="btnCustom" destination="TLM-nR-tKi" id="kj0-0Z-8LO"/>
                 <outlet property="headerView" destination="YfX-Mh-vhW" id="ABz-3q-SyH"/>
             </connections>
         </placeholder>

@@ -14,7 +14,9 @@ protocol ResgisterNoteHeaderViewDelegate: class {
 
 class RegisterNoteHeaderView: UIView {
     
-    @IBOutlet var headerView: UIView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var btnCustom: UIButton!
+    
     var delegate: ResgisterNoteHeaderViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
