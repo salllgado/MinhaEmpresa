@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B565388322ED41F200E5F65B /* StyleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B565388122ED41F200E5F65B /* StyleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B565388A22ED41FE00E5F65B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565388922ED41FE00E5F65B /* RoundedView.swift */; };
+		B565389222EDDFBA00E5F65B /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565389122EDDFBA00E5F65B /* AppButton.swift */; };
+		B565389522EDE32C00E5F65B /* Hex+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565389422EDE32C00E5F65B /* Hex+String.swift */; };
+		B565389822EDE4E000E5F65B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565389722EDE4E000E5F65B /* AppColors.swift */; };
+		B565389A22EDE72200E5F65B /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565389922EDE72200E5F65B /* AppLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,10 @@
 		B565388122ED41F200E5F65B /* StyleKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
 		B565388222ED41F200E5F65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B565388922ED41FE00E5F65B /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		B565389122EDDFBA00E5F65B /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		B565389422EDE32C00E5F65B /* Hex+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hex+String.swift"; sourceTree = "<group>"; };
+		B565389722EDE4E000E5F65B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		B565389922EDE72200E5F65B /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,8 @@
 		B565388E22ED43B300E5F65B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B565389622EDE4D300E5F65B /* Pallet */,
+				B565389322EDE31800E5F65B /* Extensions */,
 				B565389022ED43E500E5F65B /* View */,
 			);
 			path = Sources;
@@ -75,8 +85,26 @@
 			isa = PBXGroup;
 			children = (
 				B565388922ED41FE00E5F65B /* RoundedView.swift */,
+				B565389122EDDFBA00E5F65B /* AppButton.swift */,
+				B565389922EDE72200E5F65B /* AppLabel.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B565389322EDE31800E5F65B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B565389422EDE32C00E5F65B /* Hex+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B565389622EDE4D300E5F65B /* Pallet */ = {
+			isa = PBXGroup;
+			children = (
+				B565389722EDE4E000E5F65B /* AppColors.swift */,
+			);
+			path = Pallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B565389A22EDE72200E5F65B /* AppLabel.swift in Sources */,
+				B565389522EDE32C00E5F65B /* Hex+String.swift in Sources */,
+				B565389822EDE4E000E5F65B /* AppColors.swift in Sources */,
+				B565389222EDDFBA00E5F65B /* AppButton.swift in Sources */,
 				B565388A22ED41FE00E5F65B /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

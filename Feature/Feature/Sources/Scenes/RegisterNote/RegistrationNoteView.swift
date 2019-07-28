@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol ResgisterNoteViewDelegate: class {
+    func actionNewNote()
+}
+
 class RegistrationNoteView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegate: ResgisterNoteViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    @IBAction func actionNewNote(_ sender: Any) {
+        delegate?.actionNewNote()
+    }
 }

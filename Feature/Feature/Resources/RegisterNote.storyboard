@@ -24,6 +24,35 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-Ir-S2m">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="04f-63-Eic" userLabel="Header View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcA-SK-psb" customClass="AppButton" customModule="StyleKit">
+                                                    <rect key="frame" x="63" y="16" width="288" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="H2g-nA-gzX"/>
+                                                        <constraint firstAttribute="width" constant="288" id="Ui7-3u-Qfh"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionNewNote:" destination="Wqu-BL-hkm" eventType="touchUpInside" id="0O5-tG-Rxz"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="NcA-SK-psb" secondAttribute="bottom" constant="16" id="2ST-DL-Sr8"/>
+                                                <constraint firstItem="NcA-SK-psb" firstAttribute="centerX" secondItem="04f-63-Eic" secondAttribute="centerX" id="Ojv-CG-tPo"/>
+                                                <constraint firstItem="NcA-SK-psb" firstAttribute="top" secondItem="04f-63-Eic" secondAttribute="top" constant="16" id="gTA-E5-Y8W"/>
+                                                <constraint firstItem="NcA-SK-psb" firstAttribute="centerY" secondItem="04f-63-Eic" secondAttribute="centerY" id="oI2-Fe-LcL"/>
+                                            </constraints>
+                                        </view>
                                         <connections>
                                             <outlet property="dataSource" destination="WjP-Fs-NLh" id="HcW-9k-kAy"/>
                                             <outlet property="delegate" destination="WjP-Fs-NLh" id="Ahh-mt-s6u"/>
@@ -50,6 +79,7 @@
                             <constraint firstItem="Wqu-BL-hkm" firstAttribute="top" secondItem="eYg-fw-uoh" secondAttribute="top" id="g2K-qL-xXD"/>
                             <constraint firstAttribute="bottom" secondItem="Wqu-BL-hkm" secondAttribute="bottom" id="oOB-ML-fj2"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="rhq-qB-kzs"/>
                     </view>
                     <navigationItem key="navigationItem" id="0HW-SE-LPN"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

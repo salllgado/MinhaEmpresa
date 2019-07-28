@@ -23,14 +23,10 @@ class ResgisterNoteViewController: UIViewController {
     private func setupUI() {
         title = "Notas"
         
+        registrationNoteView.delegate = self
         registrationNoteView.tableView.delegate = self
         registrationNoteView.tableView.dataSource = self
         registrationNoteView.tableView.rowHeight = 80.0
-        
-        let headerView = UIView()
-        headerView.backgroundColor = .lightGray
-        headerView.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: 200)
-        registrationNoteView.tableView.tableHeaderView = headerView
     }
 }
 
@@ -46,5 +42,12 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+
+extension ResgisterNoteViewController: ResgisterNoteViewDelegate {
+    
+    func actionNewNote() {
+        print("Button tapped")
     }
 }

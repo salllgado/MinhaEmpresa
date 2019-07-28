@@ -37,6 +37,7 @@
 		B565387022ED419600E5F65B /* RegistrationNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNoteView.swift; sourceTree = "<group>"; };
 		B565387122ED419600E5F65B /* RegistrationNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNoteTableViewCell.swift; sourceTree = "<group>"; };
 		B565388C22ED427E00E5F65B /* StyleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StyleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B565389B22EDEC5900E5F65B /* Pods_MinhaEmpresa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MinhaEmpresa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewController.swift; sourceTree = "<group>"; };
 		B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteViewModel.swift; sourceTree = "<group>"; };
 		B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterNote.storyboard; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		B565388B22ED427E00E5F65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B565389B22EDEC5900E5F65B /* Pods_MinhaEmpresa.framework */,
 				B565388C22ED427E00E5F65B /* StyleKit.framework */,
 			);
 			name = Frameworks;
