@@ -6,7 +6,6 @@ target 'MinhaEmpresa' do
   use_frameworks!
 
   # Pods for MinhaEmpresa
-    pod 'Alamofire'
     pod 'CSUtils', :git => 'https://github.com/salllgado/CSUtils.git', :branch => 'develop'
     pod 'KeychainSwift', '~> 13.0'
 

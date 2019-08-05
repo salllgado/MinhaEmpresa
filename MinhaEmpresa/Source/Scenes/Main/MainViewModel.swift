@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NetworkKit
 
 protocol MainViewModelDelegate: class {
     func serverResponds(send: Enterprise)
@@ -18,24 +19,21 @@ protocol MainViewModelDelegate: class {
 class MainViewModel {
     
     weak var delegate: MainViewModelDelegate?
-    private var network: NetworkAPIProtocol?
     private var keychain: KeychainWorkable?
     
     init() {
-        network = NetworkAPI()
         keychain = KeychainWorker()
     }
     
     func loadData(cnpj: String) {
         delegate?.loadingStart()
-        network?.requestEnterprise(urlParam: cnpj, completionHanlder: { (response, error) in
-            self.delegate?.loadingEnd()
+        Manager.requestEnterprise(cnpj: cnpj) { (response, error) in
             if let err = error {
                 Logger.log(err)
             } else if let enterprise = response {
                 self.delegate?.serverResponds(send: enterprise)
             }
-        })
+        }
     }
     
     func getEnterpriseId() {

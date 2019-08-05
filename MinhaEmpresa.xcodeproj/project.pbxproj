@@ -27,10 +27,6 @@
 		B5B2E95F22D1303F00C5039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E95D22D1303F00C5039A /* LaunchScreen.storyboard */; };
 		B5B2E96A22D1303F00C5039A /* MinhaEmpresaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E96922D1303F00C5039A /* MinhaEmpresaTests.swift */; };
 		B5B2E97522D1303F00C5039A /* MinhaEmpresaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E97422D1303F00C5039A /* MinhaEmpresaUITests.swift */; };
-		B5B2E98922D1338C00C5039A /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E98822D1338C00C5039A /* Manager.swift */; };
-		B5B2E99122D1382800C5039A /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99022D1382800C5039A /* NetworkAPI.swift */; };
-		B5B2E99322D1387F00C5039A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99222D1387F00C5039A /* Endpoint.swift */; };
-		B5B2E99622D13C4600C5039A /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99522D13C4600C5039A /* Enterprise.swift */; };
 		B5B2E99D22D3AF3F00C5039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */; };
 		B5B2E99E22D3AF3F00C5039A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E99B22D3AF3F00C5039A /* Info.plist */; };
 		B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */; };
@@ -101,13 +97,10 @@
 		B5B2E97022D1303F00C5039A /* MinhaEmpresaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinhaEmpresaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2E97422D1303F00C5039A /* MinhaEmpresaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaEmpresaUITests.swift; sourceTree = "<group>"; };
 		B5B2E97622D1303F00C5039A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5B2E98822D1338C00C5039A /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		B5B2E99022D1382800C5039A /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
-		B5B2E99222D1387F00C5039A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		B5B2E99522D13C4600C5039A /* Enterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
 		B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B2E99B22D3AF3F00C5039A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B5BC7FCB22F7BA2400FBFC52 /* NetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MinhaEmpresa-geehqurbifjlwrhhlowsdggtiuey/Build/Products/Debug-iphoneos/NetworkKit.framework"; sourceTree = "<group>"; };
 		B5E03A3822E86D1100EC85A7 /* Feature.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Feature.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MinhaEmpresa-geehqurbifjlwrhhlowsdggtiuey/Build/Products/Debug-iphoneos/Feature.framework"; sourceTree = "<group>"; };
 		B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexColor+String.swift"; sourceTree = "<group>"; };
 		B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
@@ -301,9 +294,6 @@
 		B5B2E98722D1336C00C5039A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B5B2E98822D1338C00C5039A /* Manager.swift */,
-				B5B2E99022D1382800C5039A /* NetworkAPI.swift */,
-				B5B2E99222D1387F00C5039A /* Endpoint.swift */,
 				B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */,
 			);
 			path = Service;
@@ -312,7 +302,6 @@
 		B5B2E99422D13BAA00C5039A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5B2E99522D13C4600C5039A /* Enterprise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,6 +319,7 @@
 		B5E03A3722E86D0600EC85A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5BC7FCB22F7BA2400FBFC52 /* NetworkKit.framework */,
 				B5E03A3822E86D1100EC85A7 /* Feature.framework */,
 				1E7106C86EC5584B4C96EC41 /* Pods_MinhaEmpresa.framework */,
 				31CAE9F812F9084EBE481838 /* Pods_MinhaEmpresaTests.framework */,
@@ -572,13 +562,9 @@
 				B5EA89F122E3D41D002B46C1 /* KeychainWorker.swift in Sources */,
 				B5EA89EF22E3CEAB002B46C1 /* HexColor+String.swift in Sources */,
 				B526B9F322E399E80018D9DE /* HomeViewController.swift in Sources */,
-				B5B2E99122D1382800C5039A /* NetworkAPI.swift in Sources */,
 				B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */,
-				B5B2E99322D1387F00C5039A /* Endpoint.swift in Sources */,
 				B5B2E95A22D1303D00C5039A /* MinhaEmpresa.xcdatamodeld in Sources */,
-				B5B2E99622D13C4600C5039A /* Enterprise.swift in Sources */,
 				B526B9F022E396B10018D9DE /* MainCoordinator.swift in Sources */,
-				B5B2E98922D1338C00C5039A /* Manager.swift in Sources */,
 				B526B9F722E39AD00018D9DE /* HomeCoordinator.swift in Sources */,
 				B526B9F522E39A5C0018D9DE /* HomeViewModel.swift in Sources */,
 				B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */,

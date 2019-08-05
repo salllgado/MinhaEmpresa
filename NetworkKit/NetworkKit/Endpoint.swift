@@ -1,8 +1,8 @@
 //
 //  Endpoint.swift
-//  MinhaEmpresa
+//  NetworkKit
 //
-//  Created by Chrystian Salgado on 06/07/19.
+//  Created by Chrystian Salgado on 04/08/19.
 //  Copyright © 2019 Salgado's Production. All rights reserved.
 //
 

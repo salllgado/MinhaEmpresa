@@ -1,32 +1,31 @@
 //
 //  Enterprise.swift
-//  MinhaEmpresa
+//  NetworkKit
 //
-//  Created by Chrystian Salgado on 06/07/19.
+//  Created by Chrystian Salgado on 04/08/19.
 //  Copyright © 2019 Salgado's Production. All rights reserved.
 //
 
 import Foundation
 
-struct Enterprise {
-    
-    var status: String? = ""
-    var message: String? = ""
-    var cnpj: String = ""
-    var type: String = ""
-    var fondationDate: String = ""
-    var enterpriseName: String = ""
-    var nickname: String = ""
-    var firstActivity: [Detail] = []
-    var secondaryActivity: [Detail] = []
-    var enterprisePlace: String = ""
-    var number: String = ""
-    var complement: String = ""
-    var adressCode: String = ""
-    var neighborhood: String = ""
-    var city: String = ""
-    var uf: String = ""
-    var socios: [Socios] = []
+public struct Enterprise {
+    public var status: String? = ""
+    public var message: String? = ""
+    public var cnpj: String = ""
+    public var type: String = ""
+    public var fondationDate: String = ""
+    public var enterpriseName: String = ""
+    public var nickname: String = ""
+    public var firstActivity: [Detail] = []
+    public var secondaryActivity: [Detail] = []
+    public var enterprisePlace: String = ""
+    public var number: String = ""
+    public var complement: String = ""
+    public var adressCode: String = ""
+    public var neighborhood: String = ""
+    public var city: String = ""
+    public var uf: String = ""
+    public var socios: [Socios] = []
     
     enum CodingKeys: String, CodingKey {
         case status
@@ -50,7 +49,7 @@ struct Enterprise {
 }
 
 extension Enterprise: Decodable {
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = try values.decodeIfPresent(String.self, forKey: .status)
         message = try values.decodeIfPresent(String.self, forKey: .message)
@@ -72,14 +71,14 @@ extension Enterprise: Decodable {
     }
 }
 
-struct Detail: Decodable {
-    var text: String = ""
-    var code: String = ""
+public struct Detail: Decodable {
+    public var text: String = ""
+    public var code: String = ""
 }
 
-struct Socios: Decodable {
-    var tipo: String
-    var nome: String
+public struct Socios: Decodable {
+    public var tipo: String
+    public var nome: String
     
     enum CodingKeys: String, CodingKey {
         case tipo = "qual"

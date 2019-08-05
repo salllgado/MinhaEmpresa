@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkKit
 
 protocol MainViewControllerDelegate: class {
     func navigate(with param: Enterprise)
