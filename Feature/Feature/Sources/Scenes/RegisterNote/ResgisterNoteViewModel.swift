@@ -8,7 +8,25 @@
 
 import Foundation
 
+struct Notes {
+    var enterpriseName: String
+    var enterpriseCNPJ: String
+    var noteValue: Double
+    var noteDate: Date
+}
+
+protocol RegisterNoteDelegate: class {
+    func fetchNotesResponds()
+}
+
 class ResgisterNoteViewModel {
     
-    // ...
+    weak var delegate: RegisterNoteDelegate?
+    private (set) var notes: [Notes] = []
+    
+    // Fetch notes in system.
+    func fetchNotes() {
+        notes = []
+        delegate?.fetchNotesResponds()
+    }
 }

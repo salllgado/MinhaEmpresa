@@ -17,7 +17,10 @@ class ResgisterNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel?.delegate = self
+        
         setupUI()
+        viewModel?.fetchNotes()
     }
     
     /// This method load all ui components in view.
@@ -33,14 +36,21 @@ class ResgisterNoteViewController: UIViewController {
     }
 }
 
+extension ResgisterNoteViewController: RegisterNoteDelegate {
+    
+    func fetchNotesResponds() {
+        registrationNoteView.tableView.reloadData()
+    }
+}
+
 extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel?.notes.count ?? 0 > 0 ? 1 : 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel?.notes.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,12 +62,14 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
+    
     func actionNewNote() {
         print("Button tapped")
     }
 }
 
 extension ResgisterNoteViewController: RegisterNoteTableViewCellDelegate {
+    
     func actionSelected() {
         print("Cell tapped")
     }
