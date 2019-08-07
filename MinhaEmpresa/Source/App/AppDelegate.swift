@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appCoordinator = AppCoordinator(window: window)
         
+        
         self.window = window
         applicationCoordinator = appCoordinator
         

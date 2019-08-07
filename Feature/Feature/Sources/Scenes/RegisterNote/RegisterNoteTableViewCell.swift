@@ -8,7 +8,17 @@
 
 import UIKit
 
+protocol RegisterNoteTableViewCellDelegate: class {
+    func actionSelected()
+}
+
 class RegisterNoteTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var lblEnterpriseName: UILabel!
+    @IBOutlet weak var lblNoteValue: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    
+    weak var delegate: RegisterNoteTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +30,12 @@ class RegisterNoteTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        lblEnterpriseName.text = ""
+        lblNoteValue.text = ""
+        lblDate.text = ""
+    }
+    
+    @IBAction func actionTappep(_ sender: Any) {
+        delegate?.actionSelected()
     }
 }

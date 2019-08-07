@@ -38,7 +38,7 @@ class ResgisterNoteViewController: UIViewController {
         // table view
         registrationNoteView.tableView.delegate = self
         registrationNoteView.tableView.dataSource = self
-        registrationNoteView.tableView.rowHeight = 98.0
+        registrationNoteView.tableView.rowHeight = UITableView.automaticDimension
     }
 }
 
@@ -54,13 +54,20 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! RegisterNoteTableViewCell
+        cell.delegate = self
+        
         return cell
     }
 }
 
 extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
-    
     func actionNewNote() {
         print("Button tapped")
+    }
+}
+
+extension ResgisterNoteViewController: RegisterNoteTableViewCellDelegate {
+    func actionSelected() {
+        print("Cell tapped")
     }
 }

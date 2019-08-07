@@ -76,6 +76,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B54CD55D22FA5A1A00E26BA6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B5E03A4122E86E3200EC85A7 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B54CD55E22FA5A5400E26BA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B565387122ED419600E5F65B /* RegisterNoteTableViewCell.swift */,
+				B565387022ED419600E5F65B /* RegistrationNoteView.swift */,
+				B550EE1A22EDF76F005AB323 /* RegisterNoteHeaderView.swift */,
+				B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B54CD55F22FA5A7500E26BA6 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */,
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
+		B54CD56022FA5AC700E26BA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B565386E22ED418B00E5F65B /* RegisterNoteTableViewCell.xib */,
+				B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */,
+				B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B54CD56122FA615F00E26BA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B565388B22ED427E00E5F65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +151,11 @@
 		B5E03A1B22E86CAB00EC85A7 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B5E03A3D22E86D6000EC85A7 /* Feature.swift */,
+				B54CD55D22FA5A1A00E26BA6 /* Protocol */,
+				B5E03A4022E86E1700EC85A7 /* Scenes */,
+				B54CD56122FA615F00E26BA6 /* Resources */,
 				B5E03A3C22E86D4C00EC85A7 /* Other Sources */,
-				B5E03A3B22E86D4300EC85A7 /* Resources */,
-				B5E03A3A22E86D3A00EC85A7 /* Sources */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -121,26 +167,6 @@
 				B5E03A2922E86CAB00EC85A7 /* Info.plist */,
 			);
 			path = FeatureTests;
-			sourceTree = "<group>";
-		};
-		B5E03A3A22E86D3A00EC85A7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				B5E03A3D22E86D6000EC85A7 /* Feature.swift */,
-				B5E03A4122E86E3200EC85A7 /* CoordinatorProtocol.swift */,
-				B5E03A4022E86E1700EC85A7 /* Scenes */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		B5E03A3B22E86D4300EC85A7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B565386E22ED418B00E5F65B /* RegisterNoteTableViewCell.xib */,
-				B5B2F22B22E8766E00C48305 /* RegisterNote.storyboard */,
-				B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		B5E03A3C22E86D4C00EC85A7 /* Other Sources */ = {
@@ -157,18 +183,17 @@
 			children = (
 				B5E03A4522E870E000EC85A7 /* RegisterNote */,
 			);
-			path = Scenes;
+			name = Scenes;
+			path = Sources/Scenes;
 			sourceTree = "<group>";
 		};
 		B5E03A4522E870E000EC85A7 /* RegisterNote */ = {
 			isa = PBXGroup;
 			children = (
-				B565387122ED419600E5F65B /* RegisterNoteTableViewCell.swift */,
-				B565387022ED419600E5F65B /* RegistrationNoteView.swift */,
 				B5E03A4622E870EF00EC85A7 /* ResgisterNoteCoordinator.swift */,
-				B5B2F22622E8752500C48305 /* ResgisterNoteViewController.swift */,
-				B5B2F22822E8754900C48305 /* ResgisterNoteViewModel.swift */,
-				B550EE1A22EDF76F005AB323 /* RegisterNoteHeaderView.swift */,
+				B54CD55E22FA5A5400E26BA6 /* View */,
+				B54CD55F22FA5A7500E26BA6 /* View Model */,
+				B54CD56022FA5AC700E26BA6 /* Resources */,
 			);
 			path = RegisterNote;
 			sourceTree = "<group>";
