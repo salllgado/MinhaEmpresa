@@ -24,21 +24,12 @@ class ResgisterNoteViewController: UIViewController {
     private func setupUI() {
         title = "Notas"
         
-        // register table view cell.
-        let nib = UINib(nibName: "RegisterNoteTableViewCell", bundle: Bundle(for: RegisterNoteTableViewCell.self))
-        registrationNoteView.tableView.register(nib, forCellReuseIdentifier: "TableViewCellIdentifier")
-        
-        // header view
-        let headerView = RegisterNoteHeaderView()
-        headerView.btnCustom.setTitle("Registrar Nota", for: .normal)
-        headerView.delegate = self
-        headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 76)
-        registrationNoteView.tableView.tableHeaderView = headerView
-        
         // table view
         registrationNoteView.tableView.delegate = self
         registrationNoteView.tableView.dataSource = self
-        registrationNoteView.tableView.rowHeight = UITableView.automaticDimension
+        
+        guard let tableHeaderView = registrationNoteView.tableView.tableHeaderView as? RegisterNoteHeaderView else { return }
+        tableHeaderView.delegate = self
     }
 }
 
