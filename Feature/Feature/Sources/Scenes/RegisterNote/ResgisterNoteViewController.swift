@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol RegisterNoteViewControllerDelegate {
+    func navigateToAdd()
+}
+
 class ResgisterNoteViewController: UIViewController {
     
     @IBOutlet weak var registrationNoteView: RegistrationNoteView!
     
     var viewModel: ResgisterNoteViewModel?
+    var delegate: RegisterNoteViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +69,7 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
 extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
     
     func actionNewNote() {
-        print("Button tapped")
+        delegate?.navigateToAdd()
     }
 }
 

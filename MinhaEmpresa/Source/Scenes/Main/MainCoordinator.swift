@@ -32,7 +32,7 @@ class MainCoordinator: Coordinator {
         presenter.setNavigationBarHidden(true, animated: false)
         presenter.pushViewController(viewController, animated: true)
         
-        self.mainViewController = viewController
+        mainViewController = viewController
     }
 }
 

@@ -65,8 +65,8 @@ extension HomeCoordinator: HomeViewControllerDelegate {
     
     func navigateToFeature() {
         let param = RegistrationNoteParam(presenter: self.presenter)
-        let registerNoteCoordinator = Feature.registerNote(param)
-        registerNoteCoordinator.start()
+        let destinationCoordinator = Feature.registerNote(param)
+        destinationCoordinator.start()
     }
 }
 
