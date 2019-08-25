@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import NetworkKit
 
 class NewNoteViewModel {
     
+    weak var delegate: NewNoteDelegate?
+    
+    func saveData(_ receipt: Receipt) {
+        delegate?.loading(true)
+        // perfrom save
+        delegate?.loading(false)
+    }
 }

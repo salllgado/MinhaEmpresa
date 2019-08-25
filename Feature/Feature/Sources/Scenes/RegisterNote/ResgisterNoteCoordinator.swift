@@ -37,7 +37,10 @@ extension ResgisterNoteCoordinator: RegisterNoteViewControllerDelegate {
     func navigateToAdd() {
         let storyboard = UIStoryboard(name: "RegisterNote", bundle: Bundle(for: NewNoteViewController.self))
         let viewController = storyboard.instantiateViewController(withIdentifier: "NewNoteViewController") as! NewNoteViewController
-        viewController.viewModel = NewNoteViewModel()
+        let viewModel = NewNoteViewModel()
+        viewModel.delegate = viewController
+        viewController.viewModel = viewModel
+        
         presenter?.pushViewController(viewController, animated: true)
     }
 }

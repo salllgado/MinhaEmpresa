@@ -78,7 +78,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-LD-RNy" userLabel="Stack View Fields">
-                                                <rect key="frame" x="8" y="8" width="398" height="392"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="460"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-w0-YtC" userLabel="Container CNPJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="92"/>
@@ -320,6 +320,46 @@
                                                             <constraint firstAttribute="bottom" secondItem="Fs7-TK-uTC" secondAttribute="bottom" constant="3" id="StP-5q-H0c"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-gJ-Ekv" userLabel="Container Button">
+                                                        <rect key="frame" x="0.0" y="400" width="398" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-17-R1B" customClass="AppButton" customModule="StyleKit">
+                                                                <rect key="frame" x="16" y="8" width="366" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="a79-Xh-6zX"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                        <color key="value" red="0.015686274510000001" green="0.054901960780000002" blue="0.1137254902" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                        <size key="value" width="0.0" height="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="actionSave:" destination="BJa-eu-QKG" eventType="touchUpInside" id="H9X-8Q-Qoo"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Ey0-17-R1B" firstAttribute="centerX" secondItem="EYf-gJ-Ekv" secondAttribute="centerX" id="00G-ON-7eq"/>
+                                                            <constraint firstItem="Ey0-17-R1B" firstAttribute="top" secondItem="EYf-gJ-Ekv" secondAttribute="top" constant="8" id="1UE-qz-VXa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ey0-17-R1B" secondAttribute="bottom" constant="8" id="7fC-zV-ll1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ey0-17-R1B" secondAttribute="trailing" constant="16" id="Iym-8x-4dT"/>
+                                                            <constraint firstItem="Ey0-17-R1B" firstAttribute="centerY" secondItem="EYf-gJ-Ekv" secondAttribute="centerY" id="KcJ-Tj-Bk9"/>
+                                                            <constraint firstItem="Ey0-17-R1B" firstAttribute="leading" secondItem="EYf-gJ-Ekv" secondAttribute="leading" constant="16" id="hSQ-rF-4vi"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -350,6 +390,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOV-er-utw"/>
                     </view>
+                    <connections>
+                        <outlet property="enterpriseNameTf" destination="DnJ-mU-T59" id="L7C-1d-kcT"/>
+                        <outlet property="noteCNPJTf" destination="JJb-78-jZT" id="uXA-3A-teM"/>
+                        <outlet property="noteDateTf" destination="Ao8-hj-863" id="Nbq-Wh-UIQ"/>
+                        <outlet property="noteValueTf" destination="oc5-FT-Slu" id="uVm-4v-EwK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-6h-JOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
