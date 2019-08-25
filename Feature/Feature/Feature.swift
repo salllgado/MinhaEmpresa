@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 public class Feature {
     
@@ -17,5 +18,20 @@ public class Feature {
     public class func registerNote(_ param: ResgistratioNoteParams) -> CoordinatorProtocol {
         let registerNoteCoordinator = ResgisterNoteCoordinator(presenter: param.presenter)
         return registerNoteCoordinator
+    }
+}
+
+class FirebaseDatabase {
+    
+    static let sharedInstance = FirebaseDatabase()
+    private var ref: DatabaseReference
+    
+    init() {
+        FirebaseApp.configure()
+        ref = Database.database().reference()
+    }
+    
+    func getReference() -> DatabaseReference {
+        return ref
     }
 }

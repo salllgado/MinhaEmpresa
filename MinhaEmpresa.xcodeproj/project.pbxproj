@@ -20,6 +20,8 @@
 		B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */; };
 		B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6E22D3BCC30008D874 /* String+Logger.swift */; };
 		B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */; };
+		B599D0AD23121614009479F9 /* Feature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B599D0AC23121614009479F9 /* Feature.framework */; };
+		B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B599D0AE23121A45009479F9 /* GoogleService-Info.plist */; };
 		B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E95322D1303D00C5039A /* MainViewController.swift */; };
 		B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E95522D1303D00C5039A /* Main.storyboard */; };
 		B5B2E95A22D1303D00C5039A /* MinhaEmpresa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E95822D1303D00C5039A /* MinhaEmpresa.xcdatamodeld */; };
@@ -85,6 +87,8 @@
 		B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Params.swift"; sourceTree = "<group>"; };
 		B564BE6E22D3BCC30008D874 /* String+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Logger.swift"; sourceTree = "<group>"; };
 		B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Formatter.swift"; sourceTree = "<group>"; };
+		B599D0AC23121614009479F9 /* Feature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B599D0AE23121A45009479F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B2E94C22D1303D00C5039A /* MinhaEmpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinhaEmpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2E95322D1303D00C5039A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5B2E95622D1303D00C5039A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 		B5B2E99B22D3AF3F00C5039A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B5BC7FCB22F7BA2400FBFC52 /* NetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MinhaEmpresa-geehqurbifjlwrhhlowsdggtiuey/Build/Products/Debug-iphoneos/NetworkKit.framework"; sourceTree = "<group>"; };
-		B5E03A3822E86D1100EC85A7 /* Feature.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Feature.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MinhaEmpresa-geehqurbifjlwrhhlowsdggtiuey/Build/Products/Debug-iphoneos/Feature.framework"; sourceTree = "<group>"; };
 		B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexColor+String.swift"; sourceTree = "<group>"; };
 		B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWorker.swift; sourceTree = "<group>"; };
 		B5EA89F522E3DD0C002B46C1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B599D0AD23121614009479F9 /* Feature.framework in Frameworks */,
 				8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */,
 				BBCEFED7D5B9FFB54AF5DDE7 /* Pods_MinhaEmpresa.framework in Frameworks */,
 			);
@@ -235,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				B5B2E99B22D3AF3F00C5039A /* Info.plist */,
+				B599D0AE23121A45009479F9 /* GoogleService-Info.plist */,
 				B5B2E98322D132E100C5039A /* Resource */,
 				B5B2E98222D1322600C5039A /* Source */,
 			);
@@ -319,8 +324,8 @@
 		B5E03A3722E86D0600EC85A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B599D0AC23121614009479F9 /* Feature.framework */,
 				B5BC7FCB22F7BA2400FBFC52 /* NetworkKit.framework */,
-				B5E03A3822E86D1100EC85A7 /* Feature.framework */,
 				1E7106C86EC5584B4C96EC41 /* Pods_MinhaEmpresa.framework */,
 				31CAE9F812F9084EBE481838 /* Pods_MinhaEmpresaTests.framework */,
 				995F825767D2189E5BA1395C /* Pods_MinhaEmpresaUITests.framework */,
@@ -444,6 +449,7 @@
 				B5B2E95F22D1303F00C5039A /* LaunchScreen.storyboard in Resources */,
 				B5B2E95C22D1303F00C5039A /* Assets.xcassets in Resources */,
 				B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */,
+				B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
