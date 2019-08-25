@@ -22,8 +22,8 @@ struct Receipt: Encodable {
     }
 }
 
-protocol NewNoteDelegate: class {
-    func loading(_ show: Bool)
+protocol NewNoteViewControllerDelegate: class {
+    func navigate()
 }
 
 class NewNoteViewController: UIViewController {

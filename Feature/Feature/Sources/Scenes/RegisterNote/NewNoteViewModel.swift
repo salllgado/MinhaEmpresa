@@ -9,13 +9,19 @@
 import Foundation
 import NetworkKit
 
+protocol NewNoteDelegate: class {
+    func loading(_ show: Bool)
+}
+
 class NewNoteViewModel {
     
     weak var delegate: NewNoteDelegate?
+    weak var viewControllerDelegate: NewNoteViewControllerDelegate?
     
     func saveData(_ receipt: Receipt) {
         delegate?.loading(true)
         // perfrom save
         delegate?.loading(false)
+        viewControllerDelegate?.navigate()
     }
 }
