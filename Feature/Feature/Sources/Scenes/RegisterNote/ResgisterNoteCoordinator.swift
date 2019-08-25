@@ -34,18 +34,18 @@ class ResgisterNoteCoordinator: CoordinatorProtocol {
 
 extension ResgisterNoteCoordinator: RegisterNoteViewControllerDelegate {
     
-    func navigateToAdd() {
-        presenter?.pushViewController(instantiateRegisterNoteController(),
+    func navigateToAdd(lastReceipt Id: Int) {
+        presenter?.pushViewController(instantiateRegisterNoteController(lastReceipt: Id),
                                       animated: true)
     }
     
-    private func instantiateRegisterNoteController() -> UIViewController {
+    private func instantiateRegisterNoteController(lastReceipt Id: Int) -> UIViewController {
         let identifier = "NewNoteViewController"
         let storyboardName = "RegisterNote"
         let storyboard = UIStoryboard(name: storyboardName,
                                       bundle: Bundle(for: NewNoteViewController.self))
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as! NewNoteViewController
-        let viewModel = NewNoteViewModel()
+        let viewModel = NewNoteViewModel(lastReceipt: Id)
         
         viewModel.delegate = viewController
         viewModel.viewControllerDelegate = self

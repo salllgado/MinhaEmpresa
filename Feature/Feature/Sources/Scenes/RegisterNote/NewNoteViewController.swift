@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 
 struct Receipts: Decodable {
-    var CNPJ: Receipt
+    var CNPJ: [Receipt]
 }
 
 struct Receipt: Codable {

@@ -38,7 +38,7 @@ class ResgisterNoteViewModel {
                 let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
                 let receipt = try JSONDecoder().decode(Receipts.self, from: jsonData)
                 
-                self.notes = [receipt.CNPJ]
+                self.notes = receipt.CNPJ
             } catch let error {
                 print(error)
             }

@@ -18,6 +18,11 @@ class NewNoteViewModel {
     
     weak var delegate: NewNoteDelegate?
     weak var viewControllerDelegate: NewNoteViewControllerDelegate?
+    private (set) var lastId: Int
+    
+    init(lastReceipt id: Int) {
+        self.lastId = id
+    }
     
     func saveData(_ receipt: Receipt) {
         delegate?.loading(true)
@@ -29,7 +34,7 @@ class NewNoteViewModel {
     private func saveReceipt(_ receipt: Receipt) {
         let dictValue = try? receipt.toDict()
         let ref = FirebaseDatabase.sharedInstance.getReference()
-        ref.child("CNPJ").setValue(dictValue)
+        ref.child("CNPJ/\(self.lastId)").setValue(dictValue)
     }
 }
 

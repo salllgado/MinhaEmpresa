@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RegisterNoteViewControllerDelegate {
-    func navigateToAdd()
+    func navigateToAdd(lastReceipt Id: Int)
 }
 
 class ResgisterNoteViewController: UIViewController {
@@ -21,10 +21,13 @@ class ResgisterNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel?.delegate = self
         
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel?.fetchNotes()
     }
     
@@ -70,7 +73,7 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
 extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
     
     func actionNewNote() {
-        delegate?.navigateToAdd()
+        delegate?.navigateToAdd(lastReceipt: viewModel?.notes.count ?? 0 + 1 )
     }
 }
 
