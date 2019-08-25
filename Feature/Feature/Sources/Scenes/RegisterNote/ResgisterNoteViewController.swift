@@ -61,6 +61,7 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! RegisterNoteTableViewCell
         cell.delegate = self
+        cell.configure(viewModel!.notes[indexPath.row])
         
         return cell
     }

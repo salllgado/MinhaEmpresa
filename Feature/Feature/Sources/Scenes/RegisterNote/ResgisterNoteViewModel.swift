@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct Notes {
     var enterpriseName: String
@@ -22,11 +23,26 @@ protocol RegisterNoteDelegate: class {
 class ResgisterNoteViewModel {
     
     weak var delegate: RegisterNoteDelegate?
-    private (set) var notes: [Notes] = []
+    private (set) var notes: [Receipt] = []
     
     // Fetch notes in system.
     func fetchNotes() {
-        notes = []
-        delegate?.fetchNotesResponds()
+        loadDataFromFirebase()
+    }
+    
+    func loadDataFromFirebase() {
+        let ref = FirebaseDatabase.sharedInstance.getReference()
+        ref.observeSingleEvent(of: .value) { (firebaseData) in
+            guard let value = firebaseData.value as? [String: Any] else { return }
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+                let receipt = try JSONDecoder().decode(Receipts.self, from: jsonData)
+                
+                self.notes = [receipt.CNPJ]
+            } catch let error {
+                print(error)
+            }
+            self.delegate?.fetchNotesResponds()
+        }
     }
 }

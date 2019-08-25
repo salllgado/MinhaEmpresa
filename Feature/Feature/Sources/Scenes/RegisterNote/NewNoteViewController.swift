@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
-struct Receipt: Encodable {
+struct Receipts: Decodable {
+    var CNPJ: Receipt
+}
+
+struct Receipt: Codable {
     var cnpj: String
     var enterpriseName: String
     var value: String

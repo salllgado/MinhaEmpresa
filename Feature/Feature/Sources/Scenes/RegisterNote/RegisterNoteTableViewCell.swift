@@ -28,6 +28,12 @@ class RegisterNoteTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configure(_ receipt: Receipt) {
+        self.lblEnterpriseName.text = receipt.enterpriseName
+        self.lblNoteValue.text = receipt.value
+        self.lblDate.text = receipt.date
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         lblEnterpriseName.text = ""
