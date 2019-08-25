@@ -18,6 +18,7 @@ class ResgisterNoteCoordinator: CoordinatorProtocol {
         
         self.viewModel = viewModel
         self.presenter = presenter
+        self.presenter?.navigationBar.tintColor = .white
     }
     
     func start() {

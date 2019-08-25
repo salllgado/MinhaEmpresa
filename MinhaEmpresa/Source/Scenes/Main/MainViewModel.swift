@@ -28,6 +28,7 @@ class MainViewModel {
     func loadData(cnpj: String) {
         delegate?.loadingStart()
         Manager.requestEnterprise(cnpj: cnpj) { (response, error) in
+            self.delegate?.loadingEnd()
             if let err = error {
                 Logger.log(err)
             } else if let enterprise = response {
