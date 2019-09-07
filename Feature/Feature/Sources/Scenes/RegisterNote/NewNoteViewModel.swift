@@ -26,9 +26,18 @@ class NewNoteViewModel {
     
     func saveData(_ receipt: Receipt) {
         delegate?.loading(true)
-        saveReceipt(receipt)
-        delegate?.loading(false)
-        viewControllerDelegate?.navigate()
+        if validReceipt(receipt) {
+            saveReceipt(receipt)
+            delegate?.loading(false)
+            viewControllerDelegate?.navigate()
+        } else {
+            print("Show alert to user because this note needs cnpj.")
+            // show alert to user because this note needs cnpj.
+        }
+    }
+    
+    private func validReceipt(_ receipt: Receipt) -> Bool {
+        return !(receipt.cnpj == "")
     }
     
     private func saveReceipt(_ receipt: Receipt) {
