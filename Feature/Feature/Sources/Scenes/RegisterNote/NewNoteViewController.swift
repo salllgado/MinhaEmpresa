@@ -7,25 +7,6 @@
 //
 
 import Foundation
-import FirebaseDatabase
-
-struct Receipts: Decodable {
-    var CNPJ: [Receipt]
-}
-
-struct Receipt: Codable {
-    var cnpj: String
-    var enterpriseName: String
-    var value: String
-    var date: String
-    
-    init(cnpj: String, enterpriseName: String, value: String, date: String) {
-        self.cnpj = cnpj
-        self.enterpriseName = enterpriseName
-        self.value = value
-        self.date = date
-    }
-}
 
 protocol NewNoteViewControllerDelegate: class {
     func navigate()
@@ -33,10 +14,10 @@ protocol NewNoteViewControllerDelegate: class {
 
 class NewNoteViewController: UIViewController {
     
-    @IBOutlet weak var noteCNPJTf: UITextField!
-    @IBOutlet weak var enterpriseNameTf: UITextField!
-    @IBOutlet weak var noteValueTf: UITextField!
-    @IBOutlet weak var noteDateTf: UITextField!
+    @IBOutlet weak var noteCNPJTf: MyTextField!
+    @IBOutlet weak var enterpriseNameTf: MyTextField!
+    @IBOutlet weak var noteValueTf: MyTextField!
+    @IBOutlet weak var noteDateTf: MyTextField!
     
     var viewModel: NewNoteViewModel?
     
@@ -44,6 +25,11 @@ class NewNoteViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Nova nota"
+        
+        noteCNPJTf.formatting = .cnpj
+        noteDateTf.formatting = .date
+
+        noteValueTf.delegate = self
     }
     
     @IBAction func actionSave(_ sender: Any) {
@@ -60,5 +46,17 @@ extension NewNoteViewController: NewNoteDelegate {
     
     func loading(_ show: Bool) {
         // ...
+    }
+}
+
+extension NewNoteViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == noteValueTf, let text = textField.text, !text.contains("R$") {
+            noteValueTf.text = "R$ \(textField.text ?? "")"
+        }
+        
+        return true
     }
 }
