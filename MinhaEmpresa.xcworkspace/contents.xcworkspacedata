@@ -5,10 +5,10 @@
       location = "group:MinhaEmpresa.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:NetworkKit/NetworkKit.xcodeproj">
+      location = "group:Feature/Feature.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Feature/Feature.xcodeproj">
+      location = "group:NetworkKit/NetworkKit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:StyleKit/StyleKit.xcodeproj">

@@ -10,6 +10,7 @@
 		5B31096F45C908D79A42F7C3 /* Pods_FeatureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC439F415DFC9228738FB1 /* Pods_FeatureTests.framework */; };
 		B520D5AF2323E2A800488C9C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5AE2323E2A800488C9C /* UITextField+Extension.swift */; };
 		B520D5B12323E5A600488C9C /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5B02323E5A600488C9C /* Receipts.swift */; };
+		B520D5B92323F1FD00488C9C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5B82323F1FD00488C9C /* Strings.swift */; };
 		B550EE1922EDF6FF005AB323 /* RegistrationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */; };
 		B550EE1B22EDF76F005AB323 /* RegisterNoteHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550EE1A22EDF76F005AB323 /* RegisterNoteHeaderView.swift */; };
 		B565386F22ED418B00E5F65B /* RegisterNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B565386E22ED418B00E5F65B /* RegisterNoteTableViewCell.xib */; };
@@ -47,6 +48,7 @@
 		B1F994C6F571F66A34B238D2 /* Pods-Feature.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature.release.xcconfig"; path = "Target Support Files/Pods-Feature/Pods-Feature.release.xcconfig"; sourceTree = "<group>"; };
 		B520D5AE2323E2A800488C9C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B520D5B02323E5A600488C9C /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
+		B520D5B82323F1FD00488C9C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationButton.xib; sourceTree = "<group>"; };
 		B550EE1A22EDF76F005AB323 /* RegisterNoteHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNoteHeaderView.swift; sourceTree = "<group>"; };
 		B565386E22ED418B00E5F65B /* RegisterNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterNoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		B54CD56122FA615F00E26BA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B520D5B82323F1FD00488C9C /* Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -358,6 +361,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				"pt-BR",
 			);
 			mainGroup = B5E03A0F22E86CAB00EC85A7;
 			productRefGroup = B5E03A1A22E86CAB00EC85A7 /* Products */;
@@ -449,6 +454,7 @@
 				B5E03A4722E870EF00EC85A7 /* ResgisterNoteCoordinator.swift in Sources */,
 				B565387222ED419600E5F65B /* RegistrationNoteView.swift in Sources */,
 				B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */,
+				B520D5B92323F1FD00488C9C /* Strings.swift in Sources */,
 				B520D5AF2323E2A800488C9C /* UITextField+Extension.swift in Sources */,
 				B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */,
 				B550EE1B22EDF76F005AB323 /* RegisterNoteHeaderView.swift in Sources */,
@@ -480,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -544,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

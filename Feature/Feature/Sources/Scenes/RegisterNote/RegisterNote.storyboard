@@ -345,6 +345,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                                         <real key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="BUTTON_SAVE_NEW_NOTE"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="actionSave:" destination="BJa-eu-QKG" eventType="touchUpInside" id="H9X-8Q-Qoo"/>
@@ -391,6 +392,7 @@
                         <viewLayoutGuide key="safeArea" id="eOV-er-utw"/>
                     </view>
                     <connections>
+                        <outlet property="btnSaveNote" destination="Ey0-17-R1B" id="QZr-dm-YVf"/>
                         <outlet property="enterpriseNameTf" destination="DnJ-mU-T59" id="L7C-1d-kcT"/>
                         <outlet property="noteCNPJTf" destination="JJb-78-jZT" id="uXA-3A-teM"/>
                         <outlet property="noteDateTf" destination="Ao8-hj-863" id="Nbq-Wh-UIQ"/>

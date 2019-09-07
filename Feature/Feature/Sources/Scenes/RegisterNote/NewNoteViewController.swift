@@ -18,18 +18,23 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var enterpriseNameTf: MyTextField!
     @IBOutlet weak var noteValueTf: MyTextField!
     @IBOutlet weak var noteDateTf: MyTextField!
+    @IBOutlet weak var btnSaveNote: UIButton!
     
     var viewModel: NewNoteViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Nova nota"
+        noteValueTf.delegate = self
+        setupUI()
+    }
+    
+    private func setupUI() {
+        title = Strings.NewNote.title
+        btnSaveNote.setTitle(Strings.NewNote.btnNewNote, for: .normal)
         
         noteCNPJTf.formatting = .cnpj
         noteDateTf.formatting = .date
-
-        noteValueTf.delegate = self
     }
     
     @IBAction func actionSave(_ sender: Any) {
@@ -53,8 +58,10 @@ extension NewNoteViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField == noteValueTf, let text = textField.text, !text.contains("R$") {
-            noteValueTf.text = "R$ \(textField.text ?? "")"
+        let currencyString = NSLocalizedString("CURRENCY_FORMAT", comment: "")
+        
+        if textField == noteValueTf, let text = textField.text, !text.contains(currencyString) {
+            noteValueTf.text = currencyString + " \(textField.text ?? "")"
         }
         
         return true
