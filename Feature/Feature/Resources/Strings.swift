@@ -14,5 +14,9 @@ struct Strings {
         static let title = "Nova nota"
         static let btnNewNote = "Salvar nota"
     }
+    
+    struct Others {
+        static let currency = "R$"
+    }
 
 }

@@ -58,7 +58,7 @@ extension NewNoteViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let currencyString = NSLocalizedString("CURRENCY_FORMAT", comment: "")
+        let currencyString = Strings.Others.currency
         
         if textField == noteValueTf, let text = textField.text, !text.contains(currencyString) {
             noteValueTf.text = currencyString + " \(textField.text ?? "")"
