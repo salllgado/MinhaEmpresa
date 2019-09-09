@@ -27,6 +27,7 @@ DEPENDENCIES:
   - CSUtils (from `https://github.com/salllgado/CSUtils.git`, branch `develop`)
   - Firebase/Database
   - KeychainSwift (~> 13.0)
+  - TPKeyboardAvoiding
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -62,6 +63,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: 23b68a5a24e3b61543f8e710ca246eeea42aefb0
+PODFILE CHECKSUM: b3626b13e02c1a5e7a405fdfe429fd4f2f1b8aa1
 
 COCOAPODS: 1.7.2
