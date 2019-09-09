@@ -20,20 +20,6 @@
                ReferencedContainer = "container:MinhaEmpresa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5E03A1822E86CAB00EC85A7"
-               BuildableName = "Feature.framework"
-               BlueprintName = "Feature"
-               ReferencedContainer = "container:Feature/Feature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

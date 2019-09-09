@@ -8,7 +8,7 @@
 
 import UIKit
 import CSUtils
-import Feature
+//import Feature
 import NetworkKit
 
 class HomeCoordinator: Coordinator {
