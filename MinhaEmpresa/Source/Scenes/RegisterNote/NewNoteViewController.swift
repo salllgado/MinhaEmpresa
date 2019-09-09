@@ -19,6 +19,7 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var enterpriseNameTf: MyTextField!
     @IBOutlet weak var noteValueTf: MyTextField!
     @IBOutlet weak var noteDateTf: MyTextField!
+    @IBOutlet weak var paymentDateTf: MyTextField!
     @IBOutlet weak var btnSaveNote: UIButton!
     
     var viewModel: NewNoteViewModel?
@@ -37,6 +38,7 @@ class NewNoteViewController: UIViewController {
         
         noteCNPJTf.formatting = .cnpj
         noteDateTf.formatting = .date
+        paymentDateTf.formatting = .date
         
         loadingView = LoadingView(color: primaryColor)
     }
@@ -45,7 +47,8 @@ class NewNoteViewController: UIViewController {
         let receipt = Receipt(cnpj: noteCNPJTf.text ?? "",
                            enterpriseName: enterpriseNameTf.text ?? "",
                            value: noteValueTf.text ?? "",
-                           date: noteDateTf.text ?? "")
+                           date: noteDateTf.text ?? "",
+                           paymentDate: paymentDateTf.text)
         
         viewModel?.saveData(receipt)
     }

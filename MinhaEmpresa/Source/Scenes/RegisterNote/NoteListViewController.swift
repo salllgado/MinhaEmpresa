@@ -71,7 +71,7 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! NoteListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell") as! NoteListTableViewCell
         cell.delegate = self
         cell.configure(viewModel!.notes[indexPath.row])
         

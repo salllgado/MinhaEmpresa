@@ -10,8 +10,12 @@
 "RAZAO_TITLE" = "RAZÃO SOCIAL";
 "ENTERPRISE_TIPE_TITLE" = "ESPECIALIDADE";
 "NOTES_TITLE" = "Notas";
-"NEW_NOTE_TITLE" = "Nova nota";
 
-"SAVE_NOTE_BUTTON" = "Salvar nota";
+"MORE_DETAILS_BUTTON" = "Mais detalhes";
 "STRING_CURRENCY" = "R$";
 
+
+/// NEW NOTE
+"NEW_NOTE_TITLE" = "Nova nota";
+"PAYMENT_DAY_TITLE_LABEL" = "Data de pagamento";
+"SAVE_NOTE_BUTTON" = "Salvar nota";

@@ -16,7 +16,7 @@ class NoteListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblEnterpriseName: UILabel!
     @IBOutlet weak var lblNoteValue: UILabel!
-    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var noteDateTf: MyTextField!
     
     weak var delegate: NoteListTableViewCellDelegate?
 
@@ -29,16 +29,18 @@ class NoteListTableViewCell: UITableViewCell {
     }
     
     func configure(_ receipt: Receipt) {
-        self.lblEnterpriseName.text = receipt.enterpriseName
-        self.lblNoteValue.text = receipt.value
-        self.lblDate.text = receipt.date
+        lblEnterpriseName.text = receipt.enterpriseName
+        lblNoteValue.text = receipt.value
+        noteDateTf.text = receipt.date
+        
+        noteDateTf.formatting = .date
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         lblEnterpriseName.text = ""
         lblNoteValue.text = ""
-        lblDate.text = ""
+        noteDateTf.text = ""
     }
     
     @IBAction func actionTappep(_ sender: Any) {

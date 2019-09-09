@@ -17,11 +17,13 @@ struct Receipt: Codable {
     var enterpriseName: String
     var value: String
     var date: String
+    var paymentDate: String?
     
-    init(cnpj: String, enterpriseName: String, value: String, date: String) {
+    init(cnpj: String, enterpriseName: String, value: String, date: String, paymentDate: String?) {
         self.cnpj = cnpj
         self.enterpriseName = enterpriseName
         self.value = value
         self.date = date
+        self.paymentDate = paymentDate
     }
 }

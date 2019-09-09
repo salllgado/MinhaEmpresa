@@ -33,7 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-Km-7ql">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-Km-7ql" customClass="AppButton" customModule="StyleKit">
                                         <rect key="frame" x="32" y="658" width="311" height="44"/>
                                         <color key="backgroundColor" red="0.023131326786061022" green="0.054808130875633423" blue="0.11160136010362698" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>

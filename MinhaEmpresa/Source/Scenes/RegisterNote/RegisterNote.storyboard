@@ -78,7 +78,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-LD-RNy" userLabel="Stack View Fields">
-                                                <rect key="frame" x="8" y="8" width="398" height="460"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="560"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-w0-YtC" userLabel="Container CNPJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="92"/>
@@ -320,15 +320,77 @@
                                                             <constraint firstAttribute="bottom" secondItem="Fs7-TK-uTC" secondAttribute="bottom" constant="3" id="StP-5q-H0c"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-M2-eja" userLabel="Container Data de Pagamento da Nota">
+                                                        <rect key="frame" x="0.0" y="400" width="398" height="92"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9x-hZ-geJ" userLabel="Data de Pagamento da Nota">
+                                                                <rect key="frame" x="1" y="1" width="396" height="88"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data da Nota" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiv-WA-g7r">
+                                                                        <rect key="frame" x="8" y="8" width="380" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                        <color key="textColor" red="0.61962240930000001" green="0.61959654090000005" blue="0.61960846189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="PAYMENT_DAY_TITLE_LABEL"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01/01/2010 (Opcional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kmi-rO-Nr4" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="40.5" width="380" height="39.5"/>
+                                                                        <nil key="textColor"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Xiv-WA-g7r" firstAttribute="leading" secondItem="w9x-hZ-geJ" secondAttribute="leading" constant="8" id="C2m-Do-RmP"/>
+                                                                    <constraint firstItem="kmi-rO-Nr4" firstAttribute="top" secondItem="Xiv-WA-g7r" secondAttribute="bottom" constant="12" id="Fd4-ey-CQJ"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="88" id="gNy-a8-oHN"/>
+                                                                    <constraint firstItem="Xiv-WA-g7r" firstAttribute="top" secondItem="w9x-hZ-geJ" secondAttribute="top" constant="8" id="ibr-XL-hOa"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="kmi-rO-Nr4" secondAttribute="bottom" constant="8" id="lgq-v8-5ox"/>
+                                                                    <constraint firstItem="kmi-rO-Nr4" firstAttribute="leading" secondItem="w9x-hZ-geJ" secondAttribute="leading" constant="8" id="oJn-nW-nS6"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="kmi-rO-Nr4" secondAttribute="trailing" constant="8" id="qaP-Py-jjB"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Xiv-WA-g7r" secondAttribute="trailing" constant="8" id="sgb-Zj-96G"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                        <size key="value" width="1" height="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="w9x-hZ-geJ" firstAttribute="leading" secondItem="WdF-M2-eja" secondAttribute="leading" constant="1" id="c1D-dC-Ngz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="w9x-hZ-geJ" secondAttribute="trailing" constant="1" id="idX-MN-BmG"/>
+                                                            <constraint firstItem="w9x-hZ-geJ" firstAttribute="top" secondItem="WdF-M2-eja" secondAttribute="top" constant="1" id="mCH-CT-MsN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="w9x-hZ-geJ" secondAttribute="bottom" constant="3" id="rhY-dN-Q6I"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-gJ-Ekv" userLabel="Container Button">
-                                                        <rect key="frame" x="0.0" y="400" width="398" height="60"/>
+                                                        <rect key="frame" x="0.0" y="500" width="398" height="60"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-17-R1B" customClass="AppButton" customModule="StyleKit">
                                                                 <rect key="frame" x="16" y="8" width="366" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="a79-Xh-6zX"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
                                                                         <integer key="value" value="1"/>
@@ -397,6 +459,7 @@
                         <outlet property="noteCNPJTf" destination="JJb-78-jZT" id="uXA-3A-teM"/>
                         <outlet property="noteDateTf" destination="Ao8-hj-863" id="Nbq-Wh-UIQ"/>
                         <outlet property="noteValueTf" destination="oc5-FT-Slu" id="uVm-4v-EwK"/>
+                        <outlet property="paymentDateTf" destination="kmi-rO-Nr4" id="LnU-Db-Iw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-6h-JOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
