@@ -17,7 +17,7 @@ class NoteListView: UIView {
         
         // register table view cell.
         let nib = UINib(nibName: "NoteListTableViewCell", bundle: Bundle(for: NoteListTableViewCell.self))
-        tableView.register(nib, forCellReuseIdentifier: "TableViewCellIdentifier")
+        tableView.register(nib, forCellReuseIdentifier: "NoteListTableViewCell")
         
         // header view
         let headerView = NoteListHeaderView()
