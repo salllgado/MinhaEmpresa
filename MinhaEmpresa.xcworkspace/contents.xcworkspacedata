@@ -5,9 +5,6 @@
       location = "group:MinhaEmpresa.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Feature/Feature.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:NetworkKit/NetworkKit.xcodeproj">
    </FileRef>
    <FileRef

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B31096F45C908D79A42F7C3 /* Pods_FeatureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC439F415DFC9228738FB1 /* Pods_FeatureTests.framework */; };
-		B520D5AF2323E2A800488C9C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5AE2323E2A800488C9C /* UITextField+Extension.swift */; };
 		B520D5B12323E5A600488C9C /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5B02323E5A600488C9C /* Receipts.swift */; };
 		B520D5B92323F1FD00488C9C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5B82323F1FD00488C9C /* Strings.swift */; };
 		B550EE1922EDF6FF005AB323 /* RegistrationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */; };
@@ -28,7 +27,6 @@
 		B5E03A2822E86CAB00EC85A7 /* FeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E03A2722E86CAB00EC85A7 /* FeatureTests.swift */; };
 		B5E03A2A22E86CAB00EC85A7 /* Feature.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E03A1C22E86CAB00EC85A7 /* Feature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5E03A3E22E86D6000EC85A7 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E03A3D22E86D6000EC85A7 /* Feature.swift */; };
-		B5E03A4222E86E3200EC85A7 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E03A4122E86E3200EC85A7 /* CoordinatorProtocol.swift */; };
 		B5E03A4722E870EF00EC85A7 /* ResgisterNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E03A4622E870EF00EC85A7 /* ResgisterNoteCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +44,6 @@
 		539813098E087D36B3A9F3D6 /* Pods-Feature.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature.debug.xcconfig"; path = "Target Support Files/Pods-Feature/Pods-Feature.debug.xcconfig"; sourceTree = "<group>"; };
 		7C8C1B7FFD89A4DC9464BCAF /* Pods-FeatureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureTests.debug.xcconfig"; path = "Target Support Files/Pods-FeatureTests/Pods-FeatureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F994C6F571F66A34B238D2 /* Pods-Feature.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature.release.xcconfig"; path = "Target Support Files/Pods-Feature/Pods-Feature.release.xcconfig"; sourceTree = "<group>"; };
-		B520D5AE2323E2A800488C9C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B520D5B02323E5A600488C9C /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
 		B520D5B82323F1FD00488C9C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		B550EE1822EDF6FF005AB323 /* RegistrationButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationButton.xib; sourceTree = "<group>"; };
@@ -70,7 +67,6 @@
 		B5E03A2722E86CAB00EC85A7 /* FeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTests.swift; sourceTree = "<group>"; };
 		B5E03A2922E86CAB00EC85A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E03A3D22E86D6000EC85A7 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
-		B5E03A4122E86E3200EC85A7 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		B5E03A4622E870EF00EC85A7 /* ResgisterNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteCoordinator.swift; sourceTree = "<group>"; };
 		C0A5474008A9692D8B9B5F46 /* Pods_Feature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEC439F415DFC9228738FB1 /* Pods_FeatureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeatureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +110,6 @@
 		B520D5AD2323E28200488C9C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B520D5AE2323E2A800488C9C /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,7 +117,6 @@
 		B54CD55D22FA5A1A00E26BA6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B5E03A4122E86E3200EC85A7 /* CoordinatorProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -448,14 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B520D5B12323E5A600488C9C /* Receipts.swift in Sources */,
-				B5E03A4222E86E3200EC85A7 /* CoordinatorProtocol.swift in Sources */,
 				B580643B2309A45600A122D2 /* NewNoteViewModel.swift in Sources */,
 				B5E03A3E22E86D6000EC85A7 /* Feature.swift in Sources */,
 				B5E03A4722E870EF00EC85A7 /* ResgisterNoteCoordinator.swift in Sources */,
 				B565387222ED419600E5F65B /* RegistrationNoteView.swift in Sources */,
 				B5B2F22722E8752500C48305 /* ResgisterNoteViewController.swift in Sources */,
 				B520D5B92323F1FD00488C9C /* Strings.swift in Sources */,
-				B520D5AF2323E2A800488C9C /* UITextField+Extension.swift in Sources */,
 				B5B2F22922E8754900C48305 /* ResgisterNoteViewModel.swift in Sources */,
 				B550EE1B22EDF76F005AB323 /* RegisterNoteHeaderView.swift in Sources */,
 				B565387322ED419600E5F65B /* RegisterNoteTableViewCell.swift in Sources */,

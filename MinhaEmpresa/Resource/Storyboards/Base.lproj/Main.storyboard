@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3Q-fQ-kde" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.000.000/000-00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-9p-X8x" customClass="CustomFormatter" customModule="MinhaEmpresa" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.000.000/000-00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-9p-X8x" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
                                         <rect key="frame" x="32" y="598" width="311" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Khr-wB-YO1"/>

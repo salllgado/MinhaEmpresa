@@ -15,7 +15,7 @@ protocol MainViewControllerDelegate: class {
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var cnpjTf: CustomFormatter!
+    @IBOutlet weak var cnpjTf: MyTextField!
     
     var delegate: MainViewControllerDelegate?
     var viewModel: MainViewModel!
@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        cnpjTf.formatting = .CNPJ
+        cnpjTf.formatting = .cnpj
         
         setupLoadingView()
         viewModel.getEnterpriseId()

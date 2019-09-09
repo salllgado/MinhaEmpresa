@@ -10,7 +10,7 @@ import Foundation
 import KeychainSwift
 import NetworkKit
 
-let cnpjKey: String = "keychain_enterprise_cnpj"
+internal let cnpjKey: String = "keychain_enterprise_cnpj"
 
 protocol KeychainWorkable {
     func getEnterpriseId() -> String

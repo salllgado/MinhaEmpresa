@@ -10,12 +10,23 @@ import UIKit.UITextField
 
 public enum TextFieldFormatting {
     case uuid
-    case CNPJ
+    case cpf
+    case cnpj
+    
+    // Phone formats
+    case phoneNumber8Digits
+    case phoneNumber9Digits
+    case phoneNumberOther
+    
+    // Othes
+    case currency
+    case date
     case custom
     case noFormatting
 }
 
-public class CustomFormatter: UITextField {
+public class MyTextField: UITextField {
+    
     /**
      Set a formatting pattern for a number and define a replacement string. For example: If formattingPattern would be "##-##-AB-##" and
      replacement string would be "#" and user input would be "123456", final string would look like "12-34-AB-56"
@@ -55,11 +66,37 @@ public class CustomFormatter: UITextField {
     public var formatting : TextFieldFormatting = .noFormatting {
         didSet {
             switch formatting {
+            case .uuid:
+                self.formattingPattern = "********-****-****-****-************"
+                self.replacementChar = "*"
                 
-            case .CNPJ:
+            case .cpf:
+                self.formattingPattern = "***.***.***-**"
+                self.replacementChar = "*"
+                
+            case .cnpj:
                 self.formattingPattern = "**.***.***/****-**"
                 self.replacementChar = "*"
                 
+            case .phoneNumber8Digits:
+                self.formattingPattern = "(**) ****-****"
+                self.replacementChar = "*"
+                
+            case .phoneNumber9Digits:
+                self.formattingPattern = "(**) *****-****"
+                self.replacementChar = "*"
+                
+            case .phoneNumberOther:
+                self.formattingPattern = "(**) *****-****-****"
+                self.replacementChar = "*"
+                
+            case .currency:
+                self.formattingPattern = "R$ *.***.***,**"
+                self.replacementChar = "*"
+                
+            case .date:
+                self.formattingPattern = "**/**/****"
+                self.replacementChar = "*"
             default:
                 self.maxLength = 0
             }
@@ -137,7 +174,7 @@ public class CustomFormatter: UITextField {
     
     fileprivate func registerForNotifications() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(CustomFormatter.textDidChange),
+                                               selector: #selector(MyTextField.textDidChange),
                                                name: NSNotification.Name(rawValue: "UITextFieldTextDidChangeNotification"),
                                                object: self)
     }
@@ -229,7 +266,6 @@ extension String {
     }
 }
 
-
 // Helpers
 fileprivate func < <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
@@ -249,5 +285,4 @@ fileprivate func > <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
     default:
         return rhs < lhs
     }
-
 }

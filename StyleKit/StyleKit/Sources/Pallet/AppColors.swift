@@ -9,6 +9,7 @@
 import Foundation
 
 // Navy blue 
-let primaryColor = "040E1D".hexColor()
+public let primaryColor = "040E1D".hexColor()
 
-let secondaryColor = UIColor.white
+// Default white
+public let secondaryColor = UIColor.white

@@ -9,21 +9,14 @@
 import Foundation
 import FirebaseDatabase
 
-struct Notes {
-    var enterpriseName: String
-    var enterpriseCNPJ: String
-    var noteValue: Double
-    var noteDate: Date
-}
-
-protocol RegisterNoteDelegate: class {
+protocol NoteListDelegate: class {
     func fetchNotesResponds()
     func loading(_ isLoading: Bool)
 }
 
-class ResgisterNoteViewModel {
+class NoteListViewModel {
     
-    weak var delegate: RegisterNoteDelegate?
+    weak var delegate: NoteListDelegate?
     private (set) var notes: [Receipt] = []
     
     // Fetch notes in system.

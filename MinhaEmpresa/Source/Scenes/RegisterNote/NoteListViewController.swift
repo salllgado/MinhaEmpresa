@@ -9,16 +9,18 @@
 import UIKit
 import StyleKit
 
-protocol RegisterNoteViewControllerDelegate {
+protocol NoteListViewControllerDelegate {
     func navigateToAdd(lastReceipt Id: Int)
 }
 
-class ResgisterNoteViewController: UIViewController {
+class NoteListViewController: UIViewController {
     
-    @IBOutlet weak var registrationNoteView: RegistrationNoteView!
+    @IBOutlet weak var registrationNoteView: NoteListView!
     
-    var viewModel: ResgisterNoteViewModel?
-    var delegate: RegisterNoteViewControllerDelegate?
+    private var loadingView: LoadingView?
+    
+    var viewModel: NoteListViewModel?
+    var delegate: NoteListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,29 +36,31 @@ class ResgisterNoteViewController: UIViewController {
     
     /// This method load all ui components in view.
     private func setupUI() {
-        title = "Notas"
+        title = Localizer.stringProj("NOTES_TITLE")
         
         // table view
         registrationNoteView.tableView.delegate = self
         registrationNoteView.tableView.dataSource = self
         
-        guard let tableHeaderView = registrationNoteView.tableView.tableHeaderView as? RegisterNoteHeaderView else { return }
+        guard let tableHeaderView = registrationNoteView.tableView.tableHeaderView as? NoteListHeaderView else { return }
         tableHeaderView.delegate = self
+        
+        loadingView = LoadingView(color: primaryColor)
     }
 }
 
-extension ResgisterNoteViewController: RegisterNoteDelegate {
+extension NoteListViewController: NoteListDelegate {
     
     func fetchNotesResponds() {
         registrationNoteView.tableView.reloadData()
     }
     
     func loading(_ isLoading: Bool) {
-        let loadingView = LoadingView()
+        isLoading ? loadingView?.showLoading(in: self.view) : loadingView?.dismissLoading()
     }
 }
 
-extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSource {
+extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel?.notes.count ?? 0 > 0 ? 1 : 0
@@ -67,7 +71,7 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! RegisterNoteTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellIdentifier") as! NoteListTableViewCell
         cell.delegate = self
         cell.configure(viewModel!.notes[indexPath.row])
         
@@ -75,14 +79,14 @@ extension ResgisterNoteViewController: UITableViewDelegate, UITableViewDataSourc
     }
 }
 
-extension ResgisterNoteViewController: ResgisterNoteHeaderViewDelegate {
+extension NoteListViewController: NoteListHeaderViewDelegate {
     
     func actionNewNote() {
         delegate?.navigateToAdd(lastReceipt: viewModel?.notes.count ?? 0 + 1 )
     }
 }
 
-extension ResgisterNoteViewController: RegisterNoteTableViewCellDelegate {
+extension NoteListViewController: NoteListTableViewCellDelegate {
     
     func actionSelected() {
         print("Cell tapped")
