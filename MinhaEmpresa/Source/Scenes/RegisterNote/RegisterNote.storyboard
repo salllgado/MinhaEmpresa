@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sKK-l0-pON">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,16 +13,16 @@
         <!--Note List View Controller-->
         <scene sceneID="dqc-rX-aIY">
             <objects>
-                <viewController storyboardIdentifier="ResgisterNoteViewController" id="WjP-Fs-NLh" customClass="NoteListViewController" customModule="Feature" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="eYg-fw-uoh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController storyboardIdentifier="ResgisterNoteViewController" id="WjP-Fs-NLh" customClass="NoteListViewController" customModule="MinhaEmpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYg-fw-uoh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqu-BL-hkm" customClass="NoteListView" customModule="Feature" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqu-BL-hkm" customClass="NoteListView" customModule="MinhaEmpresa" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-Ir-S2m">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="WjP-Fs-NLh" id="HcW-9k-kAy"/>
@@ -62,34 +66,34 @@
         <!--New Note View Controller-->
         <scene sceneID="QNt-1B-2yS">
             <objects>
-                <viewController storyboardIdentifier="NewNoteViewController" id="BJa-eu-QKG" customClass="NewNoteViewController" customModule="Feature" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="78T-KA-cD2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController storyboardIdentifier="NewNoteViewController" id="BJa-eu-QKG" customClass="NewNoteViewController" customModule="MinhaEmpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78T-KA-cD2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="tbe-hh-1j7" userLabel="Container Scroll View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsb-Ox-GY9">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-LD-RNy" userLabel="Stack View Fields">
-                                                <rect key="frame" x="8" y="8" width="584" height="460"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="460"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-w0-YtC" userLabel="Container CNPJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="584" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="92"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jne-gL-9K8" userLabel="CNPJ">
-                                                                <rect key="frame" x="1" y="1" width="582" height="88"/>
+                                                                <rect key="frame" x="1" y="1" width="396" height="88"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNPJ" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-MT-ig0">
-                                                                        <rect key="frame" x="8" y="8" width="566" height="20.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="380" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <color key="textColor" red="0.61962240930000001" green="0.61959654090000005" blue="0.61960846189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01.001.001/000-11" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-78-jZT" customClass="MyTextField" customModule="Feature" customModuleProvider="target">
-                                                                        <rect key="frame" x="8" y="40.5" width="566" height="39.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01.001.001/000-11" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-78-jZT" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="40.5" width="380" height="39.5"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next"/>
@@ -137,19 +141,19 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-L6-Mte" userLabel="Container Razão Social">
-                                                        <rect key="frame" x="0.0" y="100" width="584" height="92"/>
+                                                        <rect key="frame" x="0.0" y="100" width="398" height="92"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xP3-dp-k7c" userLabel="Razão Social">
-                                                                <rect key="frame" x="1" y="1" width="582" height="88"/>
+                                                                <rect key="frame" x="1" y="1" width="396" height="88"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Razão Social" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-L7-fJW">
-                                                                        <rect key="frame" x="8" y="8" width="566" height="20.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="380" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <color key="textColor" red="0.61962240930000001" green="0.61959654090000005" blue="0.61960846189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minha Empresa Ltda-ME" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DnJ-mU-T59" customClass="MyTextField" customModule="Feature" customModuleProvider="target">
-                                                                        <rect key="frame" x="8" y="40.5" width="566" height="39.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minha Empresa Ltda-ME" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DnJ-mU-T59" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="40.5" width="380" height="39.5"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -197,19 +201,19 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-zf-37c" userLabel="Container Valor da Nota">
-                                                        <rect key="frame" x="0.0" y="200" width="584" height="92"/>
+                                                        <rect key="frame" x="0.0" y="200" width="398" height="92"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNf-lI-SDg" userLabel="Valor da Nota">
-                                                                <rect key="frame" x="1" y="1" width="582" height="88"/>
+                                                                <rect key="frame" x="1" y="1" width="396" height="88"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor da Nota" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-b4-kPC">
-                                                                        <rect key="frame" x="8" y="8" width="566" height="20.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="380" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <color key="textColor" red="0.61962240930000001" green="0.61959654090000005" blue="0.61960846189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 1.000.000,00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-FT-Slu" customClass="MyTextField" customModule="Feature" customModuleProvider="target">
-                                                                        <rect key="frame" x="8" y="40.5" width="566" height="39.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 1.000.000,00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-FT-Slu" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="40.5" width="380" height="39.5"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next"/>
@@ -257,19 +261,19 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t71-ax-pD9" userLabel="Container Data da Nota">
-                                                        <rect key="frame" x="0.0" y="300" width="584" height="92"/>
+                                                        <rect key="frame" x="0.0" y="300" width="398" height="92"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fs7-TK-uTC" userLabel="Data da Nota">
-                                                                <rect key="frame" x="1" y="1" width="582" height="88"/>
+                                                                <rect key="frame" x="1" y="1" width="396" height="88"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data da Nota" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiE-7S-tam">
-                                                                        <rect key="frame" x="8" y="8" width="566" height="20.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="380" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <color key="textColor" red="0.61962240930000001" green="0.61959654090000005" blue="0.61960846189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01/01/2010" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-hj-863" customClass="MyTextField" customModule="Feature" customModuleProvider="target">
-                                                                        <rect key="frame" x="8" y="40.5" width="566" height="39.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01/01/2010" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-hj-863" customClass="MyTextField" customModule="MinhaEmpresa" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="40.5" width="380" height="39.5"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
@@ -317,10 +321,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-gJ-Ekv" userLabel="Container Button">
-                                                        <rect key="frame" x="0.0" y="400" width="584" height="60"/>
+                                                        <rect key="frame" x="0.0" y="400" width="398" height="60"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-17-R1B" customClass="AppButton" customModule="StyleKit">
-                                                                <rect key="frame" x="16" y="8" width="552" height="44"/>
+                                                                <rect key="frame" x="16" y="8" width="366" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="a79-Xh-6zX"/>
                                                                 </constraints>

@@ -209,7 +209,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c4D-Vf-EJa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e1F-55-y5b"/>
+                    <navigationItem key="navigationItem" id="e1F-55-y5b">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Md4-Qd-Cq0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblActivityTitle" destination="PR4-OV-DIR" id="Add-ne-AhE"/>
                         <outlet property="lblCNPJ" destination="uX2-rc-QeL" id="pXU-3t-Ymc"/>

@@ -12,7 +12,7 @@
 		B3125529D05CBAA701155F74 /* Pods_MinhaEmpresaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */; };
 		B520D5C0232467CD00488C9C /* ResgisterNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */; };
 		B520D5D02324687900488C9C /* RegistrationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C42324687800488C9C /* RegistrationButton.xib */; };
-		B520D5D12324687900488C9C /* RegisterNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C52324687800488C9C /* RegisterNoteTableViewCell.xib */; };
+		B520D5D12324687900488C9C /* NoteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C52324687800488C9C /* NoteListTableViewCell.xib */; };
 		B520D5D22324687900488C9C /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5C62324687800488C9C /* NoteListViewController.swift */; };
 		B520D5D32324687900488C9C /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5C72324687800488C9C /* NewNoteViewController.swift */; };
 		B520D5D42324687900488C9C /* RegisterNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C82324687800488C9C /* RegisterNote.storyboard */; };
@@ -89,7 +89,7 @@
 		A2C8B33D4F88408D9C787725 /* Pods-MinhaEmpresaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.release.xcconfig"; sourceTree = "<group>"; };
 		B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteCoordinator.swift; sourceTree = "<group>"; };
 		B520D5C42324687800488C9C /* RegistrationButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationButton.xib; sourceTree = "<group>"; };
-		B520D5C52324687800488C9C /* RegisterNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterNoteTableViewCell.xib; sourceTree = "<group>"; };
+		B520D5C52324687800488C9C /* NoteListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteListTableViewCell.xib; sourceTree = "<group>"; };
 		B520D5C62324687800488C9C /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		B520D5C72324687800488C9C /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		B520D5C82324687800488C9C /* RegisterNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterNote.storyboard; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 		B520D5BE232467A200488C9C /* RegisterNote */ = {
 			isa = PBXGroup;
 			children = (
+				B520D5EB2325D22C00488C9C /* Notes.swift */,
 				B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */,
 				B520D5CA2324687900488C9C /* Receipts.swift */,
-				B520D5EB2325D22C00488C9C /* Notes.swift */,
 				B520D5E72325D09E00488C9C /* NewNote */,
 				B520D5E92325D0B600488C9C /* NoteList */,
 				B520D5EA2325D0DC00488C9C /* View */,
@@ -239,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				B520D5C82324687800488C9C /* RegisterNote.storyboard */,
-				B520D5C52324687800488C9C /* RegisterNoteTableViewCell.xib */,
+				B520D5C52324687800488C9C /* NoteListTableViewCell.xib */,
 				B520D5C42324687800488C9C /* RegistrationButton.xib */,
 			);
 			name = View;
@@ -249,8 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				B5B2E95D22D1303F00C5039A /* LaunchScreen.storyboard */,
-				B5B2E95522D1303D00C5039A /* Main.storyboard */,
-				B526B9F822E39CD20018D9DE /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -267,6 +265,7 @@
 		B526B9F122E399420018D9DE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B526B9F822E39CD20018D9DE /* Home.storyboard */,
 				B526B9F222E399E80018D9DE /* HomeViewController.swift */,
 				B526B9F422E39A5C0018D9DE /* HomeViewModel.swift */,
 				B526B9F622E39AD00018D9DE /* HomeCoordinator.swift */,
@@ -389,6 +388,7 @@
 		B5B2E9A222D3B66800C5039A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B5B2E95522D1303D00C5039A /* Main.storyboard */,
 				B5B2E95322D1303D00C5039A /* MainViewController.swift */,
 				B5B2E9A022D3B60F00C5039A /* MainViewModel.swift */,
 				B526B9EF22E396B10018D9DE /* MainCoordinator.swift */,
@@ -512,7 +512,7 @@
 				B5B2E95F22D1303F00C5039A /* LaunchScreen.storyboard in Resources */,
 				B5B2E95C22D1303F00C5039A /* Assets.xcassets in Resources */,
 				B520D5D42324687900488C9C /* RegisterNote.storyboard in Resources */,
-				B520D5D12324687900488C9C /* RegisterNoteTableViewCell.xib in Resources */,
+				B520D5D12324687900488C9C /* NoteListTableViewCell.xib in Resources */,
 				B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */,
 				B520D5D02324687900488C9C /* RegistrationButton.xib in Resources */,
 				B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */,
