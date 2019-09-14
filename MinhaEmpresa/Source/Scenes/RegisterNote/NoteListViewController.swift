@@ -63,7 +63,7 @@ extension NoteListViewController: NoteListDelegate {
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel?.notes.count ?? 0 > 0 ? 1 : 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,6 +76,16 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(viewModel!.notes[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.viewModel?.removeReceipt(receipt: (viewModel?.notes[indexPath.row])!)
+            self.registrationNoteView.tableView.beginUpdates()
+            self.registrationNoteView.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.registrationNoteView.tableView.endUpdates()
+            
+        }
     }
 }
 

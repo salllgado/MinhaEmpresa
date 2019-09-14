@@ -27,20 +27,30 @@ class NoteListViewModel {
     func loadDataFromFirebase() {
         delegate?.loading(true)
         
-        let ref = FirebaseDatabase.sharedInstance.getReference()
-        ref.observeSingleEvent(of: .value) { (firebaseData) in
+        FirebaseDatabase.sharedInstance.getData(decodableObj: Receipts.self) { (response, err) in
             self.delegate?.loading(false)
-
-            guard let value = firebaseData.value as? [String: Any] else { return }
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
-                let receipt = try JSONDecoder().decode(Receipts.self, from: jsonData)
-                
+            if let receipt = response {
                 self.notes = receipt.CNPJ
-            } catch let error {
-                print(error)
+                self.delegate?.fetchNotesResponds()
+            } else {
+                Logger.log(err?.localizedDescription)
             }
-            self.delegate?.fetchNotesResponds()
+        }
+    }
+    
+    func removeReceipt(receipt: Receipt) {
+        for i in 0...notes.count - 1{
+            if notes[i] == receipt {
+                notes.remove(at: i)
+                break
+            }
         }
     }
 }
+
+extension Receipt: Equatable {
+    static func ==(lhs: Receipt, rhs: Receipt) -> Bool {
+        return lhs.value == rhs.value
+    }
+}
+

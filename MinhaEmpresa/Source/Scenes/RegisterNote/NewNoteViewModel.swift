@@ -42,8 +42,7 @@ class NewNoteViewModel {
     }
     
     private func saveReceipt(_ receipt: Receipt) {
-        let dictValue = try? receipt.toDict()
-        let ref = FirebaseDatabase.sharedInstance.getReference()
-        ref.child("CNPJ/\(self.lastId)").setValue(dictValue)
+        guard let dictValue = try? receipt.toDict() else { return }
+        FirebaseDatabase.sharedInstance.saveData(path: "CNPJ/\(self.lastId)", dict: dictValue)
     }
 }

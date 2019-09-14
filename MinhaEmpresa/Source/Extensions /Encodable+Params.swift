@@ -34,11 +34,11 @@ extension Encodable {
     }
     
     /// Converts to [String: String] dict.
-    public func toDict() throws -> [String: String]? {
+    public func toDict() throws -> [String: Any]? {
         do {
             let jsonData = try JSONEncoder().encode(self)
             let dict = try JSONSerialization.jsonObject(with: jsonData)
-            if let dictionary = dict as? [String: String] {
+            if let dictionary = dict as? [String: Any] {
                 return dictionary
             }
         } catch {
