@@ -10,6 +10,8 @@
 		0CDA00D71A2151C424C4D5CE /* Pods_MinhaEmpresaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B889B739F104E7AF734092E /* Pods_MinhaEmpresaTests.framework */; };
 		8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD23392E967620DBC116232C /* Pods_MinhaEmpresa.framework */; };
 		B3125529D05CBAA701155F74 /* Pods_MinhaEmpresaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */; };
+		B5027255232FC473004725F1 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5027254232FC473004725F1 /* NetworkKit.framework */; };
+		B5027256232FC473004725F1 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5027254232FC473004725F1 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B520D5C0232467CD00488C9C /* ResgisterNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */; };
 		B520D5D02324687900488C9C /* RegistrationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C42324687800488C9C /* RegistrationButton.xib */; };
 		B520D5D12324687900488C9C /* NoteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C52324687800488C9C /* NoteListTableViewCell.xib */; };
@@ -27,8 +29,6 @@
 		B520D5EC2325D22C00488C9C /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5EB2325D22C00488C9C /* Notes.swift */; };
 		B520D62323269F0000488C9C /* StyleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B520D5E323247CCE00488C9C /* StyleKit.framework */; };
 		B520D62423269F0000488C9C /* StyleKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B520D5E323247CCE00488C9C /* StyleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B520D62723269F0600488C9C /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B520D62623269F0600488C9C /* NetworkKit.framework */; };
-		B520D62823269F0600488C9C /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B520D62623269F0600488C9C /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B526B9EE22E395E30018D9DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B9ED22E395E30018D9DE /* AppCoordinator.swift */; };
 		B526B9F022E396B10018D9DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B9EF22E396B10018D9DE /* MainCoordinator.swift */; };
 		B526B9F322E399E80018D9DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B9F222E399E80018D9DE /* HomeViewController.swift */; };
@@ -80,7 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B520D62823269F0600488C9C /* NetworkKit.framework in Embed Frameworks */,
+				B5027256232FC473004725F1 /* NetworkKit.framework in Embed Frameworks */,
 				B520D62423269F0000488C9C /* StyleKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -94,6 +94,7 @@
 		6B889B739F104E7AF734092E /* Pods_MinhaEmpresaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinhaEmpresaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780443F57A0ADA07C4F56F03 /* Pods-MinhaEmpresaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaUITests/Pods-MinhaEmpresaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2C8B33D4F88408D9C787725 /* Pods-MinhaEmpresaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5027254232FC473004725F1 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteCoordinator.swift; sourceTree = "<group>"; };
 		B520D5C42324687800488C9C /* RegistrationButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationButton.xib; sourceTree = "<group>"; };
 		B520D5C52324687800488C9C /* NoteListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteListTableViewCell.xib; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		B520D5E123246C3D00488C9C /* Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		B520D5E323247CCE00488C9C /* StyleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StyleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B520D5EB2325D22C00488C9C /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		B520D62623269F0600488C9C /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B526B9ED22E395E30018D9DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B526B9EF22E396B10018D9DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B526B9F222E399E80018D9DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			files = (
 				8F4BD6136C66AAE956423497 /* Pods_MinhaEmpresa.framework in Frameworks */,
 				B520D62323269F0000488C9C /* StyleKit.framework in Frameworks */,
-				B520D62723269F0600488C9C /* NetworkKit.framework in Frameworks */,
+				B5027255232FC473004725F1 /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +196,7 @@
 		970B3FF7D8D510306FEF7F24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5027254232FC473004725F1 /* NetworkKit.framework */,
 				B520D5E323247CCE00488C9C /* StyleKit.framework */,
 				FD23392E967620DBC116232C /* Pods_MinhaEmpresa.framework */,
 				6B889B739F104E7AF734092E /* Pods_MinhaEmpresaTests.framework */,
@@ -299,7 +300,6 @@
 		B5B2E94322D1303D00C5039A = {
 			isa = PBXGroup;
 			children = (
-				B520D62623269F0600488C9C /* NetworkKit.framework */,
 				B5B2E94E22D1303D00C5039A /* MinhaEmpresa */,
 				B5B2E96822D1303F00C5039A /* MinhaEmpresaTests */,
 				B5B2E97322D1303F00C5039A /* MinhaEmpresaUITests */,
