@@ -7,25 +7,37 @@
 //
 
 import Foundation
+import CoreData
+//
+//struct Receipts: Decodable {
+//    var CNPJ: [Receipt]
+//}
+//
 
-struct Receipts: Decodable {
-    var CNPJ: [Receipt]
-}
-
-struct Receipt: Codable {
-    var noteOwner: String
-    var cnpj: String
-    var enterpriseName: String
-    var value: String
-    var date: String
-    var paymentDate: String?
+final class Receipt: NSManagedObject {
     
-    init(cnpj: String, enterpriseName: String, value: String, date: String, paymentDate: String?) {
-        self.noteOwner = KeychainWorker().getEnterpriseId()
-        self.cnpj = cnpj
-        self.enterpriseName = enterpriseName
-        self.value = value
-        self.date = date
-        self.paymentDate = paymentDate
-    }
+    @NSManaged var noteOwner: String
+    @NSManaged var cnpj: String
+    @NSManaged var enterpriseName: String
+    @NSManaged var value: String
+    @NSManaged var date: String
+    @NSManaged var paymentDate: String?
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Receipt> {
+           return NSFetchRequest<Receipt>(entityName: String(describing: self))
+       }
+       
+       convenience init() {
+           let entityDescription: NSEntityDescription = CoreDataHelper.shared.create(String(describing: type(of: self)))
+           self.init(entity: entityDescription, insertInto: nil)
+       }
+
+//    init(cnpj: String, enterpriseName: String, value: String, date: String, paymentDate: String?) {
+//        self.noteOwner = KeychainWorker().getEnterpriseId()
+//        self.cnpj = cnpj
+//        self.enterpriseName = enterpriseName
+//        self.value = value
+//        self.date = date
+//        self.paymentDate = paymentDate
+//    }
 }

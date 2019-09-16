@@ -19,6 +19,12 @@ class NoteListViewModel {
     weak var delegate: NoteListDelegate?
     private (set) var notes: [Receipt] = []
     
+    private let coreDataWorker: CoreDataWorkable?
+    
+    init() {
+        coreDataWorker = CoreDataWorker()
+    }
+    
     // Fetch notes in system.
     func fetchNotes() {
         loadDataFromFirebase()
@@ -27,30 +33,28 @@ class NoteListViewModel {
     func loadDataFromFirebase() {
         delegate?.loading(true)
         
-        FirebaseDatabase.sharedInstance.getData(decodableObj: Receipts.self) { (response, err) in
-            self.delegate?.loading(false)
-            if let receipt = response {
-                self.notes = receipt.CNPJ
-                self.delegate?.fetchNotesResponds()
-            } else {
-                Logger.log(err?.localizedDescription)
-            }
+        do {
+            let values = try coreDataWorker?.fetch()
+            self.notes = values ?? []
+        } catch {
+            // ...
         }
+        
+        self.delegate?.loading(false)
+        self.delegate?.fetchNotesResponds()
     }
     
     func removeReceipt(receipt: Receipt) {
-        for i in 0...notes.count - 1{
-            if notes[i] == receipt {
-                notes.remove(at: i)
-                break
+        do {
+            try coreDataWorker?.delete(receipt)
+            for i in 0...notes.count - 1{
+                if notes[i] == receipt {
+                    notes.remove(at: i)
+                    break
+                }
             }
+        } catch {
+            // ...
         }
     }
 }
-
-extension Receipt: Equatable {
-    static func ==(lhs: Receipt, rhs: Receipt) -> Bool {
-        return lhs.value == rhs.value
-    }
-}
-

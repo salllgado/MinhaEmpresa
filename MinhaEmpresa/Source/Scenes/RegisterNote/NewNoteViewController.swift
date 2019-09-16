@@ -44,11 +44,12 @@ class NewNoteViewController: UIViewController {
     }
     
     @IBAction func actionSave(_ sender: Any) {
-        let receipt = Receipt(cnpj: noteCNPJTf.text ?? "",
-                           enterpriseName: enterpriseNameTf.text ?? "",
-                           value: noteValueTf.text ?? "",
-                           date: noteDateTf.text ?? "",
-                           paymentDate: paymentDateTf.text)
+        let receipt = Receipt()
+        receipt.cnpj = noteCNPJTf.text
+        receipt.enterpriseName = enterpriseNameTf.text
+        receipt.value = noteValueTf.text
+        receipt.date = noteDateTf.text
+        receipt.paymentDate = paymentDateTf.text
         
         viewModel?.saveData(receipt)
     }

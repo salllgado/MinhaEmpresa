@@ -21,8 +21,11 @@ class NewNoteViewModel {
     weak var viewControllerDelegate: NewNoteViewControllerDelegate?
     private (set) var lastId: Int
     
+    private let worker: CoreDataWorkable?
+    
     init(lastReceipt id: Int) {
         self.lastId = id
+        self.worker = CoreDataWorker()
     }
     
     func saveData(_ receipt: Receipt) {
@@ -42,7 +45,10 @@ class NewNoteViewModel {
     }
     
     private func saveReceipt(_ receipt: Receipt) {
-        guard let dictValue = try? receipt.toDict() else { return }
-        FirebaseDatabase.sharedInstance.saveData(path: "CNPJ/\(self.lastId)", dict: dictValue)
+        do {
+            try worker?.create(receipt)
+        } catch {
+            // ...
+        }
     }
 }
