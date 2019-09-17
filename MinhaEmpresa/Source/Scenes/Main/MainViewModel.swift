@@ -21,10 +21,12 @@ class MainViewModel {
     weak var delegate: MainViewModelDelegate?
     private let keychain: KeychainWorkable?
     private let network: NetworkWorkable?
+    private let authentication: AuthenticationWorkable?
     
     init() {
         keychain = KeychainWorker()
         network = NetworkWorker()
+        authentication = AuthenticationWorker()
     }
     
     func loadData(cnpj: String) {
@@ -40,6 +42,10 @@ class MainViewModel {
     }
     
     func getEnterpriseId() {
-        delegate?.setEnterpriseId(cnpj: keychain?.getEnterpriseId() ?? "")
+        authentication?.requestForUserAuthentication(completionHandler: { (success) in
+            if success {
+                self.delegate?.setEnterpriseId(cnpj: self.keychain?.getEnterpriseId() ?? "")
+            }
+        })
     }
 }

@@ -41,6 +41,7 @@
 		B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6E22D3BCC30008D874 /* String+Logger.swift */; };
 		B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */; };
 		B583F0A92331408F00CBD009 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583F0A82331408F00CBD009 /* NetworkWorker.swift */; };
+		B583F0AB233142EB00CBD009 /* AuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583F0AA233142EB00CBD009 /* AuthenticationWorker.swift */; };
 		B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B599D0AE23121A45009479F9 /* GoogleService-Info.plist */; };
 		B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E95322D1303D00C5039A /* MainViewController.swift */; };
 		B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E95522D1303D00C5039A /* Main.storyboard */; };
@@ -125,6 +126,7 @@
 		B564BE6E22D3BCC30008D874 /* String+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Logger.swift"; sourceTree = "<group>"; };
 		B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Formatter.swift"; sourceTree = "<group>"; };
 		B583F0A82331408F00CBD009 /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
+		B583F0AA233142EB00CBD009 /* AuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWorker.swift; sourceTree = "<group>"; };
 		B599D0AE23121A45009479F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B2E94C22D1303D00C5039A /* MinhaEmpresa.dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinhaEmpresa.dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2E95322D1303D00C5039A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				B520D5DE23246AA300488C9C /* FirebaseDatabase.swift */,
 				B5343F13232F0872004C5A03 /* CoreDataWorker.swift */,
 				B583F0A82331408F00CBD009 /* NetworkWorker.swift */,
+				B583F0AA233142EB00CBD009 /* AuthenticationWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				B520D5C0232467CD00488C9C /* ResgisterNoteCoordinator.swift in Sources */,
 				B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */,
 				B5B2E95A22D1303D00C5039A /* MinhaEmpresa.xcdatamodeld in Sources */,
+				B583F0AB233142EB00CBD009 /* AuthenticationWorker.swift in Sources */,
 				B520D5DB2324687900488C9C /* NewNoteViewModel.swift in Sources */,
 				B526B9F022E396B10018D9DE /* MainCoordinator.swift in Sources */,
 				B520D5E223246C3D00488C9C /* Localizer.swift in Sources */,
