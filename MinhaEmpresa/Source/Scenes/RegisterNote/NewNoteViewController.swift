@@ -28,6 +28,7 @@ class NewNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        noteCNPJTf.delegate = self
         noteValueTf.delegate = self
         setupUI()
     }
@@ -64,6 +65,10 @@ extension NewNoteViewController: NewNoteDelegate {
     func showAlert(_ actions: [UIAlertAction]) {
         self.showAlertController(title: "Tente novamente", message: "Existem dados em branco, preencha novamente e tente novamente.", actions: actions)
     }
+    
+    func serverResponds() {
+        self.enterpriseNameTf.text = viewModel?.enterpriseData?.enterpriseName ?? ""
+    }
 }
 
 extension NewNoteViewController: UITextFieldDelegate {
@@ -77,5 +82,11 @@ extension NewNoteViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if textField == noteCNPJTf {
+            viewModel?.loadData(cnpj: noteCNPJTf.text)
+        }
     }
 }
