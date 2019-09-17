@@ -34,8 +34,9 @@ class MainViewController: UIViewController {
         loadingView.color = .black
         loadingView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         loadingView.center = self.view.center
-        self.view.addSubview(loadingView)
-        self.view.bringSubviewToFront(loadingView)
+        
+        view.addSubview(loadingView)
+        view.bringSubviewToFront(loadingView)
     }
     
     @IBAction func sendData(_ sender: Any) {

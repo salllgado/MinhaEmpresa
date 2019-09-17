@@ -40,6 +40,7 @@
 		B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */; };
 		B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6E22D3BCC30008D874 /* String+Logger.swift */; };
 		B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */; };
+		B583F0A92331408F00CBD009 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583F0A82331408F00CBD009 /* NetworkWorker.swift */; };
 		B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B599D0AE23121A45009479F9 /* GoogleService-Info.plist */; };
 		B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E95322D1303D00C5039A /* MainViewController.swift */; };
 		B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E95522D1303D00C5039A /* Main.storyboard */; };
@@ -123,6 +124,7 @@
 		B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Params.swift"; sourceTree = "<group>"; };
 		B564BE6E22D3BCC30008D874 /* String+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Logger.swift"; sourceTree = "<group>"; };
 		B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Formatter.swift"; sourceTree = "<group>"; };
+		B583F0A82331408F00CBD009 /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
 		B599D0AE23121A45009479F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B2E94C22D1303D00C5039A /* MinhaEmpresa.dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinhaEmpresa.dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2E95322D1303D00C5039A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				B5EA89F022E3D41D002B46C1 /* KeychainWorker.swift */,
 				B520D5DE23246AA300488C9C /* FirebaseDatabase.swift */,
 				B5343F13232F0872004C5A03 /* CoreDataWorker.swift */,
+				B583F0A82331408F00CBD009 /* NetworkWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */,
 				B5343F12232F07E0004C5A03 /* CoreDataHelper.swift in Sources */,
 				B520D5DF23246AA300488C9C /* FirebaseDatabase.swift in Sources */,
+				B583F0A92331408F00CBD009 /* NetworkWorker.swift in Sources */,
 				B520D5DA2324687900488C9C /* NoteListHeaderView.swift in Sources */,
 				B520D5D22324687900488C9C /* NoteListViewController.swift in Sources */,
 				B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */,

@@ -24,10 +24,12 @@ class NewNoteViewModel {
     private (set) var enterpriseData: Enterprise?
     
     private let worker: CoreDataWorkable?
+    private let network: NetworkWorkable?
     
     init(lastReceipt id: Int) {
         self.lastId = id
         self.worker = CoreDataWorker()
+        self.network = NetworkWorker()
     }
     
     func saveData(_ receipt: Receipt) {
@@ -44,7 +46,7 @@ class NewNoteViewModel {
     
     func loadData(cnpj: String) {
         delegate?.loading(true)
-        Manager.requestEnterprise(cnpj: cnpj) { (response, error) in
+        network?.requestEnterprise(cnpj: cnpj, completionHandler: { (response, error) in
             self.delegate?.loading(false)
             if let err = error {
                 Logger.log(err)
@@ -53,7 +55,7 @@ class NewNoteViewModel {
                 self.delegate?.loading(false)
                 self.delegate?.serverResponds()
             }
-        }
+        })
     }
     
     private func validReceipt(_ receipt: Receipt) -> Bool {

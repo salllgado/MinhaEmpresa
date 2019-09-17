@@ -19,22 +19,24 @@ protocol MainViewModelDelegate: class {
 class MainViewModel {
     
     weak var delegate: MainViewModelDelegate?
-    private var keychain: KeychainWorkable?
+    private let keychain: KeychainWorkable?
+    private let network: NetworkWorkable?
     
     init() {
         keychain = KeychainWorker()
+        network = NetworkWorker()
     }
     
     func loadData(cnpj: String) {
         delegate?.loadingStart()
-        Manager.requestEnterprise(cnpj: cnpj) { (response, error) in
+        network?.requestEnterprise(cnpj: cnpj, completionHandler: { (response, error) in
             self.delegate?.loadingEnd()
             if let err = error {
                 Logger.log(err)
             } else if let enterprise = response {
                 self.delegate?.serverResponds(send: enterprise)
             }
-        }
+        })
     }
     
     func getEnterpriseId() {
