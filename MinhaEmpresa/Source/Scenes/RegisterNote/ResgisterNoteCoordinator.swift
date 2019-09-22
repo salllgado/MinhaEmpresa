@@ -23,7 +23,8 @@ class ResgisterNoteCoordinator: Coordinator {
     
     func start() {
         let storyboard = UIStoryboard(name: "RegisterNote", bundle: Bundle(for: NoteListViewController.self))
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ResgisterNoteViewController") as! NoteListViewController
+        let identifier = String(describing: NoteListViewController.self)
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as! NoteListViewController
         viewController.delegate = self
         viewController.viewModel = self.viewModel
         
@@ -37,6 +38,11 @@ extension ResgisterNoteCoordinator: NoteListViewControllerDelegate {
     func navigateToAdd(lastReceipt Id: Int) {
         presenter?.pushViewController(instantiateRegisterNoteController(lastReceipt: Id),
                                       animated: true)
+    }
+    
+    func navigateToDetail(sender: Receipt) {
+        let coordinator = DetailNoteCoordinator(presenter: self.presenter ?? UINavigationController(), receipt: sender)
+        coordinator.start()
     }
     
     private func instantiateRegisterNoteController(lastReceipt Id: Int) -> UIViewController {

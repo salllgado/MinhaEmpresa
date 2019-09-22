@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NoteListTableViewCellDelegate: class {
-    func actionSelected()
+    func actionSelected(_ receipt: Receipt)
 }
 
 class NoteListTableViewCell: UITableViewCell {
@@ -19,6 +19,7 @@ class NoteListTableViewCell: UITableViewCell {
     @IBOutlet weak var noteDateTf: MyTextField!
     
     weak var delegate: NoteListTableViewCellDelegate?
+    private var receipt: Receipt?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,7 @@ class NoteListTableViewCell: UITableViewCell {
         noteDateTf.text = receipt.date
         
         noteDateTf.formatting = .date
+        self.receipt = receipt
     }
     
     override func prepareForReuse() {
@@ -44,6 +46,7 @@ class NoteListTableViewCell: UITableViewCell {
     }
     
     @IBAction func actionTappep(_ sender: Any) {
-        delegate?.actionSelected()
+        guard let _receipt = receipt else { return }
+        delegate?.actionSelected(_receipt)
     }
 }

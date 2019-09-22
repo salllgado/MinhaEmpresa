@@ -16,7 +16,6 @@ protocol Coordinator {
     func start()
 }
 
-
 class AppCoordinator {
     let window: UIWindow
     let rootViewController: UINavigationController

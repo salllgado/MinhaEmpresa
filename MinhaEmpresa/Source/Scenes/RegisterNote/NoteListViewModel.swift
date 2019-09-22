@@ -16,6 +16,7 @@ protocol NoteListDelegate: class {
 
 class NoteListViewModel {
     
+    weak var viewControllerDelegate: NoteListViewControllerDelegate?
     weak var delegate: NoteListDelegate?
     private (set) var notes: [Receipt] = []
     

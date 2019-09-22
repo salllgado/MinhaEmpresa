@@ -9,8 +9,9 @@
 import UIKit
 import StyleKit
 
-protocol NoteListViewControllerDelegate {
+protocol NoteListViewControllerDelegate: class {
     func navigateToAdd(lastReceipt Id: Int)
+    func navigateToDetail(sender: Receipt)
 }
 
 class NoteListViewController: UIViewController {
@@ -97,8 +98,8 @@ extension NoteListViewController: NoteListHeaderViewDelegate {
 }
 
 extension NoteListViewController: NoteListTableViewCellDelegate {
-    
-    func actionSelected() {
-        print("Cell tapped")
+
+    func actionSelected(_ receipt: Receipt) {
+        delegate?.navigateToDetail(sender: receipt)
     }
 }
