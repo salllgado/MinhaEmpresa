@@ -25,7 +25,7 @@ class DetailNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Detalhes"
         setupUI()
     }
     
