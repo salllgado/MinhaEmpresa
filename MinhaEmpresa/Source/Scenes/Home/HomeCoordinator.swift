@@ -37,6 +37,7 @@ class HomeCoordinator: Coordinator {
             self.homeViewController = viewController
         }
         
+//        navigationController.modalPresentationStyle = .fullScreen
         presenter.present(navigationController, animated: true, completion: {
             guard let navigationController = self.homeViewController?.navigationController else { return }
             self.presenter = navigationController
@@ -49,7 +50,7 @@ extension HomeCoordinator {
     private func setupNavigationBar(nav: UINavigationController) -> UINavigationController {
         let attr: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.white]
         
-        nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.prefersLargeTitles = false
         nav.navigationBar.titleTextAttributes = attr
         nav.navigationBar.largeTitleTextAttributes = attr
         nav.navigationBar.barTintColor = "#040E1D".hexColor()
@@ -63,7 +64,7 @@ extension HomeCoordinator: HomeViewControllerDelegate {
         navigateToFeature()
     }
     
-    func navigateToFeature() {
+    fileprivate func navigateToFeature() {
         let destinationCoordinator = ResgisterNoteCoordinator(presenter: self.presenter)
         destinationCoordinator.start()
     }
