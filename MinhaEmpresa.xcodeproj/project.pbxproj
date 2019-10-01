@@ -40,6 +40,7 @@
 		B534C4F42336CE2800CD5079 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534C4F32336CE2800CD5079 /* DetailNoteViewController.swift */; };
 		B534C4F62336CE4500CD5079 /* DetailNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534C4F52336CE4500CD5079 /* DetailNoteViewModel.swift */; };
 		B534C4F92336D09A00CD5079 /* DetailNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534C4F82336D09A00CD5079 /* DetailNoteCoordinator.swift */; };
+		B55824F92343AFAE00441DF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55824F82343AFAE00441DF9 /* SceneDelegate.swift */; };
 		B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */; };
 		B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6E22D3BCC30008D874 /* String+Logger.swift */; };
 		B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */; };
@@ -127,6 +128,7 @@
 		B534C4F32336CE2800CD5079 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
 		B534C4F52336CE4500CD5079 /* DetailNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewModel.swift; sourceTree = "<group>"; };
 		B534C4F82336D09A00CD5079 /* DetailNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteCoordinator.swift; sourceTree = "<group>"; };
+		B55824F82343AFAE00441DF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Params.swift"; sourceTree = "<group>"; };
 		B564BE6E22D3BCC30008D874 /* String+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Logger.swift"; sourceTree = "<group>"; };
 		B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Formatter.swift"; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				B5B2E99A22D3AF3E00C5039A /* AppDelegate.swift */,
 				B526B9ED22E395E30018D9DE /* AppCoordinator.swift */,
+				B55824F82343AFAE00441DF9 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */,
 				B520D5D92324687900488C9C /* NoteListTableViewCell.swift in Sources */,
 				B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */,
+				B55824F92343AFAE00441DF9 /* SceneDelegate.swift in Sources */,
 				B5343F12232F07E0004C5A03 /* CoreDataHelper.swift in Sources */,
 				B520D5DF23246AA300488C9C /* FirebaseDatabase.swift in Sources */,
 				B583F0A92331408F00CBD009 /* NetworkWorker.swift in Sources */,
