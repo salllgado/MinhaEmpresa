@@ -12,6 +12,9 @@
 		B3125529D05CBAA701155F74 /* Pods_MinhaEmpresaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */; };
 		B5027255232FC473004725F1 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5027254232FC473004725F1 /* NetworkKit.framework */; };
 		B5027256232FC473004725F1 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5027254232FC473004725F1 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B505C3F32344111A006304DA /* NoteFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505C3F22344111A006304DA /* NoteFinderViewController.swift */; };
+		B505C3F5234411A3006304DA /* NoteFinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B505C3F4234411A3006304DA /* NoteFinder.storyboard */; };
+		B505C3F7234412D2006304DA /* NoteFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505C3F6234412D2006304DA /* NoteFinderViewModel.swift */; };
 		B520D5C0232467CD00488C9C /* ResgisterNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */; };
 		B520D5D02324687900488C9C /* RegistrationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C42324687800488C9C /* RegistrationButton.xib */; };
 		B520D5D12324687900488C9C /* NoteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B520D5C52324687800488C9C /* NoteListTableViewCell.xib */; };
@@ -44,6 +47,8 @@
 		B564BE6D22D3BC9B0008D874 /* Encodable+Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */; };
 		B564BE6F22D3BCC30008D874 /* String+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE6E22D3BCC30008D874 /* String+Logger.swift */; };
 		B564BE7322D3D9830008D874 /* UITextField+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */; };
+		B56FC37E23442DB7004D5E71 /* NoteFinderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FC37C23442DB7004D5E71 /* NoteFinderTableViewCell.swift */; };
+		B56FC37F23442DB7004D5E71 /* NoteFinderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56FC37D23442DB7004D5E71 /* NoteFinderTableViewCell.xib */; };
 		B583F0A92331408F00CBD009 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583F0A82331408F00CBD009 /* NetworkWorker.swift */; };
 		B583F0AB233142EB00CBD009 /* AuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583F0AA233142EB00CBD009 /* AuthenticationWorker.swift */; };
 		B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B599D0AE23121A45009479F9 /* GoogleService-Info.plist */; };
@@ -101,6 +106,9 @@
 		780443F57A0ADA07C4F56F03 /* Pods-MinhaEmpresaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaUITests/Pods-MinhaEmpresaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2C8B33D4F88408D9C787725 /* Pods-MinhaEmpresaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinhaEmpresaTests.release.xcconfig"; path = "Target Support Files/Pods-MinhaEmpresaTests/Pods-MinhaEmpresaTests.release.xcconfig"; sourceTree = "<group>"; };
 		B5027254232FC473004725F1 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B505C3F22344111A006304DA /* NoteFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFinderViewController.swift; sourceTree = "<group>"; };
+		B505C3F4234411A3006304DA /* NoteFinder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoteFinder.storyboard; sourceTree = "<group>"; };
+		B505C3F6234412D2006304DA /* NoteFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFinderViewModel.swift; sourceTree = "<group>"; };
 		B520D5BF232467CD00488C9C /* ResgisterNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterNoteCoordinator.swift; sourceTree = "<group>"; };
 		B520D5C42324687800488C9C /* RegistrationButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationButton.xib; sourceTree = "<group>"; };
 		B520D5C52324687800488C9C /* NoteListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteListTableViewCell.xib; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 		B564BE6C22D3BC9B0008D874 /* Encodable+Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Params.swift"; sourceTree = "<group>"; };
 		B564BE6E22D3BCC30008D874 /* String+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Logger.swift"; sourceTree = "<group>"; };
 		B564BE7222D3D9830008D874 /* UITextField+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Formatter.swift"; sourceTree = "<group>"; };
+		B56FC37C23442DB7004D5E71 /* NoteFinderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFinderTableViewCell.swift; sourceTree = "<group>"; };
+		B56FC37D23442DB7004D5E71 /* NoteFinderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteFinderTableViewCell.xib; sourceTree = "<group>"; };
 		B583F0A82331408F00CBD009 /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
 		B583F0AA233142EB00CBD009 /* AuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWorker.swift; sourceTree = "<group>"; };
 		B599D0AE23121A45009479F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -215,6 +225,17 @@
 				F955B8EA3975CCA4446E20FD /* Pods_MinhaEmpresaUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B505C3F123441032006304DA /* NoteFinder */ = {
+			isa = PBXGroup;
+			children = (
+				B56FC37C23442DB7004D5E71 /* NoteFinderTableViewCell.swift */,
+				B505C3F22344111A006304DA /* NoteFinderViewController.swift */,
+				B505C3F6234412D2006304DA /* NoteFinderViewModel.swift */,
+				B56FC37B23442D96004D5E71 /* View */,
+			);
+			path = NoteFinder;
 			sourceTree = "<group>";
 		};
 		B520D5BE232467A200488C9C /* RegisterNote */ = {
@@ -301,9 +322,9 @@
 		B534C4F22336CE0F00CD5079 /* DetailNote */ = {
 			isa = PBXGroup;
 			children = (
+				B534C4F82336D09A00CD5079 /* DetailNoteCoordinator.swift */,
 				B534C4F32336CE2800CD5079 /* DetailNoteViewController.swift */,
 				B534C4F52336CE4500CD5079 /* DetailNoteViewModel.swift */,
-				B534C4F82336D09A00CD5079 /* DetailNoteCoordinator.swift */,
 			);
 			path = DetailNote;
 			sourceTree = "<group>";
@@ -326,6 +347,15 @@
 				B5EA89EE22E3CEAB002B46C1 /* HexColor+String.swift */,
 			);
 			path = "Extensions ";
+			sourceTree = "<group>";
+		};
+		B56FC37B23442D96004D5E71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B56FC37D23442DB7004D5E71 /* NoteFinderTableViewCell.xib */,
+				B505C3F4234411A3006304DA /* NoteFinder.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		B5B2E94322D1303D00C5039A = {
@@ -410,6 +440,7 @@
 				B5B2E9A222D3B66800C5039A /* Main */,
 				B520D5BE232467A200488C9C /* RegisterNote */,
 				B534C4F22336CE0F00CD5079 /* DetailNote */,
+				B505C3F123441032006304DA /* NoteFinder */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -555,12 +586,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B2E99E22D3AF3F00C5039A /* Info.plist in Resources */,
+				B56FC37F23442DB7004D5E71 /* NoteFinderTableViewCell.xib in Resources */,
 				B5EA89F722E3DD16002B46C1 /* Localizable.strings in Resources */,
 				B526B9F922E39CD20018D9DE /* Home.storyboard in Resources */,
 				B5B2E95F22D1303F00C5039A /* LaunchScreen.storyboard in Resources */,
 				B5B2E95C22D1303F00C5039A /* Assets.xcassets in Resources */,
 				B520D5D42324687900488C9C /* RegisterNote.storyboard in Resources */,
 				B520D5D12324687900488C9C /* NoteListTableViewCell.xib in Resources */,
+				B505C3F5234411A3006304DA /* NoteFinder.storyboard in Resources */,
 				B5B2E95722D1303D00C5039A /* Main.storyboard in Resources */,
 				B520D5D02324687900488C9C /* RegistrationButton.xib in Resources */,
 				B599D0AF23121A46009479F9 /* GoogleService-Info.plist in Resources */,
@@ -676,6 +709,8 @@
 			files = (
 				B526B9EE22E395E30018D9DE /* AppCoordinator.swift in Sources */,
 				B534C4F42336CE2800CD5079 /* DetailNoteViewController.swift in Sources */,
+				B56FC37E23442DB7004D5E71 /* NoteFinderTableViewCell.swift in Sources */,
+				B505C3F7234412D2006304DA /* NoteFinderViewModel.swift in Sources */,
 				B520D5EC2325D22C00488C9C /* Notes.swift in Sources */,
 				B5B2E99D22D3AF3F00C5039A /* AppDelegate.swift in Sources */,
 				B5B2E95422D1303D00C5039A /* MainViewController.swift in Sources */,
@@ -704,6 +739,7 @@
 				B520D5D62324687900488C9C /* Receipts.swift in Sources */,
 				B526B9F522E39A5C0018D9DE /* HomeViewModel.swift in Sources */,
 				B5343F14232F0873004C5A03 /* CoreDataWorker.swift in Sources */,
+				B505C3F32344111A006304DA /* NoteFinderViewController.swift in Sources */,
 				B520D5D82324687900488C9C /* NoteListViewModel.swift in Sources */,
 				B5B2E9A122D3B60F00C5039A /* MainViewModel.swift in Sources */,
 				B520D5D32324687900488C9C /* NewNoteViewController.swift in Sources */,

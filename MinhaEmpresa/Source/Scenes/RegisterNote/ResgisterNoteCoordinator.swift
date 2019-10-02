@@ -66,4 +66,24 @@ extension ResgisterNoteCoordinator: NewNoteViewControllerDelegate {
     func navigate() {
         presenter?.popViewController(animated: true)
     }
+    
+    func navigateToSearchNote() {
+        let viewController = instantiateNoteFinderViewController()
+        presenter?.pushViewController(viewController, animated: true)
+    }
+    
+    private func instantiateNoteFinderViewController() -> UIViewController {
+        let identifier = "NoteFinderViewController"
+        let storyboardName = "NoteFinder"
+        let storyboard = UIStoryboard(name: storyboardName,
+                                      bundle: Bundle(for: NoteFinderViewController.self))
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as! NoteFinderViewController
+        let viewModel = NoteFinderViewModel()
+        
+        viewModel.delegate = viewController
+//        viewModel.viewControllerDelegate = self
+        viewController.viewModel = viewModel
+        
+        return viewController
+    }
 }

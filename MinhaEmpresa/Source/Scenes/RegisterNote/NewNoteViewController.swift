@@ -11,6 +11,7 @@ import StyleKit
 
 protocol NewNoteViewControllerDelegate: class {
     func navigate()
+    func navigateToSearchNote()
 }
 
 class NewNoteViewController: UIViewController {
@@ -54,6 +55,11 @@ class NewNoteViewController: UIViewController {
         
         viewModel?.saveData(receipt)
     }
+    
+    @IBAction func actionNoteEnterprise(_ sender: Any) {
+        viewModel?.viewControllerDelegate?.navigateToSearchNote()
+    }
+    
 }
 
 extension NewNoteViewController: NewNoteDelegate {

@@ -29,6 +29,13 @@ class NoteListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func prepareForReuse() {
+           super.prepareForReuse()
+           lblEnterpriseName.text = ""
+           lblNoteValue.text = ""
+           noteDateTf.text = ""
+       }
+    
     func configure(_ receipt: Receipt) {
         lblEnterpriseName.text = receipt.enterpriseName
         lblNoteValue.text = receipt.value
@@ -36,13 +43,6 @@ class NoteListTableViewCell: UITableViewCell {
         
         noteDateTf.formatting = .date
         self.receipt = receipt
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        lblEnterpriseName.text = ""
-        lblNoteValue.text = ""
-        noteDateTf.text = ""
     }
     
     @IBAction func actionTappep(_ sender: Any) {
