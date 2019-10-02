@@ -71,7 +71,7 @@
                             <constraint firstItem="bgW-gY-J1p" firstAttribute="leading" secondItem="iNu-Eo-wUn" secondAttribute="leading" id="TnP-F2-fck"/>
                             <constraint firstItem="POu-WX-0wI" firstAttribute="top" secondItem="iNu-Eo-wUn" secondAttribute="top" constant="8" id="UgR-Jg-evg"/>
                             <constraint firstItem="OCD-lW-LeE" firstAttribute="centerY" secondItem="iNu-Eo-wUn" secondAttribute="centerY" id="fQv-wT-PXf"/>
-                            <constraint firstAttribute="trailing" secondItem="POu-WX-0wI" secondAttribute="trailing" priority="750" constant="8" id="hIP-Dw-D1S"/>
+                            <constraint firstAttribute="trailing" secondItem="POu-WX-0wI" secondAttribute="trailing" constant="8" id="hIP-Dw-D1S"/>
                             <constraint firstItem="bgW-gY-J1p" firstAttribute="top" secondItem="iNu-Eo-wUn" secondAttribute="top" id="oW4-H5-Z9n"/>
                             <constraint firstItem="POu-WX-0wI" firstAttribute="leading" secondItem="iNu-Eo-wUn" secondAttribute="leading" constant="8" id="vmf-jH-24R"/>
                             <constraint firstItem="OCD-lW-LeE" firstAttribute="leading" secondItem="POu-WX-0wI" secondAttribute="trailing" constant="8" id="yXf-B7-jcw"/>
@@ -102,6 +102,11 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="OCD-lW-LeE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="yXf-B7-jcw"/>
                             </mask>
                         </variation>
                     </view>
