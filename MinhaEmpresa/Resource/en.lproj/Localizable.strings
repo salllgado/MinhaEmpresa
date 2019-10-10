@@ -19,3 +19,6 @@
 "NEW_NOTE_TITLE" = "Nova nota";
 "PAYMENT_DAY_TITLE_LABEL" = "Data de pagamento";
 "SAVE_NOTE_BUTTON" = "Salvar nota";
+
+/// NOTE FINDER
+"SEARCH_BAR_PLACEHOLDER" = "Informe aqui o CNPJ";

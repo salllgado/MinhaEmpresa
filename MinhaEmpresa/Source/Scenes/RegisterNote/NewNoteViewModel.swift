@@ -58,6 +58,20 @@ class NewNoteViewModel {
         })
     }
     
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateEnterpriseData), name: NSNotification.Name(NotificationName.Action.enterpriseSelected.rawValue), object: nil)
+    }
+    
+    func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: NotificationName.Action.enterpriseSelected.rawValue), object: nil)
+    }
+    
+    @objc private func updateEnterpriseData(notification: NSNotification) {
+        if let enterprise = notification.userInfo?["value"] as? Enterprise {
+            Logger.log(enterprise)
+        }
+    }
+    
     private func validReceipt(_ receipt: Receipt) -> Bool {
         return !(receipt.cnpj == "")
     }

@@ -24,7 +24,7 @@ class NoteFinderViewController: UITableViewController {
         super.viewDidLoad()
         
         searchBar.delegate = self
-        searchBar.text = "Informe aqui o CNPJ"
+        searchBar.placeholder = Localizer.stringProj("SEARCH_BAR_PLACEHOLDER")
         
         searchBar.formatting = .cnpj
         
@@ -70,7 +70,7 @@ extension NoteFinderViewController: NoteFinderViewModelDelegate {
 extension NoteFinderViewController: NoteFinderTableViewCellDelegate {
     
     func actionSelected(_ enterprise: Enterprise) {
-        // ...
+        viewModel?.sendSelectedEnterprise(enterprise)
     }
 }
 

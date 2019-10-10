@@ -10,6 +10,7 @@ import Foundation
 
 class Localizer {
     
+    /// Return string from Localizable.strings
     class func stringProj(_ key: String) -> String {
         return NSLocalizedString(key, comment: "")
     }

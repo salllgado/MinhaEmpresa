@@ -32,6 +32,12 @@ class NewNoteViewController: UIViewController {
         noteCNPJTf.delegate = self
         noteValueTf.delegate = self
         setupUI()
+        viewModel?.addObservers()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel?.removeObservers()
     }
     
     private func setupUI() {
