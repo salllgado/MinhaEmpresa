@@ -9,7 +9,6 @@ target 'MinhaEmpresa' do
     pod 'CSUtils', :git => 'https://github.com/salllgado/CSUtils.git', :branch => 'develop'
     pod 'KeychainSwift', '~> 13.0'
     pod 'TPKeyboardAvoiding'
-    pod 'Firebase/Database'
 
   target 'MinhaEmpresaTests' do
     inherit! :search_paths
