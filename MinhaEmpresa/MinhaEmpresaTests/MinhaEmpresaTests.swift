@@ -2,8 +2,8 @@
 //  MinhaEmpresaTests.swift
 //  MinhaEmpresaTests
 //
-//  Created by Chrystian Salgado on 06/07/19.
-//  Copyright © 2019 Salgado's Production. All rights reserved.
+//  Created by Chrystian Salgado on 08/01/20.
+//  Copyright © 2020 Chrystian Salgado. All rights reserved.
 //
 
 import XCTest
