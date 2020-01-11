@@ -8,13 +8,19 @@
 
 import Foundation
 
-public class Manager {
+
+enum UserDefaultsKeys: String {
+    case enterprise = "userEnterpriseValue"
+    case userCNPJ = "userCNPJValue"
+}
+
+class Manager {
     
-    public init() {
+    init() {
         // ...
     }
     
-    public class func requestEnterprise(cnpj: String, completionHandler: @escaping (_ response: Enterprise?, _ error: Error?)-> Void) {
+    class func requestEnterprise(cnpj: String, completionHandler: @escaping (_ response: Enterprise?, _ error: Error?)-> Void) {
         Network.sharedInstance.request(
             send: EmptyRequest(),
             on: SendRequest.none,
@@ -22,8 +28,21 @@ public class Manager {
             httpMethod: HTTPMethod.get, response: Enterprise(),
             completionHandler: completionHandler)
     }
-}
-
-struct EmptyRequest: Codable {
-    // ...
+    
+    class func saveDataOnStorage(value: Any) {
+        if let _value = value as? Enterprise {
+            try? _value.save()
+        } else if let _cnpj = value as? String {
+            UserDefaults.standard.set(_cnpj, forKey: UserDefaultsKeys.userCNPJ.rawValue)
+        }
+    }
+    
+    class func getDataOnStorage(kind: UserDefaultsKeys) -> Any? {
+        switch kind {
+        case .enterprise:
+            return try? Enterprise().load()
+        case .userCNPJ:
+            return UserDefaults.standard.object(forKey: kind.rawValue)
+        }
+    }
 }

@@ -13,31 +13,25 @@ struct HomeContentView: View {
     @State var isPresentingAddModal: Bool = false
     @ObservedObject var viewModel: MainViewModel
     
-    init(vm: MainViewModel, isPresenting: Bool = true) {
+    init(vm: MainViewModel) {
         viewModel = vm
-        isPresentingAddModal = isPresenting
+        isPresentingAddModal = viewModel.isPresentingAddModal
     }
     
     var body: some View {
         NavigationView {
             ZStack {
                 Color.primaryColor
-                .edgesIgnoringSafeArea(.all)
-                VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
-                        Text("CNPJ")
-                            .foregroundColor(Color.textColor)
-                            .font(Font.system(size: 26, weight: .bold))
-                        Text(viewModel.tfValue)
-                            .foregroundColor(Color.textColor)
-                            .font(Font.system(size: 22, weight: .semibold))
-                    }
-                    .padding(EdgeInsets(top: 6, leading: 20, bottom: -5, trailing: 20))
-                    CustomDivider(color: .white)
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(0.9)
+                VStack {
+                    RowView(title: "CNPJ", value: viewModel.userEnterprise?.cnpj ?? viewModel.tfValue)
+                    RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
+                    RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
                 }
             }
-            .navigationBarTitle("Salgado Soluções em tecnologia")
+            .navigationBarTitle(viewModel.userEnterprise?.nickname ?? "Minha Empresa")
         }
     }
 }

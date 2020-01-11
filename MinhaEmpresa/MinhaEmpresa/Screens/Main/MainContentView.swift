@@ -14,6 +14,10 @@ struct MainContentView: View {
     
     @State var isPresentingAddModal: Bool = false
     
+    init() {
+        viewModel.getUserCNPJ()
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -30,7 +34,7 @@ struct MainContentView: View {
                             trailing: 0))
                     Spacer()
                     Button(action: {
-                        self.navigate()
+                        self.viewModel.requestEnterprise()
                     }, label: {
                         HStack {
                             Spacer()
@@ -46,16 +50,12 @@ struct MainContentView: View {
                         .navigationBarTitle("Sua Empresa")
                 }.padding(16)
             }
-            .sheet(isPresented: $isPresentingAddModal, content: {
-                HomeContentView(vm: self.viewModel, isPresenting: self.isPresentingAddModal)
+            .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
+                HomeContentView(vm: self.viewModel)
             })
         }
     }
     
-    func navigate() {
-        // navigate to second sceen with data
-        isPresentingAddModal.toggle()
-    }
 }
 
 

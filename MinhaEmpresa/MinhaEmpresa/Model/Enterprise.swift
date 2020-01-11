@@ -85,3 +85,73 @@ public struct Socios: Decodable {
         case nome
     }
 }
+
+extension Enterprise {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(status, forKey: .status)
+        try container.encode(message, forKey: .message)
+        try container.encode(cnpj, forKey: .cnpj)
+        try container.encode(type, forKey: .type)
+        try container.encode(fondationDate, forKey: .fondationDate)
+        try container.encode(enterpriseName, forKey: .enterpriseName)
+        try container.encode(nickname, forKey: .nickname)
+        try container.encode(firstActivity, forKey: .fistActivity)
+        try container.encode(socios, forKey: .socios)
+        try container.encode(secondaryActivity, forKey: .secondaryActivity)
+        try container.encode(enterprisePlace, forKey: .enterprisePlace)
+        try container.encode(number, forKey: .number)
+        try container.encode(complement, forKey: .complement)
+        try container.encode(adressCode, forKey: .adressCode)
+        try container.encode(neighborhood, forKey: .neighborhood)
+        try container.encode(city, forKey: .city)
+        try container.encode(uf, forKey: .uf)
+    }
+}
+
+extension Detail: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(text, forKey: .text)
+        try container.encode(code, forKey: .code)
+    }
+}
+
+extension Socios: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(tipo, forKey: .tipo)
+        try container.encode(nome, forKey: .nome)
+    }
+}
+
+extension Enterprise: CanSaveToDisk {
+    
+    static var defaultEncoder: JSONEncoder {
+        let encoder = JSONEncoder()
+        // add additional customization here
+        // like dates or data handling
+        return encoder
+    }
+    
+    var storageKeyForObject: String {
+        return UserDefaultsKeys.enterprise.rawValue
+    }
+    
+    func save() throws {
+        
+        let data = try Enterprise.defaultEncoder.encode(self)
+        let storage = UserDefaults.standard
+        storage.setValue(data, forKey: storageKeyForObject)
+    }
+    
+    func load() throws -> Enterprise? {
+        let storage = UserDefaults.standard
+        guard let value = storage.value(forKey: storageKeyForObject) as? Data else { return nil }
+        do {
+            return try JSONDecoder().decode(Enterprise.self, from: value)
+        } catch {
+            return nil
+        }
+    }
+}
