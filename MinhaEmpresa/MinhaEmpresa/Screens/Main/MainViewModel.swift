@@ -44,7 +44,15 @@ class MainViewModel: ObservableObject, Identifiable {
     }
     
     func getUserCNPJ() {
-        print(Manager.getDataOnStorage(kind: UserDefaultsKeys.userCNPJ) as? String ?? "")
+        if let _enterprise = getEnterpriseData() {
+            self.userEnterprise = _enterprise
+            navigate()
+        }
+    }
+    
+    func logout() {
+        Manager.deleteDataOnStorage(kind: .enterprise)
+        self.navigate()
     }
     
     private func navigate() {

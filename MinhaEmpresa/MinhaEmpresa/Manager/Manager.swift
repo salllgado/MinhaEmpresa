@@ -45,4 +45,8 @@ class Manager {
             return UserDefaults.standard.object(forKey: kind.rawValue)
         }
     }
+    
+    class func deleteDataOnStorage(kind: UserDefaultsKeys) {
+        UserDefaults.standard.removeObject(forKey: kind.rawValue)
+    }
 }

@@ -28,6 +28,14 @@ struct HomeContentView: View {
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
                     RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
+                    Button(action: {
+                        self.viewModel.logout()
+                    }, label: {
+                        ButtonStyle(text: "Deslogar")
+                    })
+                    .background(Color.black)
+                    .cornerRadius(32)
+                    .padding()
                 }
             }
             .navigationBarTitle(viewModel.userEnterprise?.nickname ?? "Minha Empresa")

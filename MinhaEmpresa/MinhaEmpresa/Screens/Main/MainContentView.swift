@@ -39,14 +39,7 @@ struct MainContentView: View {
                     Button(action: {
                         self.viewModel.requestEnterprise()
                     }, label: {
-                        HStack {
-                            Spacer()
-                            Text(NSLocalizedString("buttonNextText", comment: ""))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(.vertical, 12)
-                            Spacer()
-                        }
+                        ButtonStyle(text: NSLocalizedString("buttonNextText", comment: ""))
                     })
                         .background(Color.black)
                         .cornerRadius(32)
