@@ -21,9 +21,8 @@ struct HomeContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.primaryColor
-                    .edgesIgnoringSafeArea(.all)
-                    .opacity(0.9)
+                BackgroundView()
+                .frame(width: 200, height: 400, alignment: .center)
                 VStack {
                     RowView(title: "CNPJ", value: viewModel.userEnterprise?.cnpj ?? viewModel.tfValue)
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")

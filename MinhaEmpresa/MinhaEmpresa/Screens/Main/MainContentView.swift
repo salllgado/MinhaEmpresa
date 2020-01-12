@@ -21,12 +21,15 @@ struct MainContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue.opacity(0.65)
-                    .edgesIgnoringSafeArea(.all)
+                BackgroundView()
+                    .frame(width: 200, height: 400, alignment: .center)
                 VStack(alignment: .leading) {
-                    Text("Informe seu CNPJ e obtenha os dados da sua empresa")
+                    Text(NSLocalizedString("mainSubtitleText", comment: ""))
                         .font(Font.system(size: 28, weight: .bold))
-                    TextField("00.000.000/000-01", text: $viewModel.tfValue)
+                        .foregroundColor(Color.textSecondary)
+                    TextField(NSLocalizedString("textFieldPlaceholderText", comment: ""), text: $viewModel.tfValue)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.numberPad)
                         .padding(EdgeInsets(
                             top: 0,
                             leading: 0,
@@ -38,7 +41,7 @@ struct MainContentView: View {
                     }, label: {
                         HStack {
                             Spacer()
-                            Text("Continuar")
+                            Text(NSLocalizedString("buttonNextText", comment: ""))
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .padding(.vertical, 12)
@@ -47,7 +50,7 @@ struct MainContentView: View {
                     })
                         .background(Color.black)
                         .cornerRadius(32)
-                        .navigationBarTitle("Sua Empresa")
+                        .navigationBarTitle(NSLocalizedString("mainNavBarText", comment: ""))
                 }.padding(16)
             }
             .sheet(isPresented: $viewModel.isPresentingAddModal, content: {

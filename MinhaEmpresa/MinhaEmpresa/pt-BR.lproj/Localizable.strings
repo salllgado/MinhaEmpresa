@@ -1,0 +1,9 @@
+/* 
+  File.strings
+  MinhaEmpresa
+
+  Created by Chrystian Salgado on 12/01/20.
+  Copyright © 2020 Chrystian Salgado. All rights reserved.
+*/
+
+mainSubtitleText = "Informe seu CNPJ e obtenha os dados da sua empresa";

@@ -1,0 +1,12 @@
+/* 
+  File.strings
+  MinhaEmpresa
+
+  Created by Chrystian Salgado on 12/01/20.
+  Copyright © 2020 Chrystian Salgado. All rights reserved.
+*/
+
+mainNavBarText = "Sua Empresa";
+mainSubtitleText = "Informe seu CNPJ e obtenha os dados da sua empresa";
+textFieldPlaceholderText = "00.000.000/000-01";
+buttonNextText = "Continuar";
