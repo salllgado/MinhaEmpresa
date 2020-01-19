@@ -17,14 +17,13 @@ class MainViewModel: ObservableObject, Identifiable {
     private (set) var userEnterprise: Enterprise?
     
     func requestEnterprise() {
-        print(normalizeValue(tfValue))
         
         // verify for data in user defaults
         if let _enterprise = getEnterpriseData() {
             self.userEnterprise = _enterprise
             self.navigate()
         } else {
-            Manager.requestEnterprise(cnpj: tfValue) { (enterprise, error) in
+            Manager.requestEnterprise(cnpj: tfValue.normalizeValue()) { (enterprise, error) in
                 if let _enterprise = enterprise {
                     self.userEnterprise = _enterprise
                     self.saveData(value: _enterprise)
@@ -62,12 +61,12 @@ class MainViewModel: ObservableObject, Identifiable {
     }
 }
 
-extension MainViewModel {
+extension String {
     
-    func normalizeValue(_ value: String) -> String {
+    func normalizeValue() -> String {
         let blockedCharacters: [Character] = ["/", ".", "-"]
         
-        return value.filter { (char) -> Bool in
+        return self.filter { (char) -> Bool in
             !(blockedCharacters.contains(char))
         }
     }
