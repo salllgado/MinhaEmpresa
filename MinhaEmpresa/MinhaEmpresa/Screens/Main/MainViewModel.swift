@@ -17,6 +17,8 @@ class MainViewModel: ObservableObject, Identifiable {
     private (set) var userEnterprise: Enterprise?
     
     func requestEnterprise() {
+        print(normalizeValue(tfValue))
+        
         // verify for data in user defaults
         if let _enterprise = getEnterpriseData() {
             self.userEnterprise = _enterprise
@@ -57,5 +59,16 @@ class MainViewModel: ObservableObject, Identifiable {
     
     private func navigate() {
         self.isPresentingAddModal.toggle()
+    }
+}
+
+extension MainViewModel {
+    
+    func normalizeValue(_ value: String) -> String {
+        let blockedCharacters: [Character] = ["/", ".", "-"]
+        
+        return value.filter { (char) -> Bool in
+            !(blockedCharacters.contains(char))
+        }
     }
 }

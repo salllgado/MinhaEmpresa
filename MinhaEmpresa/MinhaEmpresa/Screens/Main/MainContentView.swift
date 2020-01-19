@@ -27,9 +27,7 @@ struct MainContentView: View {
                     Text(NSLocalizedString("mainSubtitleText", comment: ""))
                         .font(Font.system(size: 28, weight: .bold))
                         .foregroundColor(Color.textSecondary)
-                    TextField(NSLocalizedString("textFieldPlaceholderText", comment: ""), text: $viewModel.tfValue)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.numberPad)
+                    CustomTextField(title: NSLocalizedString("textFieldPlaceholderText", comment: ""), value: $viewModel.tfValue)
                         .padding(EdgeInsets(
                             top: 0,
                             leading: 0,
