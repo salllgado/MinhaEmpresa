@@ -29,8 +29,8 @@ class MainViewModel: ObservableObject, Identifiable {
                     self.saveData(value: _enterprise)
                     self.saveData(value: self.tfValue)
                     self.navigate()
-                } else {
-                    print(error?.localizedDescription)
+                } else if let err = error?.localizedDescription {
+                    print(err)
                 }
             }
         }
