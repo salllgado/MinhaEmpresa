@@ -50,9 +50,11 @@ struct CustomTextField: View {
                 }
                 self.editingValue = self.editingFormatterValue
             }
-        }))
+        }), onCommit: {
+            UIApplication.shared.endEditing()
+        })
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .keyboardType(.numberPad)
+            .keyboardType(.numbersAndPunctuation)
     }
     
 }
@@ -63,7 +65,7 @@ struct TestView: View {
     
     var body: some View {
         VStack {
-            CustomTextField(title: "Salgado", value: $value)
+            CustomTextField(title: "CNPJ", value: $value)
         }
     }
 }
@@ -73,6 +75,6 @@ struct CustomTextField_Previews: PreviewProvider {
     @State var value: String?
     
     static var previews: some View {
-        CustomTextField(title: "Chrystian", value: nil)
+        CustomTextField(title: "11111111111111", value: nil)
     }
 }

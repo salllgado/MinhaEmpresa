@@ -37,5 +37,6 @@ struct RowView: View {
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
         RowView(title: "CNPJ", value: "13")
+            .background(Color.blue)
     }
 }

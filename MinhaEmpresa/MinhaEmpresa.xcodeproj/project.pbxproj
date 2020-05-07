@@ -30,6 +30,8 @@
 		B5FEC1AE23C6A998005A37C6 /* MinhaEmpresaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1AD23C6A998005A37C6 /* MinhaEmpresaTests.swift */; };
 		B5FEC1B923C6B65E005A37C6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1B823C6B65E005A37C6 /* MainViewModel.swift */; };
 		B5FEC1BE23C76ADB005A37C6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */; };
+		B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B832F97C244F526200B35059 /* ShortcutManager.swift */; };
+		B8C941582464290600CA3F4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941572464290600CA3F4B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		B5FEC1AF23C6A998005A37C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FEC1B823C6B65E005A37C6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		B832F97C244F526200B35059 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		B8C941572464290600CA3F4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				B54EB28D23C77FE3000B72E7 /* Manager.swift */,
 				B54EB28F23C77FF0000B72E7 /* Network.swift */,
 				B54EB29123C78000000B72E7 /* Endpoint.swift */,
+				B832F97C244F526200B35059 /* ShortcutManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				B5E3823823CB9401002B58DC /* BackgroundView.swift */,
 				B5E3824323CB9FF4002B58DC /* ButtonStyle.swift */,
 				B5F9025F23D49E240076C4B3 /* CustomTextField.swift */,
+				B8C941572464290600CA3F4B /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,7 +340,9 @@
 			files = (
 				B54EB29023C77FF0000B72E7 /* Network.swift in Sources */,
 				B598B89023CA551A0001107C /* RowView.swift in Sources */,
+				B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */,
 				B5FEC19723C6A996005A37C6 /* AppDelegate.swift in Sources */,
+				B8C941582464290600CA3F4B /* CustomButton.swift in Sources */,
 				B5FEC19923C6A996005A37C6 /* SceneDelegate.swift in Sources */,
 				B54EB28C23C77FD4000B72E7 /* NetworkWorker.swift in Sources */,
 				B54EB29523C78028000B72E7 /* Enterprise.swift in Sources */,

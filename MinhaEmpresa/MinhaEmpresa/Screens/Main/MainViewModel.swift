@@ -28,12 +28,17 @@ class MainViewModel: ObservableObject, Identifiable {
                     self.userEnterprise = _enterprise
                     self.saveData(value: _enterprise)
                     self.saveData(value: self.tfValue)
+                    self.addToShortcut(value: _enterprise.cnpj)
                     self.navigate()
                 } else if let err = error?.localizedDescription {
                     print(err)
                 }
             }
         }
+    }
+    
+    func addToShortcut(value: String) {
+        RegisteredItems.newCNPJ.registerNewItem(cnpj: value)
     }
     
     func saveData(value: Any) {

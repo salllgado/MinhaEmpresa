@@ -15,7 +15,7 @@ let host = Bundle.main.infoDictionary?["BaseUrl"] as? String ?? ""
 let httpProtocol = Bundle.main.infoDictionary?["HttpProtocol"] as? String ?? ""
 
 ///Enum of available endpoints.
-enum Endpoint{
+enum Endpoint {
     case enterpriseData(param: String)
 }
 

@@ -129,8 +129,7 @@ extension Enterprise: CanSaveToDisk {
     
     static var defaultEncoder: JSONEncoder {
         let encoder = JSONEncoder()
-        // add additional customization here
-        // like dates or data handling
+
         return encoder
     }
     
@@ -139,7 +138,6 @@ extension Enterprise: CanSaveToDisk {
     }
     
     func save() throws {
-        
         let data = try Enterprise.defaultEncoder.encode(self)
         let storage = UserDefaults.standard
         storage.setValue(data, forKey: storageKeyForObject)

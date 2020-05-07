@@ -34,13 +34,9 @@ struct MainContentView: View {
                             bottom: 80,
                             trailing: 0))
                     Spacer()
-                    Button(action: {
+                    CustomButton(title: NSLocalizedString("buttonNextText", comment: ""), action: {
                         self.viewModel.requestEnterprise()
-                    }, label: {
-                        ButtonStyle(text: NSLocalizedString("buttonNextText", comment: ""))
                     })
-                        .background(Color.black)
-                        .cornerRadius(32)
                         .navigationBarTitle(NSLocalizedString("mainNavBarText", comment: ""))
                 }.padding(16)
             }
