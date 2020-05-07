@@ -22,20 +22,20 @@ struct HomeContentView: View {
         NavigationView {
             ZStack {
                 BackgroundView()
-                .frame(width: 200, height: 400, alignment: .center)
+                    .frame(width: 200, height: 400, alignment: .center)
                 VStack {
                     RowView(title: "CNPJ", value: viewModel.userEnterprise?.cnpj ?? viewModel.tfValue)
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
                     RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
-                    Button(action: {
+                    CustomButton(title: "Favoritar", action: {
+                        self.viewModel.favorite()
+                    }, buttonStyle: .secondary)
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 4, trailing: 16))
+                    CustomButton(title: "Deslogar", action: {
                         self.viewModel.logout()
-                    }, label: {
-                        ButtonStyle(text: "Deslogar")
                     })
-                    .background(Color.black)
-                    .cornerRadius(32)
-                    .padding()
+                        .padding(EdgeInsets(top: 4, leading: 16, bottom: 8, trailing: 16))
                 }
             }
             .navigationBarTitle(viewModel.userEnterprise?.nickname ?? "Minha Empresa")

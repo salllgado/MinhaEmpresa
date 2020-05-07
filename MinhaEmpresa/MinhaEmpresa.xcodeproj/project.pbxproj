@@ -32,6 +32,7 @@
 		B5FEC1BE23C76ADB005A37C6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */; };
 		B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B832F97C244F526200B35059 /* ShortcutManager.swift */; };
 		B8C941582464290600CA3F4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941572464290600CA3F4B /* CustomButton.swift */; };
+		B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941592464321B00CA3F4B /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		B832F97C244F526200B35059 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		B8C941572464290600CA3F4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B8C941592464321B00CA3F4B /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				B5EE85F123C771C500AC97AE /* ColorAsset.swift */,
+				B8C941592464321B00CA3F4B /* StringExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				B54EB29023C77FF0000B72E7 /* Network.swift in Sources */,
 				B598B89023CA551A0001107C /* RowView.swift in Sources */,
 				B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */,
+				B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */,
 				B5FEC19723C6A996005A37C6 /* AppDelegate.swift in Sources */,
 				B8C941582464290600CA3F4B /* CustomButton.swift in Sources */,
 				B5FEC19923C6A996005A37C6 /* SceneDelegate.swift in Sources */,

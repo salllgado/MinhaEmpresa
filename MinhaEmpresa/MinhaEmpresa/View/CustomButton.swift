@@ -10,12 +10,19 @@ import SwiftUI
 
 struct CustomButton: View {
     
+    enum Style {
+        case primary
+        case secondary
+    }
+    
     var title: String = "Pressione"
     var action: ()->Void
+    var buttonStyle: Style = .primary
     
-    init(title: String, action: @escaping ()->Void) {
+    init(title: String, action: @escaping ()->Void, buttonStyle: Style = .primary) {
         self.title = title
         self.action = action
+        self.buttonStyle = buttonStyle
     }
     
     var body: some View {
@@ -24,13 +31,23 @@ struct CustomButton: View {
         }, label: {
             ButtonStyle(text: title)
         })
-            .background(Color.black)
-            .cornerRadius(32)
+        .background(getButtonColor())
+        .cornerRadius(32)
+    }
+    
+    func getButtonColor() -> Color {
+        switch buttonStyle {
+        case .primary:
+            return Color.black
+        case .secondary:
+            return Color.secondaryColor
+        }
     }
 }
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomButton(title: "Me Aperte", action: {})
+        .padding()
     }
 }

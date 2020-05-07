@@ -17,7 +17,6 @@ class MainViewModel: ObservableObject, Identifiable {
     private (set) var userEnterprise: Enterprise?
     
     func requestEnterprise() {
-        
         // verify for data in user defaults
         if let _enterprise = getEnterpriseData() {
             self.userEnterprise = _enterprise
@@ -37,14 +36,6 @@ class MainViewModel: ObservableObject, Identifiable {
         }
     }
     
-    func addToShortcut(value: String) {
-        RegisteredItems.newCNPJ.registerNewItem(cnpj: value)
-    }
-    
-    func saveData(value: Any) {
-        Manager.saveDataOnStorage(value: value)
-    }
-    
     func getEnterpriseData() -> Enterprise? {
         return Manager.getDataOnStorage(kind: UserDefaultsKeys.enterprise) as? Enterprise
     }
@@ -56,23 +47,35 @@ class MainViewModel: ObservableObject, Identifiable {
         }
     }
     
+    func favorite() {
+        guard let _cnpj = userEnterprise?.cnpj, let _nickname = userEnterprise?.nickname else { return }
+        let dict: [String: String] = [
+            "CNPJ": _cnpj,
+            "name": _nickname
+        ]
+        
+        var array = UserDefaults.standard.object(forKey: "favoriteEnterprises") as? [[String: String]] ?? [[String: String]]()
+        array.append(dict)
+        UserDefaults.standard.set(array, forKey: "favoriteEnterprises")
+    }
+    
     func logout() {
         Manager.deleteDataOnStorage(kind: .enterprise)
         self.navigate()
     }
-    
-    private func navigate() {
-        self.isPresentingAddModal.toggle()
-    }
 }
 
-extension String {
+extension MainViewModel {
     
-    func normalizeValue() -> String {
-        let blockedCharacters: [Character] = ["/", ".", "-"]
-        
-        return self.filter { (char) -> Bool in
-            !(blockedCharacters.contains(char))
-        }
+    fileprivate func navigate() {
+        self.isPresentingAddModal.toggle()
+    }
+    
+    fileprivate func addToShortcut(value: String) {
+        RegisteredItems.newCNPJ.registerNewItem(cnpj: value)
+    }
+    
+    fileprivate func saveData(value: Any) {
+        Manager.saveDataOnStorage(value: value)
     }
 }

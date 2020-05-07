@@ -15,4 +15,6 @@ extension Color {
     static var textColor = Color.init(UIColor.white)
     
     static var textSecondary = Color.init(UIColor.lightGray)
+    
+    static var secondaryColor = Color.init(UIColor(named: "Secondary") ?? UIColor.purple)
 }
