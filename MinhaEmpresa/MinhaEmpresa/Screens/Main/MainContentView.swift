@@ -15,7 +15,9 @@ struct MainContentView: View {
     @State var isPresentingAddModal: Bool = false
     
     init() {
-        viewModel.getUserCNPJ()
+        withAnimation(.spring()){
+            self.viewModel.getLastFavoriteCNPJ()
+        }
     }
     
     var body: some View {
@@ -27,13 +29,20 @@ struct MainContentView: View {
                     Text(NSLocalizedString("mainSubtitleText", comment: ""))
                         .font(Font.system(size: 28, weight: .bold))
                         .foregroundColor(Color.textSecondary)
-                    CustomTextField(title: NSLocalizedString("textFieldPlaceholderText", comment: ""), value: $viewModel.tfValue)
+                    CustomTextField(title: Locale.mainTextFieldPlaceholder.value, value: $viewModel.tfValue)
                         .padding(EdgeInsets(
                             top: 0,
                             leading: 0,
                             bottom: 80,
                             trailing: 0))
                     Spacer()
+                    if viewModel.favorites {
+                        NavigationLink(destination: FavoriteList(), label: {
+                            ButtonStyle(text: "Favoritos")
+                                .background(Color.black)
+                                .cornerRadius(32)
+                        }).padding(.bottom, 8)
+                    }
                     CustomButton(title: NSLocalizedString("buttonNextText", comment: ""), action: {
                         self.viewModel.requestEnterprise()
                     })
@@ -44,6 +53,11 @@ struct MainContentView: View {
                 HomeContentView(vm: self.viewModel)
             })
         }
+        .onAppear(perform: {
+            withAnimation(.spring()) {
+                self.viewModel.fetchFavorites()
+            }
+        })
     }
 }
 

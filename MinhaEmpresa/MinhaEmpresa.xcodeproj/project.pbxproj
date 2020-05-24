@@ -31,6 +31,8 @@
 		B5FEC1B923C6B65E005A37C6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1B823C6B65E005A37C6 /* MainViewModel.swift */; };
 		B5FEC1BE23C76ADB005A37C6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */; };
 		B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B832F97C244F526200B35059 /* ShortcutManager.swift */; };
+		B86C19812479DD7B007EA1C3 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86C19802479DD7B007EA1C3 /* Locale.swift */; };
+		B8BCE346247AE9610050A322 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCE345247AE9610050A322 /* FavoriteList.swift */; };
 		B8C941582464290600CA3F4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941572464290600CA3F4B /* CustomButton.swift */; };
 		B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941592464321B00CA3F4B /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		B5FEC1B823C6B65E005A37C6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		B832F97C244F526200B35059 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		B86C19802479DD7B007EA1C3 /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		B8BCE345247AE9610050A322 /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		B8C941572464290600CA3F4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B8C941592464321B00CA3F4B /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,7 @@
 				B5E3824123CB9C34002B58DC /* Localizable.strings */,
 				B5FEC1BF23C76B40005A37C6 /* App */,
 				B5EE85EE23C7700400AC97AE /* Extension */,
+				B86C197F2479DD4D007EA1C3 /* Enums */,
 				B54EB29323C7801C000B72E7 /* Model */,
 				B598B89123CA5F070001107C /* Protocols */,
 				B5FEC1BA23C76ABD005A37C6 /* Screens */,
@@ -206,6 +211,7 @@
 		B5FEC1BA23C76ABD005A37C6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B8BCE344247AE9550050A322 /* FavoriteList */,
 				B5FEC1BB23C76AC5005A37C6 /* Main */,
 				B5FEC1BC23C76AC9005A37C6 /* Home */,
 			);
@@ -236,6 +242,22 @@
 				B5FEC19823C6A996005A37C6 /* SceneDelegate.swift */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		B86C197F2479DD4D007EA1C3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B86C19802479DD7B007EA1C3 /* Locale.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B8BCE344247AE9550050A322 /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				B8BCE345247AE9610050A322 /* FavoriteList.swift */,
+			);
+			path = FavoriteList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,10 +374,12 @@
 				B54EB29523C78028000B72E7 /* Enterprise.swift in Sources */,
 				B5FEC19B23C6A996005A37C6 /* MainContentView.swift in Sources */,
 				B5E3824423CB9FF4002B58DC /* ButtonStyle.swift in Sources */,
+				B86C19812479DD7B007EA1C3 /* Locale.swift in Sources */,
 				B5F9026023D49E240076C4B3 /* CustomTextField.swift in Sources */,
 				B598B89323CA5F160001107C /* CanSaveToDisk.swift in Sources */,
 				B5FEC1BE23C76ADB005A37C6 /* HomeContentView.swift in Sources */,
 				B598B89523CA5F480001107C /* EmptyRequest.swift in Sources */,
+				B8BCE346247AE9610050A322 /* FavoriteList.swift in Sources */,
 				B5E3823923CB9401002B58DC /* BackgroundView.swift in Sources */,
 				B5EE85F223C771C500AC97AE /* ColorAsset.swift in Sources */,
 				B5FEC1B923C6B65E005A37C6 /* MainViewModel.swift in Sources */,
