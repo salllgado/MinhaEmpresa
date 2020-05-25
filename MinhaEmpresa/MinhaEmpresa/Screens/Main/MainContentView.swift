@@ -26,7 +26,7 @@ struct MainContentView: View {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
                 VStack(alignment: .leading) {
-                    Text(NSLocalizedString("mainSubtitleText", comment: ""))
+                    Text(Locale.mainSubtitle.value)
                         .font(Font.system(size: 28, weight: .bold))
                         .foregroundColor(Color.textSecondary)
                     CustomTextField(title: Locale.mainTextFieldPlaceholder.value, value: $viewModel.tfValue)
@@ -43,10 +43,10 @@ struct MainContentView: View {
                                 .cornerRadius(32)
                         }).padding(.bottom, 8)
                     }
-                    CustomButton(title: NSLocalizedString("buttonNextText", comment: ""), action: {
+                    CustomButton(title: Locale.buttonNext.value, action: {
                         self.viewModel.requestEnterprise()
                     })
-                        .navigationBarTitle(NSLocalizedString("mainNavBarText", comment: ""))
+                        .navigationBarTitle(Locale.mainNavBar.value)
                 }.padding(16)
             }
             .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
