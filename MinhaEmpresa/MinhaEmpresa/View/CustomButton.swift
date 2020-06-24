@@ -38,9 +38,9 @@ struct CustomButton: View {
     func getButtonColor() -> Color {
         switch buttonStyle {
         case .primary:
-            return Color.black
-        case .secondary:
             return Color.secondaryColor
+        case .secondary:
+            return Color.gray
         }
     }
 }

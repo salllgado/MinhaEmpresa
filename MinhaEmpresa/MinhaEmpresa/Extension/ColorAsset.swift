@@ -10,11 +10,9 @@ import SwiftUI
 
 extension Color {
     
-    static var primaryColor = Color.init(UIColor(named: "Primary") ?? UIColor.blue)
+    static var primaryColor = Color.init(UIColor(named: "Primary") ?? UIColor.yellow)
+    static var secondaryColor = Color.init(UIColor(named: "Secondary") ?? UIColor.black)
     
     static var textColor = Color.init(UIColor.white)
-    
-    static var textSecondary = Color.init(UIColor.lightGray)
-    
-    static var secondaryColor = Color.init(UIColor(named: "Secondary") ?? UIColor.purple)
+    static var textSecondary = Color.init(UIColor(named: "Secondary") ?? UIColor.black)
 }
