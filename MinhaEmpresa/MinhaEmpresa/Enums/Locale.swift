@@ -9,7 +9,7 @@
 import Foundation
 
 enum Locale: String {
-    case mainTextFieldPlaceholder = "textFieldPlaceholderText"
+    case mainTextFieldPlaceholder = "mainTextFieldPlaceholder"
     case mainNavBar = "mainNavBarText"
     case buttonNext = "buttonNextText"
     case mainSubtitle = "mainSubtitleText"

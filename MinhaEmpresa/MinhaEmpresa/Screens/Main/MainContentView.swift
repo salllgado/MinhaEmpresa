@@ -14,12 +14,6 @@ struct MainContentView: View {
     
     @State var isPresentingAddModal: Bool = false
     
-    init() {
-        withAnimation(.spring()){
-            self.viewModel.getLastFavoriteCNPJ()
-        }
-    }
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -56,6 +50,8 @@ struct MainContentView: View {
         .onAppear(perform: {
             withAnimation(.spring()) {
                 self.viewModel.fetchFavorites()
+                self.viewModel.getLastFavoriteCNPJ()
+                self.viewModel.requestEnterprise()
             }
         })
     }
