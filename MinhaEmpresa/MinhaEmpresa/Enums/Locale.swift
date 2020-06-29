@@ -9,10 +9,11 @@
 import Foundation
 
 enum Locale: String {
-    case mainTextFieldPlaceholder = "mainTextFieldPlaceholder"
-    case mainNavBar = "mainNavBarText"
-    case buttonNext = "buttonNextText"
-    case mainSubtitle = "mainSubtitleText"
+    case mainTextFieldPlaceholder
+    case mainNavBarText
+    case buttonNextText
+    case mainSubtitleText
+    case favoriteButtonText
     
     var value: String {
         return NSLocalizedString(self.rawValue, comment: "")

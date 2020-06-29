@@ -10,3 +10,4 @@ mainNavBarText = "Sua Empresa";
 mainSubtitleText = "Informe seu CNPJ e obtenha os dados da sua empresa";
 textFieldPlaceholderText = "00.000.000/000-01";
 buttonNextText = "Continuar";
+favoriteButtonText = "Favoritos";

@@ -20,7 +20,7 @@ struct MainContentView: View {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
                 VStack(alignment: .leading) {
-                    Text(Locale.mainSubtitle.value)
+                    Text(Locale.mainSubtitleText.value)
                         .font(Font.system(size: 28, weight: .bold))
                         .foregroundColor(Color.textSecondary)
                     CustomTextField(title: Locale.mainTextFieldPlaceholder.value, value: $viewModel.tfValue)
@@ -30,23 +30,24 @@ struct MainContentView: View {
                             bottom: 80,
                             trailing: 0))
                     Spacer()
-                    if viewModel.favorites {
+//                    if viewModel.favorites {
                         NavigationLink(destination: FavoriteList(), label: {
-                            ButtonStyle(text: "Favoritos")
+                            ButtonStyle(text: Locale.favoriteButtonText.value)
                                 .background(Color.black)
                                 .cornerRadius(32)
                         }).padding(.bottom, 8)
-                    }
-                    CustomButton(title: Locale.buttonNext.value, action: {
+//                    }
+                    CustomButton(title: Locale.buttonNextText.value, action: {
                         self.viewModel.requestEnterprise()
                     })
-                        .navigationBarTitle(Locale.mainNavBar.value)
+                        .navigationBarTitle(Locale.mainNavBarText.value)
                 }.padding(16)
             }
             .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
                 HomeContentView(vm: self.viewModel)
             })
         }
+        .accentColor(Color.primaryColor)
         .onAppear(perform: {
             withAnimation(.spring()) {
                 self.viewModel.fetchFavorites()

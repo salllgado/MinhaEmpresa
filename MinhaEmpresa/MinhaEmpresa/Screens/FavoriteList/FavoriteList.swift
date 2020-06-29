@@ -9,13 +9,26 @@
 import SwiftUI
 
 struct FavoriteList: View {
+    
+    @ObservedObject var viewModel = FavoriteListViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List {
+                ForEach(viewModel.fetchFavorites()) { favorite in
+                    Text(favorite.cnpj)
+                }
+            }
+        }
+        .navigationBarTitle(
+            Text("Some").foregroundColor(Color.primaryColor),
+            displayMode: .inline
+        )
     }
 }
 
 struct FavoriteList_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteList()
+        FavoriteList(viewModel: FavoriteListViewModel())
     }
 }

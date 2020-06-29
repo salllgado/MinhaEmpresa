@@ -35,6 +35,10 @@
 		B8BCE346247AE9610050A322 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCE345247AE9610050A322 /* FavoriteList.swift */; };
 		B8C941582464290600CA3F4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941572464290600CA3F4B /* CustomButton.swift */; };
 		B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941592464321B00CA3F4B /* StringExtensions.swift */; };
+		B8EF9D7224AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8EF9D7024AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld */; };
+		B8EF9D7424AA213B00D135A9 /* AppDelegateShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF9D7324AA213B00D135A9 /* AppDelegateShortcut.swift */; };
+		B8EF9D7624AA249D00D135A9 /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF9D7524AA249D00D135A9 /* FavoriteListViewModel.swift */; };
+		B8EF9D7824AA25D200D135A9 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF9D7724AA25D200D135A9 /* PersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		B8BCE345247AE9610050A322 /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		B8C941572464290600CA3F4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B8C941592464321B00CA3F4B /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		B8EF9D7124AA203D00D135A9 /* MinhaEmpresa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MinhaEmpresa.xcdatamodel; sourceTree = "<group>"; };
+		B8EF9D7324AA213B00D135A9 /* AppDelegateShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateShortcut.swift; sourceTree = "<group>"; };
+		B8EF9D7524AA249D00D135A9 /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
+		B8EF9D7724AA25D200D135A9 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				B54EB28F23C77FF0000B72E7 /* Network.swift */,
 				B54EB29123C78000000B72E7 /* Endpoint.swift */,
 				B832F97C244F526200B35059 /* ShortcutManager.swift */,
+				B8EF9D7724AA25D200D135A9 /* PersistanceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 				B5FEC19E23C6A998005A37C6 /* Preview Content */,
 				B54EB28A23C77FB4000B72E7 /* Manager */,
 				B5EE85F423C77E1700AC97AE /* View */,
+				B8EF9D7024AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld */,
 			);
 			path = MinhaEmpresa;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			children = (
 				B5FEC19623C6A996005A37C6 /* AppDelegate.swift */,
 				B5FEC19823C6A996005A37C6 /* SceneDelegate.swift */,
+				B8EF9D7324AA213B00D135A9 /* AppDelegateShortcut.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				B8BCE345247AE9610050A322 /* FavoriteList.swift */,
+				B8EF9D7524AA249D00D135A9 /* FavoriteListViewModel.swift */,
 			);
 			path = FavoriteList;
 			sourceTree = "<group>";
@@ -363,9 +375,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EF9D7624AA249D00D135A9 /* FavoriteListViewModel.swift in Sources */,
 				B54EB29023C77FF0000B72E7 /* Network.swift in Sources */,
 				B598B89023CA551A0001107C /* RowView.swift in Sources */,
+				B8EF9D7824AA25D200D135A9 /* PersistanceManager.swift in Sources */,
 				B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */,
+				B8EF9D7224AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld in Sources */,
 				B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */,
 				B5FEC19723C6A996005A37C6 /* AppDelegate.swift in Sources */,
 				B8C941582464290600CA3F4B /* CustomButton.swift in Sources */,
@@ -377,6 +392,7 @@
 				B86C19812479DD7B007EA1C3 /* Locale.swift in Sources */,
 				B5F9026023D49E240076C4B3 /* CustomTextField.swift in Sources */,
 				B598B89323CA5F160001107C /* CanSaveToDisk.swift in Sources */,
+				B8EF9D7424AA213B00D135A9 /* AppDelegateShortcut.swift in Sources */,
 				B5FEC1BE23C76ADB005A37C6 /* HomeContentView.swift in Sources */,
 				B598B89523CA5F480001107C /* EmptyRequest.swift in Sources */,
 				B8BCE346247AE9610050A322 /* FavoriteList.swift in Sources */,
@@ -664,6 +680,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8EF9D7024AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8EF9D7124AA203D00D135A9 /* MinhaEmpresa.xcdatamodel */,
+			);
+			currentVersion = B8EF9D7124AA203D00D135A9 /* MinhaEmpresa.xcdatamodel */;
+			path = MinhaEmpresa.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B5FEC18B23C6A996005A37C6 /* Project object */;
 }
