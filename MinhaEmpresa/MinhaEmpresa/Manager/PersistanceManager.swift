@@ -10,27 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 
-struct Favorite: Identifiable {
-    let id: UUID
-    let cnpj: String
-    let name: String
-    
-    init(cnpj: String, name: String) {
-        self.id = UUID()
-        self.cnpj = cnpj
-        self.name = name
-    }
-}
-
-extension Favorite {
-    
-    enum PersistenceKey: String {
-        case cnpj
-        case name
-    }
-}
-
-
 struct PersistenceManager {
     
     var appDelegate: AppDelegate?
@@ -70,5 +49,22 @@ struct PersistenceManager {
         }
         
         return favorites
+    }
+    
+    func saveFavorite(_ favorite: Favorite) {
+        let modelName = "FavoriteEnterprise"
+        guard let context = context else { return }
+        guard let consumeEntity = NSEntityDescription.entity(forEntityName: modelName, in: context) else { return }
+        let favoriteObject = NSManagedObject(entity: consumeEntity, insertInto: context)
+        
+        favoriteObject.setValue(favorite.cnpj, forKey: Favorite.PersistenceKey.cnpj.rawValue)
+        favoriteObject.setValue(favorite.name, forKey: Favorite.PersistenceKey.name.rawValue)
+        
+        do {
+            try context.save()
+            debugPrint("success saving object")
+        } catch {
+            debugPrint("error when system trying save object")
+        }
     }
 }

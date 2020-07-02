@@ -51,11 +51,7 @@ class MainViewModel: ViewModable {
     
     func favorite() {        
         guard let _cnpj = userEnterprise?.cnpj, let _nickname = userEnterprise?.nickname else { return }
-        let dict = FavoriteCNPJ(cnpj: _cnpj, enterpriseName: _nickname)
-        
-        var array = excludeIfNeededCNPJ(_cnpj)
-        array.append(dict)
-        UserDefaults.standard.set(array, forKey: "favoriteEnterprises")
+        PersistenceManager().saveFavorite(Favorite(cnpj: _cnpj, name: _nickname))
     }
     
     func fetchFavorites() -> [FavoriteCNPJ] {
