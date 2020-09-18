@@ -26,12 +26,15 @@ class MainViewModel: ViewModable {
     
     @Published var tfValue: String = ""
     @Published var isPresentingAddModal: Bool = false
+    @Published var isLoading: Bool = true
     @Published var favorites: Bool = false
     
     private (set) var userEnterprise: Enterprise?
     
     func requestEnterprise() {
+        self.isLoading = true
         Manager.requestEnterprise(cnpj: tfValue.normalizeValue()) { (enterprise, error) in
+            self.isLoading = false
             if let _enterprise = enterprise {
                 self.userEnterprise = _enterprise
                 self.saveData(value: _enterprise)

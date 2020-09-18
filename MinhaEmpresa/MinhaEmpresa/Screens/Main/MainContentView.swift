@@ -12,13 +12,15 @@ struct MainContentView: View {
     
     @ObservedObject var viewModel = MainViewModel()
     
-    @State var isPresentingAddModal: Bool = false
-    
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
+                if self.$viewModel.isLoading.wrappedValue {
+                    ProgressView()
+                        .background(Color.white)
+                }
                 VStack(alignment: .leading) {
                     Text(Locale.mainSubtitleText.value)
                         .font(Font.system(size: 28, weight: .bold))
@@ -30,13 +32,6 @@ struct MainContentView: View {
                             bottom: 80,
                             trailing: 0))
                     Spacer()
-//                    if viewModel.favorites {
-                        NavigationLink(destination: FavoriteList(), label: {
-                            ButtonStyle(text: Locale.favoriteButtonText.value)
-                                .background(Color.black)
-                                .cornerRadius(32)
-                        }).padding(.bottom, 8)
-//                    }
                     CustomButton(title: Locale.buttonNextText.value, action: {
                         self.viewModel.requestEnterprise()
                     })
@@ -50,7 +45,6 @@ struct MainContentView: View {
         .accentColor(Color.primaryColor)
         .onAppear(perform: {
             withAnimation(.spring()) {
-                self.viewModel.fetchFavorites()
                 self.viewModel.getLastFavoriteCNPJ()
                 self.viewModel.requestEnterprise()
             }
