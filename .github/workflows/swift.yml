@@ -18,4 +18,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build/tests
-      run: xcodebuild test -project MinhaEmpresa.xcodeproj -scheme MinhaEmpresa -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0'
+      run: |
+          cd MinhaEmpresa
+          xcodebuild test -project MinhaEmpresa.xcodeproj -scheme MinhaEmpresa -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0'
