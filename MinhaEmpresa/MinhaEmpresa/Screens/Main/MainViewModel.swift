@@ -28,8 +28,10 @@ class MainViewModel: ViewModable {
     @Published var isPresentingAddModal: Bool = false
     @Published var isLoading: Bool = true
     @Published var favorites: Bool = false
+    @Published var showingAlert: Bool = false
     
     private (set) var userEnterprise: Enterprise?
+    private (set) var alertMessage: String = "Algum erro aconteçeu"
     
     func requestEnterprise() {
         self.isLoading = true
@@ -41,8 +43,12 @@ class MainViewModel: ViewModable {
                 self.saveData(value: self.tfValue)
                 self.addToShortcut(value: _enterprise.cnpj)
                 self.navigate()
+            } else if let _enterprise = enterprise, let message = _enterprise.message {
+                self.showingAlert = true
+                self.alertMessage = message
             } else if let err = error?.localizedDescription {
-                print(err)
+                self.showingAlert = true
+                self.alertMessage = err
             }
         }
     }
@@ -52,7 +58,7 @@ class MainViewModel: ViewModable {
         tfValue = dictArray?.last?["CNPJ"] ?? ""
     }
     
-    func favorite() {        
+    func favorite() {
         guard let _cnpj = userEnterprise?.cnpj, let _nickname = userEnterprise?.nickname else { return }
         PersistenceManager().saveFavorite(Favorite(cnpj: _cnpj, name: _nickname))
     }

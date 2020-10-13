@@ -27,20 +27,23 @@ struct MainContentView: View {
                         .foregroundColor(Color.textSecondary)
                     CustomTextField(title: Locale.mainTextFieldPlaceholder.value, value: $viewModel.tfValue)
                         .padding(EdgeInsets(
-                            top: 0,
-                            leading: 0,
-                            bottom: 80,
-                            trailing: 0))
+                                    top: 0,
+                                    leading: 0,
+                                    bottom: 80,
+                                    trailing: 0))
                     Spacer()
                     CustomButton(title: Locale.buttonNextText.value, action: {
                         self.viewModel.requestEnterprise()
                     })
-                        .navigationBarTitle(Locale.mainNavBarText.value)
+                    .navigationBarTitle(Locale.mainNavBarText.value)
                 }.padding(16)
             }
             .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
                 HomeContentView(vm: self.viewModel)
             })
+            .alert(isPresented: $viewModel.showingAlert) {
+                Alert(title: Text(viewModel.alertMessage), message: nil, dismissButton: .default(Text("OK")))
+            }
         }
         .accentColor(Color.primaryColor)
         .onAppear(perform: {
