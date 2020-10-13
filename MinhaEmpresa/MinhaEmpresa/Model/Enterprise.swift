@@ -15,7 +15,7 @@ public struct Enterprise {
     public var type: String = ""
     public var fondationDate: String = ""
     public var enterpriseName: String = ""
-    public var nickname: String = ""
+    public var nickname: String = "Minha Empresa"
     public var firstActivity: [Detail] = []
     public var secondaryActivity: [Detail] = []
     public var enterprisePlace: String = ""
