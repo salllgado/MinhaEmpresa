@@ -17,6 +17,7 @@ struct MainContentView: View {
             ZStack {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
+                    .edgesIgnoringSafeArea(.all)
                 if self.$viewModel.isLoading.wrappedValue {
                     ProgressView()
                         .background(Color.white)
@@ -25,7 +26,7 @@ struct MainContentView: View {
                     Text(Locale.mainSubtitleText.value)
                         .font(Font.system(size: 28, weight: .bold))
                         .foregroundColor(Color.textSecondary)
-                    CustomTextField(title: Locale.mainTextFieldPlaceholder.value, value: $viewModel.tfValue)
+                    CustomTextField(title: "CNPJ", value: $viewModel.tfValue)
                         .padding(EdgeInsets(
                                     top: 0,
                                     leading: 0,
@@ -38,20 +39,14 @@ struct MainContentView: View {
                     .navigationBarTitle(Locale.mainNavBarText.value)
                 }.padding(16)
             }
-            .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
+            .fullScreenCover(isPresented: $viewModel.isPresentingAddModal, content: {
                 HomeContentView(vm: self.viewModel)
             })
             .alert(isPresented: $viewModel.showingAlert) {
-                Alert(title: Text(viewModel.alertMessage), message: nil, dismissButton: .default(Text("OK")))
+                Alert(title: Text(viewModel.alertMessage?.prettyError ?? LocalizedError.unknown.prettyError), message: nil, dismissButton: .default(Text("OK")))
             }
         }
         .accentColor(Color.primaryColor)
-        .onAppear(perform: {
-            withAnimation(.spring()) {
-                self.viewModel.getLastFavoriteCNPJ()
-                self.viewModel.requestEnterprise()
-            }
-        })
     }
 }
 

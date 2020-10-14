@@ -28,10 +28,6 @@ struct HomeContentView: View {
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
                     RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
-                    CustomButton(title: "Favoritar", action: {
-                        self.viewModel.favorite()
-                    }, buttonStyle: .secondary)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 4, trailing: 16))
                     CustomButton(title: "Deslogar", action: {
                         self.viewModel.logout()
                     })

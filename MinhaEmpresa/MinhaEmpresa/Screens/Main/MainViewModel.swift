@@ -26,12 +26,12 @@ class MainViewModel: ViewModable {
     
     @Published var tfValue: String = ""
     @Published var isPresentingAddModal: Bool = false
-    @Published var isLoading: Bool = true
+    @Published var isLoading: Bool = false
     @Published var favorites: Bool = false
     @Published var showingAlert: Bool = false
     
     private (set) var userEnterprise: Enterprise?
-    private (set) var alertMessage: String = "Algum erro aconteçeu"
+    private (set) var alertMessage: LocalizedError?
     
     func requestEnterprise() {
         self.isLoading = true
@@ -39,34 +39,15 @@ class MainViewModel: ViewModable {
             self.isLoading = false
             if let _enterprise = enterprise {
                 self.userEnterprise = _enterprise
-                self.saveData(value: _enterprise)
-                self.saveData(value: self.tfValue)
-                self.addToShortcut(value: _enterprise.cnpj)
                 self.navigate()
-            } else if let _enterprise = enterprise, let message = _enterprise.message {
+            } else if let _enterprise = enterprise, let _ = _enterprise.message {
                 self.showingAlert = true
-                self.alertMessage = message
-            } else if let err = error?.localizedDescription {
+                self.alertMessage = .parseError
+            } else if let _ = error?.localizedDescription {
                 self.showingAlert = true
-                self.alertMessage = err
+                self.alertMessage = LocalizedError.networkError
             }
         }
-    }
-    
-    func getLastFavoriteCNPJ(){
-        let dictArray = UserDefaults.standard.object(forKey: "favoriteEnterprises") as? [[String: String]]
-        tfValue = dictArray?.last?["CNPJ"] ?? ""
-    }
-    
-    func favorite() {
-        guard let _cnpj = userEnterprise?.cnpj, let _nickname = userEnterprise?.nickname else { return }
-        PersistenceManager().saveFavorite(Favorite(cnpj: _cnpj, name: _nickname))
-    }
-    
-    func fetchFavorites() -> [FavoriteCNPJ] {
-        let array = UserDefaults.standard.object(forKey: "favoriteEnterprises") as? [FavoriteCNPJ] ?? [FavoriteCNPJ]()
-        favorites = !array.isEmpty
-        return array
     }
     
     func logout() {
