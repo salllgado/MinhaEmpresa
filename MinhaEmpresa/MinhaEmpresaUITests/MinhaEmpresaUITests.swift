@@ -10,11 +10,14 @@ import XCTest
 
 class MinhaEmpresaUITests: XCTestCase {
 
-    func testExample() throws {
+    func testInitialView() {
         let app = XCUIApplication()
         app.launch()
 
+        XCTAssertTrue(app.staticTexts["Sua Empresa"].exists)
+        XCTAssertTrue(app.textFields["CNPJ"].exists)
         XCTAssertTrue(app.buttons["Continuar"].exists)
+        XCTAssertTrue(app.buttons["Continuar"].isHittable)
     }
 
     func testLaunchPerformance() throws {
