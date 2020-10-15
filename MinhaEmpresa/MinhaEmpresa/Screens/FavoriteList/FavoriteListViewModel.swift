@@ -13,7 +13,20 @@ protocol ViewModable: ObservableObject, Identifiable {}
 
 class FavoriteListViewModel: ViewModable {
     
-    func fetchFavorites() -> [Favorite] {
-        return PersistenceManager().fetchFavorites()
+    @Published var favorites: [Favorite] = []
+    
+    func fetchFavorites() {
+        favorites = PersistenceManager().fetchFavorites()
+    }
+    
+    func deleteFavorite(at offset: IndexSet) {
+        for index in offset {
+            let favorite = PersistenceManager().fetchFavorites()[index]
+            PersistenceManager().deleteFavoriteIfNeeded(favorite, completion: { success in
+                if success {
+                    self.favorites = PersistenceManager().fetchFavorites()
+                }
+            })
+        }
     }
 }

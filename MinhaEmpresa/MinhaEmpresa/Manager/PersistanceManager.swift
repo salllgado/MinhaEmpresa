@@ -37,9 +37,10 @@ struct PersistenceManager {
             let items = try context.fetch(fetchRequest)
             
             for item in (items as? [NSManagedObject]) ?? [] {
-                if let cnpj = item.value(forKey: Favorite.PersistenceKey.cnpj.rawValue) as? String,
+                if let uudi = item.value(forKey: Favorite.PersistenceKey.id.rawValue) as? UUID,
+                    let cnpj = item.value(forKey: Favorite.PersistenceKey.cnpj.rawValue) as? String,
                     let name = item.value(forKey: Favorite.PersistenceKey.name.rawValue) as? String {
-                    favorites.append(Favorite(cnpj: cnpj, name: name))
+                    favorites.append(Favorite(id: uudi,cnpj: cnpj, name: name, managedObject: item))
                 }
                 
             }
@@ -57,8 +58,10 @@ struct PersistenceManager {
         guard let consumeEntity = NSEntityDescription.entity(forEntityName: modelName, in: context) else { return }
         let favoriteObject = NSManagedObject(entity: consumeEntity, insertInto: context)
         
+        favoriteObject.setValue(favorite.id, forKey: Favorite.PersistenceKey.id.rawValue)
         favoriteObject.setValue(favorite.cnpj, forKey: Favorite.PersistenceKey.cnpj.rawValue)
         favoriteObject.setValue(favorite.name, forKey: Favorite.PersistenceKey.name.rawValue)
+        
         
         do {
             try context.save()
@@ -78,6 +81,21 @@ struct PersistenceManager {
             saveFavorite(favorite)
         } else {
             print("Objeto já foi salvo")
+        }
+    }
+    
+    func deleteFavoriteIfNeeded(_ favorite: Favorite, completion: @escaping (_ success: Bool)->Void) {
+        guard let context = context else { return }
+        guard let managedObject = favorite.managedObject else { return }
+        
+        context.delete(managedObject)
+        do {
+            try context.save()
+            print("object deleted")
+            completion(true)
+        } catch {
+            print("Error ao deletar o objeto")
+            completion(false)
         }
     }
 }

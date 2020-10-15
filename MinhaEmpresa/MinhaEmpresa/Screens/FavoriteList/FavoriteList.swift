@@ -14,18 +14,21 @@ struct FavoriteList: View {
     
     var body: some View {
         VStack {
-            if viewModel.fetchFavorites().isEmpty {
+            if viewModel.favorites.isEmpty {
                 Text("Não há favoritos")
                     .bold()
                     .font(.body)
                     .foregroundColor(.gray)
             } else {
                 List {
-                    ForEach(viewModel.fetchFavorites()) { favorite in
+                    ForEach(viewModel.favorites) { favorite in
                         Text(favorite.cnpj)
-                    }
+                    }.onDelete(perform: viewModel.deleteFavorite)
                 }
             }
+        }
+        .onAppear {
+            viewModel.fetchFavorites()
         }
         .navigationBarTitle("Favoritos", displayMode: .inline)
     }

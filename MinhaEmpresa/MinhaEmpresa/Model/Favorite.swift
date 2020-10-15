@@ -7,16 +7,19 @@
 //
 
 import Foundation
+import CoreData
 
 struct Favorite: Identifiable {
     let id: UUID
     let cnpj: String
     let name: String
+    let managedObject: NSManagedObject?
     
-    init(cnpj: String, name: String) {
-        self.id = UUID()
+    init(id: UUID = UUID(), cnpj: String, name: String, managedObject: NSManagedObject? = nil) {
+        self.id = id
         self.cnpj = cnpj
         self.name = name
+        self.managedObject = managedObject
     }
 }
 
@@ -25,5 +28,6 @@ extension Favorite {
     enum PersistenceKey: String {
         case cnpj
         case name
+        case id
     }
 }
