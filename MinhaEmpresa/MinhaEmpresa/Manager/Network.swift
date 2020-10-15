@@ -38,7 +38,7 @@ class Network {
                 if let _err = error {
                     completionHandler(nil, _err)
                 } else if let _data = data {
-                    print(_data.prettyPrintedJSONString)
+                    print(_data.prettyPrintedJSONString ?? "nil error")
                     self.parseObj(responseObj: response, data: _data, completionHandler: completionHandler)
                 }
             }

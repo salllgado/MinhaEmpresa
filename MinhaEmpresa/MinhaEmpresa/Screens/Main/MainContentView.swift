@@ -18,10 +18,6 @@ struct MainContentView: View {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
                     .edgesIgnoringSafeArea(.all)
-                if self.$viewModel.isLoading.wrappedValue {
-                    ProgressView()
-                        .background(Color.white)
-                }
                 VStack(alignment: .leading) {
                     Text(Locale.mainSubtitleText.value)
                         .font(Font.system(size: 28, weight: .bold))
@@ -33,11 +29,21 @@ struct MainContentView: View {
                                     bottom: 80,
                                     trailing: 0))
                     Spacer()
-                    CustomButton(title: Locale.buttonNextText.value, action: {
-                        self.viewModel.requestEnterprise()
+                    HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
+                        CustomButton(title: Locale.buttonNextText.value, action: {
+                            self.viewModel.requestEnterprise()
+                        })
+                        NavigationLink(destination: FavoriteList(), label: {
+                            ButtonStyle(text: Locale.favoriteButtonText.value)
+                                .background(Color.black)
+                                .cornerRadius(32)
+                        })
                     })
                     .navigationBarTitle(Locale.mainNavBarText.value)
                 }.padding(16)
+                if self.$viewModel.isLoading.wrappedValue {
+                    ProgressView()
+                }
             }
             .fullScreenCover(isPresented: $viewModel.isPresentingAddModal, content: {
                 HomeContentView(vm: self.viewModel)
@@ -46,7 +52,7 @@ struct MainContentView: View {
                 Alert(title: Text(viewModel.alertMessage?.prettyError ?? LocalizedError.unknown.prettyError), message: nil, dismissButton: .default(Text("OK")))
             }
         }
-        .accentColor(Color.primaryColor)
+        .accentColor(Color.black)
     }
 }
 

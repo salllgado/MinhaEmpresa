@@ -13,6 +13,7 @@ extension Color {
     static var primaryColor = Color.init(UIColor(named: "Primary") ?? UIColor.yellow)
     static var secondaryColor = Color.init(UIColor(named: "Secondary") ?? UIColor.black)
     
-    static var textColor = Color.init(UIColor.white)
+    static var textColor = Color.white
     static var textSecondary = Color.init(UIColor(named: "Secondary") ?? UIColor.black)
+    static var textColorDark = Color.black
 }

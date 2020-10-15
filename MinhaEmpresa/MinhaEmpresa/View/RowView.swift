@@ -22,10 +22,10 @@ struct RowView: View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 Text(title)
-                    .foregroundColor(Color.textColor)
+                    .foregroundColor(Color.textColorDark)
                     .font(Font.system(size: 26, weight: .bold))
                 Text(value)
-                    .foregroundColor(Color.textColor)
+                    .foregroundColor(Color.textColorDark)
                     .font(Font.system(size: 22, weight: .semibold))
             }
             .padding(EdgeInsets(top: 6, leading: 20, bottom: -5, trailing: 20))

@@ -28,10 +28,15 @@ struct HomeContentView: View {
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
                     RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
-                    CustomButton(title: "Deslogar", action: {
-                        self.viewModel.logout()
+                    HStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
+                        CustomButton(title: "Deslogar", action: {
+                            self.viewModel.logout()
+                        })
+                        CustomButton(title: "Favoritar", action: {
+                            self.viewModel.saveOnFavorites()
+                        }, buttonStyle: .secondary)
                     })
-                        .padding(EdgeInsets(top: 4, leading: 16, bottom: 8, trailing: 16))
+                    .padding(EdgeInsets(top: 4, leading: 16, bottom: 8, trailing: 16))
                 }
             }
             .navigationBarTitle(viewModel.userEnterprise?.nickname ?? "Minha Empresa")

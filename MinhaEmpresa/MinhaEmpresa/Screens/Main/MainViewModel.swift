@@ -51,10 +51,17 @@ class MainViewModel: ViewModable {
     }
     
     func logout() {
-        Manager.deleteDataOnStorage(kind: .enterprise)
         navigate()
     }
     
+    func saveOnFavorites() {
+        if let _userEnterprise = userEnterprise {
+            let manager = PersistenceManager()
+            manager.saveFavoriteIfNeeded(Favorite(cnpj: _userEnterprise.cnpj, name: _userEnterprise.enterpriseName))
+        } else {
+            alertMessage = LocalizedError.parseError
+        }
+    }
 }
 
 extension MainViewModel {
@@ -65,10 +72,6 @@ extension MainViewModel {
     
     fileprivate func addToShortcut(value: String) {
         RegisteredItems.newCNPJ.registerNewItem(cnpj: value)
-    }
-    
-    fileprivate func saveData(value: Any) {
-        Manager.saveDataOnStorage(value: value)
     }
     
     fileprivate func excludeIfNeededCNPJ(_ cnpj: String) -> [FavoriteCNPJ] {

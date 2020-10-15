@@ -67,4 +67,17 @@ struct PersistenceManager {
             debugPrint("error when system trying save object")
         }
     }
+    
+    func saveFavoriteIfNeeded(_ favorite: Favorite) {
+        let favoriteList = self.fetchFavorites()
+        let list = favoriteList.filter { (favorite) -> Bool in
+            favorite.cnpj == favorite.cnpj
+        }
+        
+        if list.isEmpty {
+            saveFavorite(favorite)
+        } else {
+            print("Objeto já foi salvo")
+        }
+    }
 }

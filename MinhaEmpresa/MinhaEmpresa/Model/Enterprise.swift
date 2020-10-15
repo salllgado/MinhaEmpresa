@@ -124,32 +124,3 @@ extension Socios: Encodable {
         try container.encode(nome, forKey: .nome)
     }
 }
-
-extension Enterprise: CanSaveToDisk {
-    
-    static var defaultEncoder: JSONEncoder {
-        let encoder = JSONEncoder()
-
-        return encoder
-    }
-    
-    var storageKeyForObject: String {
-        return UserDefaultsKeys.enterprise.rawValue
-    }
-    
-    func save() throws {
-        let data = try Enterprise.defaultEncoder.encode(self)
-        let storage = UserDefaults.standard
-        storage.setValue(data, forKey: storageKeyForObject)
-    }
-    
-    func load() throws -> Enterprise? {
-        let storage = UserDefaults.standard
-        guard let value = storage.value(forKey: storageKeyForObject) as? Data else { return nil }
-        do {
-            return try JSONDecoder().decode(Enterprise.self, from: value)
-        } catch {
-            return nil
-        }
-    }
-}
