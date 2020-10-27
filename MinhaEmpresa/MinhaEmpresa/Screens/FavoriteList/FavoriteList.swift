@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FavoriteList: View {
     
-    @ObservedObject var viewModel = FavoriteListViewModel()
+    @ObservedObject var viewModel:  FavoriteListViewModel
     
     var body: some View {
         VStack {
@@ -22,7 +22,15 @@ struct FavoriteList: View {
             } else {
                 List {
                     ForEach(viewModel.favorites) { favorite in
-                        Text(favorite.cnpj)
+                        NavigationLink(destination: HomeViewModel(enterprise: favorite, delegate: nil), label: {
+                            VStack(alignment: .leading) {
+                                Text(favorite.name)
+                                    .font(Font.system(size: 18, weight: .bold))
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
+                                Text(favorite.cnpj)
+                            }
+                            .padding(EdgeInsets(top: 0, leading: 8, bottom: 4, trailing: 8))
+                        })
                     }.onDelete(perform: viewModel.deleteFavorite)
                 }
             }
@@ -31,6 +39,10 @@ struct FavoriteList: View {
             viewModel.fetchFavorites()
         }
         .navigationBarTitle("Favoritos", displayMode: .inline)
+    }
+    
+    init(viewModel: FavoriteListViewModel = FavoriteListViewModel()) {
+        self.viewModel = viewModel
     }
 }
 

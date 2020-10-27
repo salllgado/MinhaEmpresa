@@ -46,7 +46,10 @@ struct MainContentView: View {
                 }
             }
             .fullScreenCover(isPresented: $viewModel.isPresentingAddModal, content: {
-                HomeContentView(vm: self.viewModel)
+                if let _enterprise = viewModel.userEnterprise {
+                    let homeViewModel = HomeViewModel(enterprise: _enterprise, delegate: self.viewModel)
+                    HomeContentView(vm: homeViewModel)
+                }
             })
             .alert(isPresented: $viewModel.showingAlert) {
                 Alert(title: Text(viewModel.alertMessage?.prettyError ?? LocalizedError.unknown.prettyError), message: nil, dismissButton: .default(Text("OK")))

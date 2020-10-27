@@ -46,6 +46,10 @@ public struct Enterprise {
         case city = "municipio"
         case uf
     }
+    
+    init(cnpj: String) {
+        self.cnpj = cnpj
+    }
 }
 
 extension Enterprise: Decodable {

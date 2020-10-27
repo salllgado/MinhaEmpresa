@@ -14,9 +14,9 @@ struct BackgroundView: View {
     var body: some View {
         ZStack {
             Image("wallpaper")
+                .blur(radius: 3)
             Color.primaryColor
                 .edgesIgnoringSafeArea(.all)
-                .opacity(0.7)
         }
     }
 }

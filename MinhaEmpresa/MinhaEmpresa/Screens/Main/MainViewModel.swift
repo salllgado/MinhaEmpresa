@@ -35,38 +35,33 @@ class MainViewModel: ViewModable {
     
     func requestEnterprise() {
         self.isLoading = true
-        Manager.requestEnterprise(cnpj: tfValue.normalizeValue()) { (enterprise, error) in
-            self.isLoading = false
-            if let _enterprise = enterprise {
-                self.userEnterprise = _enterprise
-                self.navigate()
-            } else if let _enterprise = enterprise, let _ = _enterprise.message {
-                self.showingAlert = true
-                self.alertMessage = .parseError
-            } else if let _ = error?.localizedDescription {
-                self.showingAlert = true
-                self.alertMessage = LocalizedError.networkError
+        let service = EnterpriseService()
+        service.getEnterprise(cnpj: tfValue.normalizeValue()) { (result) in
+            DispatchQueue.main.async {
+                self.isLoading = false
+                
+                switch result {
+                case .success(let enterprise):
+                    if let _ = enterprise.message {
+                        self.showingAlert = true
+                        self.alertMessage = .parseError
+                    } else {
+                        self.userEnterprise = enterprise
+                        self.navigate()
+                    }
+                case .failure(let error):
+                    print(error)
+                    self.showingAlert = true
+                    self.alertMessage = LocalizedError.networkError
+                }
             }
-        }
-    }
-    
-    func logout() {
-        navigate()
-    }
-    
-    func saveOnFavorites() {
-        if let _userEnterprise = userEnterprise {
-            let manager = PersistenceManager()
-            manager.saveFavoriteIfNeeded(Favorite(cnpj: _userEnterprise.cnpj, name: _userEnterprise.enterpriseName))
-        } else {
-            alertMessage = LocalizedError.parseError
         }
     }
 }
 
 extension MainViewModel {
     
-    fileprivate func navigate() {
+    func navigate() {
         self.isPresentingAddModal.toggle()
     }
     
@@ -80,5 +75,12 @@ extension MainViewModel {
         return array.filter { (dict) -> Bool in
             dict.cnpj != cnpj
         }
+    }
+}
+
+extension MainViewModel: HomeViewModelDelegate {
+    
+    func toogleNavigate() {
+        self.isPresentingAddModal.toggle()
     }
 }

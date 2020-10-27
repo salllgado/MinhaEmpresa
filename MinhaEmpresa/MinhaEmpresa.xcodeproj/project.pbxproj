@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B54EB28C23C77FD4000B72E7 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EB28B23C77FD4000B72E7 /* NetworkWorker.swift */; };
-		B54EB28E23C77FE3000B72E7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EB28D23C77FE3000B72E7 /* Manager.swift */; };
 		B54EB29023C77FF0000B72E7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EB28F23C77FF0000B72E7 /* Network.swift */; };
 		B54EB29223C78000000B72E7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EB29123C78000000B72E7 /* Endpoint.swift */; };
 		B54EB29523C78028000B72E7 /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EB29423C78028000B72E7 /* Enterprise.swift */; };
@@ -35,6 +33,11 @@
 		B85A6F6424AE122E00FE21DE /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F6324AE122E00FE21DE /* Favorite.swift */; };
 		B86C19812479DD7B007EA1C3 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86C19802479DD7B007EA1C3 /* Locale.swift */; };
 		B893277525377C9B0034C481 /* LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893277425377C9B0034C481 /* LocalizedError.swift */; };
+		B8BAA27A25479F0A007EC9E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA27925479F0A007EC9E2 /* HomeViewModel.swift */; };
+		B8BAA2832547ABF2007EC9E2 /* EnterpriseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA2822547ABF2007EC9E2 /* EnterpriseService.swift */; };
+		B8BAA2882547ACB9007EC9E2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA2872547ACB9007EC9E2 /* NetworkError.swift */; };
+		B8BAA28D2547AD50007EC9E2 /* EnterpriseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA28C2547AD50007EC9E2 /* EnterpriseAPI.swift */; };
+		B8BAA2922547AE5A007EC9E2 /* ServiceTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA2912547AE5A007EC9E2 /* ServiceTargetProtocol.swift */; };
 		B8BCE346247AE9610050A322 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCE345247AE9610050A322 /* FavoriteList.swift */; };
 		B8C941582464290600CA3F4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941572464290600CA3F4B /* CustomButton.swift */; };
 		B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C941592464321B00CA3F4B /* StringExtensions.swift */; };
@@ -62,8 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B54EB28B23C77FD4000B72E7 /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
-		B54EB28D23C77FE3000B72E7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		B54EB28F23C77FF0000B72E7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B54EB29123C78000000B72E7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B54EB29423C78028000B72E7 /* Enterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
@@ -98,6 +99,11 @@
 		B85A6F6324AE122E00FE21DE /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		B86C19802479DD7B007EA1C3 /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		B893277425377C9B0034C481 /* LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedError.swift; sourceTree = "<group>"; };
+		B8BAA27925479F0A007EC9E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B8BAA2822547ABF2007EC9E2 /* EnterpriseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseService.swift; sourceTree = "<group>"; };
+		B8BAA2872547ACB9007EC9E2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B8BAA28C2547AD50007EC9E2 /* EnterpriseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseAPI.swift; sourceTree = "<group>"; };
+		B8BAA2912547AE5A007EC9E2 /* ServiceTargetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTargetProtocol.swift; sourceTree = "<group>"; };
 		B8BCE345247AE9610050A322 /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		B8C941572464290600CA3F4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B8C941592464321B00CA3F4B /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -135,12 +141,14 @@
 		B54EB28A23C77FB4000B72E7 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B54EB28B23C77FD4000B72E7 /* NetworkWorker.swift */,
-				B54EB28D23C77FE3000B72E7 /* Manager.swift */,
 				B54EB28F23C77FF0000B72E7 /* Network.swift */,
 				B54EB29123C78000000B72E7 /* Endpoint.swift */,
 				B832F97C244F526200B35059 /* ShortcutManager.swift */,
 				B8EF9D7724AA25D200D135A9 /* PersistanceManager.swift */,
+				B8BAA2822547ABF2007EC9E2 /* EnterpriseService.swift */,
+				B8BAA2872547ACB9007EC9E2 /* NetworkError.swift */,
+				B8BAA28C2547AD50007EC9E2 /* EnterpriseAPI.swift */,
+				B8BAA2912547AE5A007EC9E2 /* ServiceTargetProtocol.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FEC1BD23C76ADB005A37C6 /* HomeContentView.swift */,
+				B8BAA27925479F0A007EC9E2 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -449,18 +458,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EF9D7624AA249D00D135A9 /* FavoriteListViewModel.swift in Sources */,
+				B8BAA2882547ACB9007EC9E2 /* NetworkError.swift in Sources */,
 				B85A6F6424AE122E00FE21DE /* Favorite.swift in Sources */,
 				B54EB29023C77FF0000B72E7 /* Network.swift in Sources */,
 				B598B89023CA551A0001107C /* RowView.swift in Sources */,
 				B8EF9D7824AA25D200D135A9 /* PersistanceManager.swift in Sources */,
 				B893277525377C9B0034C481 /* LocalizedError.swift in Sources */,
+				B8BAA2832547ABF2007EC9E2 /* EnterpriseService.swift in Sources */,
 				B832F97D244F526200B35059 /* ShortcutManager.swift in Sources */,
 				B8EF9D7224AA203D00D135A9 /* MinhaEmpresa.xcdatamodeld in Sources */,
+				B8BAA2922547AE5A007EC9E2 /* ServiceTargetProtocol.swift in Sources */,
 				B8C9415A2464321B00CA3F4B /* StringExtensions.swift in Sources */,
 				B5FEC19723C6A996005A37C6 /* AppDelegate.swift in Sources */,
 				B8C941582464290600CA3F4B /* CustomButton.swift in Sources */,
 				B5FEC19923C6A996005A37C6 /* SceneDelegate.swift in Sources */,
-				B54EB28C23C77FD4000B72E7 /* NetworkWorker.swift in Sources */,
+				B8BAA27A25479F0A007EC9E2 /* HomeViewModel.swift in Sources */,
 				B54EB29523C78028000B72E7 /* Enterprise.swift in Sources */,
 				B5FEC19B23C6A996005A37C6 /* MainContentView.swift in Sources */,
 				B5E3824423CB9FF4002B58DC /* ButtonStyle.swift in Sources */,
@@ -474,7 +486,7 @@
 				B5E3823923CB9401002B58DC /* BackgroundView.swift in Sources */,
 				B5EE85F223C771C500AC97AE /* ColorAsset.swift in Sources */,
 				B5FEC1B923C6B65E005A37C6 /* MainViewModel.swift in Sources */,
-				B54EB28E23C77FE3000B72E7 /* Manager.swift in Sources */,
+				B8BAA28D2547AD50007EC9E2 /* EnterpriseAPI.swift in Sources */,
 				B54EB29223C78000000B72E7 /* Endpoint.swift in Sources */,
 				B5EE85F623C77E2600AC97AE /* CustomDivider.swift in Sources */,
 			);

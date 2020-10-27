@@ -11,11 +11,11 @@ import SwiftUI
 struct HomeContentView: View {
     
     @State var isPresentingAddModal: Bool = false
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: HomeViewModel
     
-    init(vm: MainViewModel) {
+    init(vm: HomeViewModel, isModalPresented: Bool = true) {
         viewModel = vm
-        isPresentingAddModal = viewModel.isPresentingAddModal
+        isPresentingAddModal = true
     }
     
     var body: some View {
@@ -24,11 +24,11 @@ struct HomeContentView: View {
                 BackgroundView()
                     .frame(width: 200, height: 400, alignment: .center)
                 VStack {
-                    RowView(title: "CNPJ", value: viewModel.userEnterprise?.cnpj ?? viewModel.tfValue)
+                    RowView(title: "CNPJ", value: viewModel.userEnterprise?.cnpj ?? "")
                     RowView(title: "Nome", value: viewModel.userEnterprise?.enterpriseName ?? "")
                     RowView(title: "Abertura", value: viewModel.userEnterprise?.fondationDate ?? "")
                     Spacer()
-                    HStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
+                    HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8, content: {
                         CustomButton(title: "Deslogar", action: {
                             self.viewModel.logout()
                         })
@@ -46,10 +46,8 @@ struct HomeContentView: View {
 
 struct HomeContentView_Previews: PreviewProvider {
     static var previews: some View {
-        func getViewModel() -> MainViewModel {
-            let vm = MainViewModel()
-            vm.tfValue = "13"
-            
+        func getViewModel() -> HomeViewModel {
+            let vm = HomeViewModel(enterprise: Enterprise(cnpj: "31313131313131"), delegate: nil)
             return vm
         }
         

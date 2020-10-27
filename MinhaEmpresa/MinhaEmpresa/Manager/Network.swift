@@ -8,60 +8,89 @@
 
 import Foundation
 
-enum SendRequest {
-    case body
-    case header
-    case none
+enum HTTPMethod: String {
+    case GET
+    case POST
 }
 
-enum HTTPMethod {
-    case get
-    case post
+enum Credentials {
+    static var accessToken = "YOUR_ACCESS_TOKEN"
 }
 
-class Network {
+class ServiceProvider {
     
-    static let sharedInstance = Network()
+    private var session: URLSession
     
-    func request<T: Encodable, U: Decodable>(send param: T?, on type: SendRequest, in endpoint: Endpoint, httpMethod: HTTPMethod, response: U, completionHandler: @escaping (_ response: U?, _ error: Error?)-> Void) {
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
+    
+    func request<T: Decodable>(target: ServiceTargetProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        guard let url = target.baseURL?.appendingPathComponent(target.path) else {
+            completion(.failure(.badURL))
+            return
+        }
         
-        var urlComponents = URLComponents()
-        urlComponents.scheme = httpProtocol
-        urlComponents.host = host
-        urlComponents.path = endpoint.path
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            completion(.failure(.badURL))
+            return
+        }
         
-        guard let _url = urlComponents.url else { return }
-        let urlRequest = URLRequest(url: _url)
+        urlComponents.queryItems = target.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
         
-        URLSession.shared.dataTask(with: urlRequest) { (data, request, error) in
-            DispatchQueue.main.async {
-                if let _err = error {
-                    completionHandler(nil, _err)
-                } else if let _data = data {
-                    print(_data.prettyPrintedJSONString ?? "nil error")
-                    self.parseObj(responseObj: response, data: _data, completionHandler: completionHandler)
+        guard let componentURL = urlComponents.url else {
+            completion(.failure(.badURL))
+            return
+        }
+        
+        let urlRequest = URLRequest(url: componentURL)
+        let session = self.session.dataTask(with: urlRequest) { (data, response, error) in
+            self.debugResponse(request: urlRequest, data: data)
+            if let error = error {
+                completion(.failure(.connectionFailure(error)))
+            } else {
+                guard let data = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                do {
+                    let decoded = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(decoded))
+                } catch(let error) {
+                    completion(.failure(.parseError(error)))
                 }
             }
-        }.resume()
+        }
+        
+        session.resume()
     }
     
-    private func parseObj<U: Decodable>(responseObj: U, data: Data, completionHandler: @escaping (_ response: U?, _ error: Error?)-> Void) {
-        do {
-            let resonseObj = try JSONDecoder().decode(U.self, from: data)
-            completionHandler(resonseObj, nil)
-        } catch {
-            completionHandler(nil, error)
-        }
-    }
-}
-
-extension Data {
-    var prettyPrintedJSONString: NSString? { /// NSString gives us a nice sanitized debugDescription
-        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
-            let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
-            let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
+    private lazy var auth: String = {
+        let auth = "Bearer \(Credentials.accessToken)"
+        return auth
+    }()
+    
+    private func debugResponse(request: URLRequest, data: Data?) {
+        print("==== REQUEST ====")
+        print("\nURL: \(request.url?.absoluteString ?? "")")
         
-        return prettyPrintedString
+        if let requestHeader = request.allHTTPHeaderFields {
+            if let data = try? JSONSerialization.data(withJSONObject: requestHeader, options: .prettyPrinted) {
+                print("\nHEADER: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+        }
+        
+        print("\nMETHOD: \(request.httpMethod ?? "")")
+        
+        print("\n==== RESPONSE ====")
+        if let data = data {
+            if let jsonObject = try? JSONSerialization.jsonObject(with: data) {
+                if let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) {
+                    print(String(data: jsonData, encoding: .utf8) ?? "")
+                }
+            }
+        }
+        print("\n================\n")
     }
 }
-
