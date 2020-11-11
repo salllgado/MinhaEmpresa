@@ -29,4 +29,8 @@ class FavoriteListViewModel: ViewModable {
             })
         }
     }
+    
+    func fetchEnterprise(completion: @escaping ()->()) {
+        
+    }
 }

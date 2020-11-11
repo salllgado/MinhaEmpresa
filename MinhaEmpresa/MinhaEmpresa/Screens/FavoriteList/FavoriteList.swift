@@ -22,7 +22,7 @@ struct FavoriteList: View {
             } else {
                 List {
                     ForEach(viewModel.favorites) { favorite in
-                        NavigationLink(destination: HomeViewModel(enterprise: favorite, delegate: nil), label: {
+                        NavigationLink(destination: HomeContentView(vm: HomeViewModel(enterprise: Enterprise(cnpj: favorite.cnpj), delegate: nil)), label: {
                             VStack(alignment: .leading) {
                                 Text(favorite.name)
                                     .font(Font.system(size: 18, weight: .bold))
